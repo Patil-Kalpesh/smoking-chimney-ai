@@ -7,7 +7,7 @@ export default function index() {
       <div className="container mx-auto px-[40px] py-[60px]">
           <h2 className=" lg:text-[48px] lg:py-[10px] leading-normal font-medium">Talk with our decision makers</h2>
           <p className="text-[22px]">The team AI-powered wonder elevates mundane tasks into the astounding. </p>
-          <p className="text-[22px] pt-[20px]">Whether Hollywood-worthy stories to profound user experiences, we're the first place to look for unprecedented changes in the digital realm.</p>
+          <p className="text-[22px] pt-[20px]">Whether Hollywood-worthy stories to profound user experiences, we&apos;re the first place to look for unprecedented changes in the digital realm.</p>
           <div className="pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 gap-y-14">
               <div className="card-item lg:p-4 ">
                   <div>

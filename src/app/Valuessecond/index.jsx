@@ -13,7 +13,7 @@ export default function index() {
                 <div className="card py-[20px] px-[15px] w-[280px] bg-[#ED5729] rounded-lg">
                     <div className='h-[48px] w-[48px] bg-gray-700'></div>
                     <p className='text-[26px] font-medium lg:py-2 py-1 text-white'>Integrity</p>
-                    <p className='text-white text-[14px]'>Doing what's right, Always striving!</p>
+                    <p className='text-white text-[14px]'>Doing what&apos;s right, Always striving!</p>
                 </div>
                 <div className="card py-[20px] px-[15px] w-[280px] bg-[#ED57291F] rounded-lg">
                     <div className='h-[48px] w-[48px] bg-gray-700'></div>
@@ -29,11 +29,11 @@ export default function index() {
                 <div className="card py-[20px] px-[15px] w-[280px]  bg-[#ED57291F] rounded-lg">
                     <div className='h-[48px] w-[48px] bg-gray-700'></div>
                     <p className='text-[26px] font-medium lg:py-2 py-1 '>Integrity</p>
-                    <p className=' text-[14px]'>Doing what's right, Always striving!</p>
+                    <p className=' text-[14px]'>Doing what&apos;s right, Always striving!</p>
                 </div>
             </div>
             <div className='text-center  pt-14'>
-                <button className=' rounded-lg bg-[#ED5729] text-white px-8 py-1 font-semibold'>Let's light it up together!</button>
+                <button className=' rounded-lg bg-[#ED5729] text-white px-8 py-1 font-semibold'>Let&apos;s light it up together!</button>
             </div>
         </div>
     </div>
