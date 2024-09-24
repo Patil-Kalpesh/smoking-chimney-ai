@@ -1,5 +1,5 @@
 import React from 'react'
-
+// import Image from 'next/image';
 export default function index() {
   return (
     <>
@@ -14,17 +14,17 @@ export default function index() {
                     <p className='text-[26px]'>Easily shift from ideas to finished <br />product to increase productivity.    </p>
                 </div>
                 <div className="card pb-[20px]">
-                    <div className='h-[48px] w-[48px] bg-gray-700'></div>
+                    <div className='h-[48px] w-[48px] '><img src="/images/Icon-1.svg" alt="icon1" /></div>
                     <p className='font-medium lg:py-2 py-1'>Curious</p>
                     <p className='text-[#00000080]'>Seeking progress. <br /> Driven by wonder</p>
                 </div>
                 <div className="card pb-[20px]">
-                    <div className='h-[48px] w-[48px] bg-gray-700'></div>
+                    <div className='h-[48px] w-[48px] '><img src="/images/Icon-2.svg" alt="icon2" /></div>
                     <p className='font-medium lg:py-2 py-1'>Value Centric</p>
                     <p className='text-[#00000080]'>Invest in an interaction <br />unless it provides value</p>
                 </div>
                 <div className="card pb-[20px]">
-                    <div className='h-[48px] w-[48px] bg-gray-700'></div>
+                    <div className='h-[48px] w-[48px]'><img src="/images/Icon-3.svg" alt="icon3" /></div>
                     <p className='font-medium lg:py-2 py-1'>Aesthetic</p>
                     <p className='text-[#00000080]'>Meticulous attention. <br />Endless pursuit of perfection.</p>
                 </div>

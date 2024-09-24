@@ -1,16 +1,26 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
+const sofia = localFont({
+  src: "./fonts/SofiaProRegularAz.woff",
+  variable: "--font-sofia-pro",
+  weight: "100 200 300 500 600 700 800 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+// const sofiablack = localFont({
+//   src: "./fonts/SofiaProBlack.ttf",
+//   variable: "--font-sofia-pro",
+//   weight: "100 200 300 500 600 700 800 900",
+// });
 
 export const metadata = {
   title: "Create Next App",
@@ -21,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${sofia.variable} antialiased bg-white`}
       >
         {children}
       </body>
