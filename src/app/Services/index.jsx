@@ -18,7 +18,7 @@ export default function index() {
                         <li>Facial Recognition</li>
                     </ul>
                 </div>
-                <div className="card-item lg:p-4 ">
+                <div className="card-item lg:p-4 lg:border-e-2">
                     <div className='h-[48px] w-[48px] '><img src="/images/Icon-o-2.svg" alt="icon" /></div>
                     <h3 className='text-[26px] py-2'>AI Development and Integration</h3>
                     <p className='font-normal text-[14px]'>Empower your business with cutting-edge, AI-powered solutions built to deliver results.</p>
@@ -38,7 +38,7 @@ export default function index() {
                         <li>Text Summarization</li>
                     </ul>
                 </div>
-                <div className="card-item lg:p-4 ">
+                <div className="card-item lg:p-4 lg:border-e-2">
                     <div className='h-[48px] w-[48px] '><img src="/images/Icon-o-4.svg" alt="icon" /></div>
                     <h3 className='text-[26px] py-2'>Computer Vision</h3>
                     <p className='font-normal text-[14px]'>Transform your business processes with advanced image and video analysis technologies.</p>
