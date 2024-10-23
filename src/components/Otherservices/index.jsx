@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 
 export default function index() {
   return (
@@ -9,7 +10,7 @@ export default function index() {
             <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /><span className='text-[#ED5729]'>revolutionary projects</span> </h2>
             <div className='pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-14'>
                 <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><img src="/images/Icon-l-1.svg" alt="icon2" /></div>
+                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-1.svg" width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>AI </h3>
                     <ul className='pt-2 font-medium list-disc list-inside '>
                         <li>AI and Automation</li>
@@ -18,7 +19,7 @@ export default function index() {
                     </ul>
                 </div>
                 <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><img src="/images/Icon-l-2.svg" alt="icon2" /></div>
+                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-2.svg"  width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Development </h3>
                     <ul className='pt-2 font-medium list-disc list-inside '>
                         <li>Mobile App Development</li>
@@ -28,7 +29,7 @@ export default function index() {
                     </ul>
                 </div>
                 <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><img src="/images/Icon-l-3.svg" alt="icon2" /></div>
+                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-3.svg" width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Tech </h3>
                     <ul className='pt-2 font-medium list-disc list-inside '>
                         <li>ERP Software</li>
@@ -38,7 +39,7 @@ export default function index() {
                     </ul>
                 </div>
                 <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><img src="/images/Icon-l-4.svg" alt="icon2" /></div>
+                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-4.svg" width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>IT </h3>
                     <ul className='pt-2 font-medium list-disc list-inside '>
                         <li>Healthcare IT</li>
@@ -47,7 +48,7 @@ export default function index() {
                     </ul>
                 </div>
                 <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><img src="/images/Icon-l-5.svg" alt="icon2" /></div>
+                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-5.svg" width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Design Solution </h3>
                     <ul className='pt-2 font-medium list-disc list-inside '>
                         <li>Digital Transformation</li>
@@ -57,7 +58,7 @@ export default function index() {
                     </ul>
                 </div>
                 <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><img src="/images/Icon-l-6.svg" alt="icon2" /></div>
+                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-6.svg" width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Testing </h3>
                     <ul className='pt-2 font-medium list-disc list-inside '>
                         <li>DevOps</li>

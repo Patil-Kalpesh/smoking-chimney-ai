@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link'; // Import Link from Next.js
+import Image from 'next/image';
 
 // Section navigation links
 const navLinks = [
@@ -24,7 +25,7 @@ function Header() {
         <div className="w-full grid lg:grid-cols-3 grid-cols-2 items-center">
           {/* Logo */}
           <div className=''>
-            <img src="/images/logo/smoking-chimney-logo.png" alt="Smoking Chimney Logo" />
+            <Link href="/"><Image src="/images/logo/smoking-chimney-logo.png" width={60} height={60} alt="Smoking Chimney Logo" /></Link>
           </div>
 
           {/* Desktop Navigation */}
