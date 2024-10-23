@@ -20,6 +20,25 @@ body {
   font-family: 'Sofia Pro' sans-serif;
   /* font-family: Sofia, Arial, Helvetica, sans-serif; */
 }
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.hide-header {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.show-header {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 
 @layer utilities {
   .text-balance {
