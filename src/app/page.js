@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import Header from '@/components/header/index';
+import Header from '@/components/Header/index';
 import Home from '@/app/home/page'
 
 
@@ -36,7 +36,7 @@ function Page() {
         <Header />
       </div>
       <Home/>
-      
+
     </div>
   );
 }
