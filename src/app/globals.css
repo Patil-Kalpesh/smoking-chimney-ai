@@ -133,3 +133,12 @@ body {
   font-weight: 900;
   font-style: italic;
 }
+/* hover btn style */
+.btn-lightup {
+  @apply rounded-md bg-[#ED5729] text-white px-8 py-1 font-normal border border-transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-lightup:hover {
+  @apply bg-white text-[#ED5729] border-[#ED5729];
+}
