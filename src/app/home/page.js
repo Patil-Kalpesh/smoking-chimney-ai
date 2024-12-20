@@ -16,23 +16,6 @@ export default function page() {
   return (
     <>
         <Hero />
-      <div className='bg-[#EEF3ED]'>
-        <Values />
-      </div>
-      <Services />
-      <div className='bg-[#EEF3ED]'>
-        <Whoweare />
-      </div>
-      <Valuessecond />
-      <Otherservices />
-      <Technicalstack />
-      <div className='bg-[#ED5729]'>
-        <CTA />
-      </div>
-      <div className='bg-[#EEF3ED]'>
-        <Ethics />
-      </div>
-      <Contact />
       <Footer />
     </>
   )

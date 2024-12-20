@@ -1,84 +1,90 @@
 "use client";
-import React, { useState } from 'react';
-import Link from 'next/link'; // Import Link from Next.js
+import React, { useState } from "react";
+import Link from "next/link";
 import Image from 'next/image';
 
-// Section navigation links
 const navLinks = [
-  { name: "Solutions", target: "/#solutions" },
-  { name: "Technology", target: "/#technology" },
-  { name: "Company", target: "/#company" },
-  { name: "Contact", target: "/#contact" }
+  { name: "Home", target: "/" },
+  { name: "About", target: "/about" },
+  { name: "Services", target: "/services" },
+  { name: "Contact", target: "/contact" },
 ];
 
-function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+function ResponsiveNavbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Toggle mobile menu
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <div>
-      <nav className='flex w-full items-center justify-between px-[20px] py-[20px] lg:mx-auto lg:px-[40px]'>
+    <header className=" container mx-auto w-full bg-white ">
+      <nav className="flex justify-between items-center px-[20px] py-[20px] lg:mx-auto lg:px-[40px]">
+        {/* Logo */}
         <div className="w-full grid lg:grid-cols-3 grid-cols-2 items-center">
-          {/* Logo */}
-          <div className=''>
-            <Link href="/"><Image src="/images/logo/smoking-chimney-logo.png" width={60} height={60} alt="Smoking Chimney Logo" /></Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className='hidden lg:block'>
-            <ul className='flex gap-[24px] justify-center items-center'>
-              {navLinks.map((item, index) => (
-                <li className='flex justify-center items-center px-4' key={index}>
-                  <Link href={item.target} scroll={false}>
-                    <span className='group text-[15px] h-[20px] inline-block overflow-y-hidden relative cursor-pointer'>
-                      <div className='group-hover:translate-y-[-100%] transition-all ease-[cubic-bezier(0.16, 1, 0.3, 1)] duration-500 opacity-70'>
-                        {item.name}
-                      </div>
-                      <div className='group-hover:translate-y-[-100%] transition-all ease-[cubic-bezier(0.16, 1, 0.3, 1)] duration-500'>
-                        {item.name}
-                      </div>
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <div className='flex justify-end '>
-            <button className='hidden lg:block rounded-lg bg-[#ED5729] text-white px-8 py-1'>
-              Find Your Solution here!
-            </button>
-            <button className='text-end lg:hidden block' onClick={toggleMobileMenu}>
-              {isMobileMenuOpen ? "Close" : "Menu"}
-            </button>
-          </div>
+        <div className="">
+        <Link href="/"><Image src="/images/logo/logo.svg" width={40} height={40} alt="Smoking Chimney Logo" /></Link>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <nav className='lg:hidden bg-gray-100 w-full p-4 absolute top-20 left-0'>
-            <ul className='flex flex-col gap-4'>
-              {navLinks.map((item, index) => (
-                <li key={index}>
-                  <Link href={item.target} scroll={false}>
-                    <span className='text-[18px] block py-2 cursor-pointer'>
-                      {item.name}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )}
+        {/* Mobile Menu Button */}
+        
+        {/* Desktop Menu */}
+        <ul className="hidden lg:flex space-x-10 ">
+          {navLinks.map((link, index) => (
+            <li key={index} className="">
+              <Link href={link.target}>
+                  <span className='group text-[15px] h-[20px] inline-block overflow-y-hidden relative cursor-pointer'>
+                    <div className='group-hover:translate-y-[-100%] transition-all ease-[cubic-bezier(0.16, 1, 0.3, 1)] duration-500 opacity-70'>
+                      {link.name}
+                    </div>
+                    <div className='group-hover:translate-y-[-100%] transition-all ease-[cubic-bezier(0.16, 1, 0.3, 1)] duration-500'>
+                      {link.name}
+                    </div>
+                  </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div className='flex justify-end '>
+          <button
+              className="lg:hidden text-gray-700 focus:outline-none"
+              onClick={toggleMenu}
+            >
+          {isMenuOpen ? (
+            <span>&#10005; {/* Close Icon */}</span>
+          ) : (
+            <span>&#9776; {/* Menu Icon */}</span>
+          )}
+        </button>
+            <button className='hidden lg:block btn-lightup'>
+            <span className='group text-[15px] h-[20px] inline-block overflow-y-hidden relative cursor-pointer'>
+                    <div className='group-hover:translate-y-[-100%] transition-all ease-[cubic-bezier(0.16, 1, 0.3, 1)] duration-400 '>
+                    Find Your Solution here!
+                    </div>
+                    <div className='group-hover:translate-y-[-100%] transition-all ease-[cubic-bezier(0.16, 1, 0.3, 1)] duration-400'>
+                    Find Your Solution here!
+                    </div>
+                  </span>
+            
+            </button>
+        </div>
+        </div>
       </nav>
-    </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <ul className="lg:hidden flex flex-col bg-gray-50 shadow-md p-4 space-y-4 text-gray-700">
+          {navLinks.map((link, index) => (
+            <li key={index} className="hover:text-blue-600">
+              <Link href={link.target} onClick={closeMenu}>
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </header>
   );
 }
 
-export default Header;
-
+export default ResponsiveNavbar;
