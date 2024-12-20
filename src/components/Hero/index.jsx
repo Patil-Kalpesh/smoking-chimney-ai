@@ -12,7 +12,7 @@ function page() {
             <h1 className='font-sofia font-medium text-center text-[60px] lg:text-[72px] text-[#212529] leading-[75.21px] lg:pt-[0px] pb-2 tracking-[-1.21px]'>Your imagination, <span className='text-[#ED5729]'>Amplified</span>. Digitally.</h1>
             <div className="singleLine"><p className='font-sofia font-light  text-[#ED5729] text-[26px] py-5 text-center'>We solve real-world problems efficiently</p></div>
             <div className='text-center '>
-                <button className='btn-lightup'>Get Amplified!!!</button>
+                <button className='btn-lightup'>Get Amplified!!</button>
             </div>
         </div>
       </div>
