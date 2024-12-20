@@ -1,6 +1,9 @@
-import localFont from "next/font/local";
-import "./globals.css";
 
+// import localFont from "next/font/local";
+import "./globals.css";
+import React from 'react';
+import Header from '@/app/header/page';
+import Footer from '@/components/Footer/index';
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
@@ -15,12 +18,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
+
   return (
     <html lang="en">
-      <body
-        className={` antialiased bg-white`}
-      >
-        {children}
+      <body className={` antialiased bg-white`} >
+   
+        <Header />
+        <div className="mt-20">  {children}</div>
+        <Footer />
       </body>
     </html>
   );

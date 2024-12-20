@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 const navLinks = [
   { name: "Home", target: "/" },
-  { name: "About", target: "/about" },
-  { name: "Services", target: "/services" },
+  { name: "Technology", target: "/technology" },
+  { name: "Company", target: "/company" },
   { name: "Contact", target: "/contact" },
 ];
 
@@ -57,15 +57,7 @@ function ResponsiveNavbar() {
           )}
         </button>
             <button className='hidden lg:block btn-lightup'>
-            <span className='group text-[15px] h-[20px] inline-block overflow-y-hidden relative cursor-pointer'>
-                    <div className='group-hover:translate-y-[-100%] transition-all ease-[cubic-bezier(0.16, 1, 0.3, 1)] duration-400 '>
-                    Find Your Solution here!
-                    </div>
-                    <div className='group-hover:translate-y-[-100%] transition-all ease-[cubic-bezier(0.16, 1, 0.3, 1)] duration-400'>
-                    Find Your Solution here!
-                    </div>
-                  </span>
-            
+              Find Your Solution here!
             </button>
         </div>
         </div>

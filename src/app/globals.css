@@ -15,7 +15,9 @@ body {
   background-color: white;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
+.banner-bg-img{
+  background: url('/images/Artboard-1.svg');
+}
 .hide-header {
   transform: translateY(-100%);
   opacity: 0;

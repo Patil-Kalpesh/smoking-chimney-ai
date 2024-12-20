@@ -6,27 +6,28 @@ import Image from 'next/image'
 function page() {
   return (
     <div className='container mx-auto w-full'>
-    <div className="pt-4 h-[650px] flex items-center justify-center bg-cover bg-center bg-[url('/images/Artboard-1.svg')]">
+      {/*----- Section-1 ----- */}
+    <div className=' h-[600px] flex items-center justify-center bg-cover bg-center banner-bg-img'>
       <div className='mx-auto max-w-6xl'>
         <div className='px-[20px]'>
-            <h1 className='font-sofia font-medium text-center text-[60px] lg:text-[72px] text-[#212529] leading-[75.21px] lg:pt-[0px] pb-2 tracking-[-1.21px]'>Your imagination, <span className='text-[#ED5729]'>Amplified</span>. Digitally.</h1>
-            <div className="singleLine"><p className='font-sofia font-light  text-[#ED5729] text-[26px] py-5 text-center'>We solve real-world problems efficiently</p></div>
-            <div className='text-center '>
+            <h1 className='font-sofia font-medium text-center text-[60px] lg:text-[72px] text-[#212529] leading-[85.21px] lg:pt-[0px] pb-2 tracking-[-1.21px]'>Your imagination, <span className='text-[#ED5729]'>Amplified</span>. Digitally.</h1>
+            <div className="singleLine"><p className='font-sofia font-light  text-[#ED5729] text-[26px]  text-center'>We solve real-world problems efficiently</p></div>
+            <div className='text-center mt-5 lg:mt-6'>
                 <button className='btn-lightup'>Get Amplified!!</button>
             </div>
         </div>
       </div>
     </div>
-    {/* ---Value Section-1 ------ */}
-    <div className='mx-auto   px-[20px] py-[60px] bg-[#EEF3ED]'>
+    {/* ---Value Section-2 ------ */}
+    <div className='mx-auto  px-8 lg:px-20 py-16 lg:py-20 bg-[#EEF3ED]'>
     <div className='text-center'>
-        <p className='lg:text-[26px]'>We’re passionate creators of immersive digital content</p>
-        <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>We’re more than just a <span className='text-[#ED5729]'>leading creative</span> </h2>
-        <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>and <span className='text-[#ED5729]'>Interactive Solutions studio</span></h2>
+        <p className='text-lg lg:text-xl'>We’re passionate creators of immersive digital content</p>
+        <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>We’re more than just a <span className='text-[#ED5729]'>leading creative</span> and <span className='text-[#ED5729]'>Interactive Solutions studio</span> </h2>
+
     </div>
     <div className='lg:grid lg:grid-cols-5 gap-3 gap-y-3 lg:content-start h-100 lg:pt-[60px] pt-[30px]'>
-        <div className='card col-span-2 flex items-center px-[30px] pb-[40px]'>
-            <p className='text-[26px]'>Easily shift from ideas to finished <br />product to increase productivity.    </p>
+        <div className='card col-span-2 flex items-center  pb-6'>
+            <p className='text-xl lg:text-2xl'>Easily shift from ideas to finished <br />product to increase productivity.    </p>
         </div>
         <div className="card pb-[20px]">
             <div className='h-[48px] w-[48px] '><Image src="/images/Icon-1.svg" width={48} height={48} alt="icon1" /></div>
@@ -45,9 +46,9 @@ function page() {
         </div>
     </div>
     </div>
-    {/* ----Service Section-2 ------ */}
+    {/* ----Service Section-3 ------ */}
     <section >
-        <div className=' mx-auto px-[20px] py-[60px] '>
+        <div className=' mx-auto px-8 lg:px-20 py-[60px] '>
             <p className='text-center text-[26px]'>Enhance the lives of millions of people</p>
             <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /> revolutionary projects</h2>
             <div className='pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-14'>
@@ -153,7 +154,7 @@ function page() {
             </div>
         </div>
     </section>
-    {/* ------Whoweare Section-3 ------*/}
+    {/* ------Whoweare Section-4 ------*/}
     <div className=' mx-auto h-100 w-full  px-[20px] py-[60px] bg-[#EEF3ED]'>
         <div className='text-center'>
             <p className='lg:text-[26px]'>We&apos;re high on innovation, sustainability, and keeping things simple.</p>
@@ -166,7 +167,7 @@ function page() {
             <p className='text-[14px]'>got you covered. We&apos;re the missing piece that makes everything fit perfectly like your trusty sidekick</p>
         </div>
     </div>
-    {/* ------Valuessecond Section-4 ----------- */}
+    {/* ------Valuessecond Section-5 ----------- */}
     <div id="scroll-div" className='container mx-auto w-full px-[20px] py-[60px]'>
         <div className='text-center'>
           <p className='lg:text-[26px] font-normal '>We see the world through every possible way</p>
@@ -221,7 +222,7 @@ function page() {
           <button className='btn-lightup'>Let's light it up together! </button>
         </div>
     </div>
-    {/* -------Otherservices Section-5 --------- */}
+    {/* -------Otherservices Section-6 --------- */}
     <section >
         <div className='container mx-auto px-[20px] py-[60px] '>
             <p className='text-center text-[26px]'>Enhance the lives of millions of people</p>
@@ -286,7 +287,7 @@ function page() {
             </div>
         </div>
     </section>
-     {/* ------- Technicalstack Section-6 --------*/}
+     {/* ------- Technicalstack Section-7 --------*/}
     <section >
       <div className='container mx-auto px-[20px] py-[60px] '>
           <p className='text-center text-[26px]'>Build & run modern, AI-powered experiences , Designed to support <br /> you throughout your app development journey.</p>
@@ -340,7 +341,7 @@ function page() {
           </div>
       </div>
     </section>
-    {/* -------- CTA Section-7 --------- */}
+    {/* -------- CTA Section-8 --------- */}
     <div className=' mx-auto h-100 w-full  px-[20px] py-[80px] bg-[#ED5729]'>
             <div className='text-center'>
                 <p className='lg:text-[26px] font-light'>We just see and do what others don&apos;t.</p>
@@ -353,7 +354,7 @@ function page() {
                  </div>
             </div>
     </div>
-    {/* ------- Ethics Section-8 -------- */}
+    {/* ------- Ethics Section-9 -------- */}
     <section className='bg-[#EEF3ED]'>
       <div className='container mx-auto px-[20px] py-[60px] '>
           <p className='text-center text-[26px]'>Positive impact while adhering to ethical standards</p>
@@ -413,7 +414,7 @@ function page() {
           </div>
       </div>
     </section>
-    {/* -------- Contact Section-9 ------- */}
+    {/* -------- Contact Section-10 ------- */}
     <div className=" mx-auto px-[40px] py-[60px]">
           <h2 className=" lg:text-[48px] lg:py-[10px] leading-normal font-medium">Talk with our decision makers</h2>
           <p className="text-[22px]">The team AI-powered wonder elevates mundane tasks into the astounding. </p>
