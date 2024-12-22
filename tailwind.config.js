@@ -52,7 +52,7 @@ module.exports = {
   		},
   		fontFamily: {
   			sofia: [
-  				'Sofia Pro"',
+  				'Sofia Pro',
   				'sans-serif'
   			]
   		},

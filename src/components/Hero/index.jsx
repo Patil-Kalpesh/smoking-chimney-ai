@@ -21,8 +21,8 @@ function page() {
     {/* ---Value Section-2 ------ */}
     <div className='mx-auto  px-8 lg:px-20 py-16 lg:py-20 bg-[#EEF3ED]'>
     <div className='text-center'>
-        <p className='text-lg lg:text-xl'>We’re passionate creators of immersive digital content</p>
-        <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>We’re more than just a <span className='text-[#ED5729]'>leading creative</span> and <span className='text-[#ED5729]'>Interactive Solutions studio</span> </h2>
+        <p className='text-lg lg:text-xl'>We&apos;re passionate creators of immersive digital content</p>
+        <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>We&apos;re more than just a <span className='text-[#ED5729]'>leading creative</span> and <span className='text-[#ED5729]'>Interactive Solutions studio</span> </h2>
 
     </div>
     <div className='lg:grid lg:grid-cols-5 gap-3 gap-y-3 lg:content-start h-100 lg:pt-[60px] pt-[30px]'>
@@ -183,7 +183,7 @@ function page() {
               <Image src="/images/Icon-1.svg" width={48} height={48} alt="icon" />
             </div>
             <p className='text-[26.72px] font-normal lg:pt-3 pt-1 text-white'>Integrity</p>
-            <p className='text-white text-[14px] lg:pt-3 pt-2'>Doing what's right, Always striving!</p>
+            <p className='text-white text-[14px] lg:pt-3 pt-2'>Doing what&apos;s right, Always striving!</p>
           </div>
 
           <div className="card p-7 w-[358px] h-[205px] bg-[#ED57291F] rounded-lg flex-shrink-0">
@@ -207,19 +207,19 @@ function page() {
               <Image src="/images/Icon-2.svg" width={48} height={48} alt="icon2" />
             </div>
             <p className='text-[26.72px] font-normal lg:pt-3 pt-1 '>Integrity</p>
-            <p className='text-[14px] lg:pt-3 pt-2'>Doing what's right, Always striving!</p>
+            <p className='text-[14px] lg:pt-3 pt-2'>Doing what&apos;s right, Always striving!</p>
           </div>
           <div className="card p-7 w-[358px] h-[205px] bg-[#ED57291F] rounded-lg flex-shrink-0">
             <div className='h-[48px] w-[48px] '>
               <Image src="/images/Icon-2.svg" width={48} height={48} alt="icon2" />
             </div>
             <p className='text-[26.72px] font-normal lg:pt-3 pt-1 '>Integrity</p>
-            <p className='text-[14px] lg:pt-3 pt-2'>Doing what's right, Always striving!</p>
+            <p className='text-[14px] lg:pt-3 pt-2'>Doing what&apos;s right, Always striving!</p>
           </div>
         </div>
 
         <div className='text-center pt-5'>
-          <button className='btn-lightup'>Let's light it up together! </button>
+          <button className='btn-lightup'>Let&apos;s light it up together! </button>
         </div>
     </div>
     {/* -------Otherservices Section-6 --------- */}

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header/index';
 
-export default function page() {
+export default function Page() {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [isScrollingUp, setIsScrollingUp] = useState(true);
 
