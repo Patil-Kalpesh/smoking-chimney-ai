@@ -23,7 +23,7 @@ function ResponsiveNavbar() {
         {/* Logo */}
         <div className="w-full grid lg:grid-cols-3 grid-cols-2 items-center">
         <div className="">
-        <Link href="/"><Image src="/images/logo/logo.svg" width={40} height={40} alt="Smoking Chimney Logo" /></Link>
+        <Link href="/"><Image src="/images/logo/Logo.svg" width={40} height={40} alt="Smoking Chimney Logo" /></Link>
         </div>
 
         {/* Mobile Menu Button */}
