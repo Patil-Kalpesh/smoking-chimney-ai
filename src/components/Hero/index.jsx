@@ -102,7 +102,7 @@ function page() {
     {/* ------Whoweare Section-4 ------*/}
     <div className=' mx-auto h-100 w-full  px-[20px] py-[60px] bg-[#EEF3ED]'>
         <div className='text-center'>
-            <p className='text-lg lg:text-[26px] lg:pb-0 pb-3'>We&apos;re high on innovation, sustainability, and keeping things simple.</p>
+            <p className='lg:text-xl text-lg lg:pb-0 pb-3'>We&apos;re high on innovation, sustainability, and keeping things simple.</p>
             <div className='lg:py-6'>
                 <h2 className='lg:text-[48px] text-[36px] font-medium leading-snug  lg:leading-[64px] lg:pb-0 pb-3'>Our solutions aren&apos;t just for today; they&apos;re ready  for whatever the future throws at you.</h2>
     
@@ -115,17 +115,15 @@ function page() {
     {/* ------Valuessecond Section-5 ----------- */}
     <div id="scroll-div" className='container mx-auto w-full px-[20px] py-[60px]'>
         <div className='text-center'>
-          <p className='lg:text-[26px] font-normal '>We see the world through every possible way</p>
+          <p className='lg:text-xl text-lg font-normal '>We see the world through every possible way</p>
           <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>Unique and badass Projects,</h2>
           <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>powered by the latest AI tech.</h2>
         </div>
-{/* ------------------------------ */}
-<IntegrityCard/>
-{/* ------------------------------ */}
         {/* Flex container for horizontal scroll */}
         <div className='card-container flex gap-6 gap-y-3 w-full h-full lg:pt-[60px] pt-[30px] mb-10 overflow-hidden'>
           {/* Individual Cards */}
-          <div className="card p-7 w-[358px] h-[205px] bg-[#ED5729] rounded-lg flex-shrink-0">
+          <IntegrityCard/>
+          {/* <div className="card p-7 w-[358px] h-[205px] bg-[#ED5729] rounded-lg flex-shrink-0">
             <div className='h-[48px] w-[48px] '>
               <Image src="/images/Icon-1.svg" width={48} height={48} alt="icon" />
             </div>
@@ -162,10 +160,10 @@ function page() {
             </div>
             <p className='text-[26.72px] font-normal lg:pt-3 pt-1 '>Integrity</p>
             <p className='text-[14px] lg:pt-3 pt-2'>Doing what&apos;s right, Always striving!</p>
-          </div>
+          </div> */}
         </div>
 
-        <div className='text-center pt-5'>
+        <div className='text-center pt-2'>
           <button className='btn-lightup'>Let&apos;s light it up together! </button>
         </div>
     </div>
