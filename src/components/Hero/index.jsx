@@ -1,14 +1,15 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-
+import services from '@/data/services.json'
+import { IntegrityCard } from '../IntegrityCard'
 
 function page() {
   return (
     <div className='container mx-auto w-full'>
       {/*----- Section-1 ----- */}
     <div className=' h-[600px] flex items-center justify-center bg-cover bg-center banner-bg-img'>
-      <div className='mx-auto max-w-6xl'>
+      <div className='mx-auto max-w-7xl'>
         <div className='px-[20px]'>
             <h1 className='font-sofia font-medium text-center text-[60px] lg:text-[72px] text-[#212529] leading-[85.21px] lg:pt-[0px] pb-2 tracking-[-1.21px]'>Your imagination, <span className='text-[#ED5729]'>Amplified</span>. Digitally.</h1>
             <div className="singleLine"><p className='font-sofia font-light  text-[#ED5729] text-[26px]  text-center'>We solve real-world problems efficiently</p></div>
@@ -25,9 +26,9 @@ function page() {
         <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>We&apos;re more than just a <span className='text-[#ED5729]'>leading creative</span> and <span className='text-[#ED5729]'>Interactive Solutions studio</span> </h2>
 
     </div>
-    <div className='lg:grid lg:grid-cols-5 gap-3 gap-y-3 lg:content-start h-100 lg:pt-[60px] pt-[30px]'>
-        <div className='card col-span-2 flex items-center  pb-6'>
-            <p className='text-xl lg:text-2xl'>Easily shift from ideas to finished <br />product to increase productivity.    </p>
+    <div className='lg:grid lg:grid-cols-5 gap-3 gap-y-3 lg:content-start h-100 lg:pt-[60px] pt-[25px]'>
+        <div className='text-center card col-span-2 flex items-center  pb-9 lg:pb-6'>
+            <p className='text-xl lg:text-2xl'>Easily shift from ideas to finished product to increase productivity.    </p>
         </div>
         <div className="card pb-[20px]">
             <div className='h-[48px] w-[48px] '><Image src="/images/Icon-1.svg" width={48} height={48} alt="icon1" /></div>
@@ -48,119 +49,63 @@ function page() {
     </div>
     {/* ----Service Section-3 ------ */}
     <section >
-        <div className=' mx-auto px-8 lg:px-20 py-[60px] '>
-            <p className='text-center text-[26px]'>Enhance the lives of millions of people</p>
-            <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /> revolutionary projects</h2>
-            <div className='pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-14'>
-                <div className="card-item lg:p-4 lg:border-e-2">
-                    <div className='h-[48px] w-[48px]'><Image src="/images/Icon-o-1.svg" width={48} height={48} alt="icon" /></div>
-                    <h3 className='text-[26px] py-2'>AI Consulting and Strategy</h3>
-                    <p className='font-normal text-[14px]'>Unlock the power of artificial intelligence with expert guidance tailored to your business needs.</p>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
-                        <li>Image Recognition</li>
-                        <li>Object Detection</li>
-                        <li>Facial Recognition</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 lg:border-e-2">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-o-2.svg" width={48} height={48} alt="icon" /></div>
-                    <h3 className='text-[26px] py-2'>AI Development and Integration</h3>
-                    <p className='font-normal text-[14px]'>Empower your business with cutting-edge, AI-powered solutions built to deliver results.</p>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
-                        <li>Custom AI Models</li>
-                        <li>Model Training</li>
-                        <li>System Integration</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-o-3.svg" width={48} height={48} alt="icon" /></div>
-                    <h3 className='text-[26px] py-2'>Natural Language Processing</h3>
-                    <p className='font-normal text-[14px]'>Unlock the power of artificial intelligence with expert guidance tailored to your business needs.</p>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
-                        <li>Chatbots & Virtual Assistants</li>
-                        <li>Sentiment Analysis</li>
-                        <li>Text Summarization</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 lg:border-e-2">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-o-4.svg" width={48} height={48} alt="icon" /></div>
-                    <h3 className='text-[26px] py-2'>Computer Vision</h3>
-                    <p className='font-normal text-[14px]'>Transform your business processes with advanced image and video analysis technologies.</p>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
-                        <li>Image Recognition</li>
-                        <li>Object Detection</li>
-                        <li>Facial Recognition</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 lg:border-e-2">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-o-5.svg"width={48} height={48}  alt="icon" /></div>
-                    <h3 className='text-[26px] py-2'>Predictive Analytics</h3>
-                    <p className='font-normal text-[14px]'>Stay ahead of the competition with data-driven insights that forecast trends and outcomes.</p>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
-                        <li>Forecasting</li>
-                        <li>Recommendation Systems</li>
-                        <li>Risk Assessment</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px]'><Image src="/images/Icon-o-6.svg" width={48} height={48} alt="icon" /></div>
-                    <h3 className='text-[26px] py-2'>AI-Powered Automation</h3>
-                    <p className='font-normal text-[14px]'>Unlock the power of artificial intelligence with expert guidance tailored to your business needs.</p>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
-                        <li>Process Automation</li>
-                        <li>Decision Automation</li>
-                        <li>Robotic Process Automation</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 lg:border-e-2">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-o-7.svg" width={48} height={48} alt="icon" /></div>
-                    <h3 className='text-[26px] py-2'>Front-end Technology</h3>
-                    <p className='font-normal text-[14px]'>Turn your product into a visually stunning, user-centric experience with our advanced front-end development services.</p>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
-                        <li>Usability and Design</li>
-                        <li>Responsive & Accessibility</li>
-                        <li>Code & Creative Optimization</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 lg:border-e-2">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-o-8.svg" width={48} height={48} alt="icon" /></div>
-                    <h3 className='text-[26px] py-2'>Back-end Technology</h3>
-                    <p className='font-normal text-[14px]'>Stay ahead of the competition with data-driven insights that forecast trends and outcomes.</p>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
-                        <li>Scalability and Security</li>
-                        <li>Database & API Integration</li>
-                        <li>Custom Code</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-o-9.svg" width={48} height={48} alt="icon" /></div>
-                    <h3 className='text-[26px] py-2'>Performance Optimization</h3>
-                    <p className='font-normal text-[14px]'>Keep your website fast, smooth, and efficient for improved user satisfaction and engagement.</p>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
-                        <li>Load Time Optimization</li>
-                        <li>Smooth Navigation</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-o-10.svg" width={48} height={48} alt="icon" /></div>
-                    <h3 className='text-[26px] py-2'>UI/UX Design Development</h3>
-                    <p className='font-normal text-[14px]'>Design experiences that captivate and convert with world-class UI/UX design services.</p>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
-                        <li>Audit, Strategy & Consultation</li>
-                        <li>Research, Testing & Design</li>
-                        <li>Design System Development</li>
-                    </ul>
-                </div>
+        <div className=' mx-auto px-8 lg:px-10 py-[60px] '>
+            <div className='pb-12 lg:pb-12 lg:px-28'>
+              <p className='text-center text-lg lg:text-xl pb-3'>Enhance the lives of millions of people</p>
+              <h2 className="text-center text-3xl lg:text-[48px] leading-snug  font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in revolutionary projects</h2>
             </div>
+            {/* ------------ */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 gap-y-10 lg:gap-y-6 relative">
+                {services.map((service, index) => {
+                  // Determine if the card is in the center position of the grid
+                  const isCenterCard = (index % 3 === 1); // Middle card in a 3-column layout
+
+                  return (
+                    <div
+                      key={index}
+                      className={`card-item lg:p-4   
+                                  ${index >= 3 ? '' : ' '} relative`}
+                    >
+                      {/* Pseudo-elements for borders (left and right borders only for the center card) */}
+                      {isCenterCard && (
+                        <>
+                        {/* Only apply borders on large screens and above */}
+                        <div className="absolute inset-0 lg:before:content-[''] lg:after:content-[''] 
+                                        lg:before:absolute lg:after:absolute lg:before:w-[2px] lg:after:w-[2px] 
+                                        lg:before:bg-gray-300 lg:after:bg-gray-300 
+                                        lg:before:left-[-6px] lg:after:right-1 
+                                        lg:before:top-14 lg:after:top-14 lg:before:h-48 lg:after:h-48">
+                        </div>
+                      </>
+                      )}
+                      <div className="h-[48px] w-[48px]">
+                        <Image src={service.icon} width={48} height={48} alt="icon" />
+                      </div>
+                      <h3 className="text-[26px] py-2 leading-8">{service.title}</h3>
+                      <p className="text-gray-600 mb-4">{service.description}</p>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-gray-700">
+                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
+            </div>
+            {/* ------------ */}
         </div>
     </section>
+
     {/* ------Whoweare Section-4 ------*/}
     <div className=' mx-auto h-100 w-full  px-[20px] py-[60px] bg-[#EEF3ED]'>
         <div className='text-center'>
-            <p className='lg:text-[26px]'>We&apos;re high on innovation, sustainability, and keeping things simple.</p>
+            <p className='text-lg lg:text-[26px] lg:pb-0 pb-3'>We&apos;re high on innovation, sustainability, and keeping things simple.</p>
             <div className='lg:py-6'>
-                <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>Our solutions aren&apos;t just for today; they&apos;re ready  </h2>
-                <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>for whatever the future throws at you.</h2>
+                <h2 className='lg:text-[48px] text-[36px] font-medium leading-snug  lg:leading-[64px] lg:pb-0 pb-3'>Our solutions aren&apos;t just for today; they&apos;re ready  for whatever the future throws at you.</h2>
+    
             </div>
             <p className='text-[14px]'>Our AI buddies are close friends to <span className='text-[#ED5729]'>creative thinkers</span>, <span className='text-[#ED5729]'>tech experts</span>, and <span className='text-[#ED5729]'>strategists</span> who love to go on</p>
             <p className='text-[14px]'>adventures whatever problem it may take. Whether you&apos;re a underdog or a colossal organization, we&apos;ve</p>
@@ -174,7 +119,9 @@ function page() {
           <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>Unique and badass Projects,</h2>
           <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>powered by the latest AI tech.</h2>
         </div>
-
+{/* ------------------------------ */}
+<IntegrityCard/>
+{/* ------------------------------ */}
         {/* Flex container for horizontal scroll */}
         <div className='card-container flex gap-6 gap-y-3 w-full h-full lg:pt-[60px] pt-[30px] mb-10 overflow-hidden'>
           {/* Individual Cards */}

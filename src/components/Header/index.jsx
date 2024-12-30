@@ -22,7 +22,7 @@ function ResponsiveNavbar() {
       <nav className="flex justify-between items-center px-[20px] py-[20px] lg:mx-auto lg:px-[40px]">
         {/* Logo */}
         <div className="w-full grid lg:grid-cols-3 grid-cols-2 items-center">
-        <div className="">
+        <div className="flex lg:flex-1">
         <Link href="/"><Image src="/images/logo/Logo.svg" width={40} height={40} alt="Smoking Chimney Logo" /></Link>
         </div>
 
