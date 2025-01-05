@@ -207,9 +207,10 @@ function page() {
                     <span><button className='explore-btn'>Explore More</button></span>
                   </div>
                   <ul className='pt-2 flex gap-5'>
-                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
-                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
-                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                      <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
+                      <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
+                      <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
+                     
                   </ul>
               </div>
               <div className="card-item lg:p-4 ">
@@ -218,9 +219,9 @@ function page() {
                     <span><button className='explore-btn'>Explore More</button></span>
                   </div>
                   <ul className='pt-2 flex gap-5'> 
-                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
-                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
-                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                  <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
+                      <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
+                      <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
                   </ul>
               </div>
               <div className="card-item lg:p-4 ">
@@ -229,9 +230,9 @@ function page() {
                     <span><button className='explore-btn'>Explore More</button></span>
                   </div>
                   <ul className='pt-2 flex gap-5'>
-                    <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
-                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
-                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                  <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
+                      <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
+                      <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
                   </ul>
               </div>
               <div className="card-item lg:p-4 ">
@@ -240,9 +241,9 @@ function page() {
                     <span><button className='explore-btn'>Explore More</button></span>
                   </div>
                   <ul className='pt-2 flex gap-5'>
-                       <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
-                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
-                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                  <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
+                      <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
+                      <li><div className='h-[40px] w-[40px]'><Image src="./images/t-icon.svg" width={40} height={40} alt="t-icon" /></div></li>
                   </ul>
               </div>
              
