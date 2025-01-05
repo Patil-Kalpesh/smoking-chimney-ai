@@ -17,6 +17,15 @@ body {
 }
 .banner-bg-img{
   background: url('/images/Artboard-1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.banner-bg-img-2{
+  background: url('/images/Artboard-bg-2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .hide-header {
   transform: translateY(-100%);
@@ -204,4 +213,10 @@ body {
 
 .btn-lightup:hover {
   @apply bg-white text-[#ED5729] border-[#ED5729];
+}
+.explore-btn{
+  @apply rounded-sm bg-[#FDF3ED] text-[#C9401D] hover:bg-[#C9401D] hover:text-[#FDF3ED] transition-colors duration-300 delay-150 px-8 py-1
+}
+.white-btn{
+  @apply rounded-sm bg-white  text-[#ED5729] hover:bg-[#FDF3ED] transition-colors duration-300 delay-150 px-8 py-1
 }

@@ -3,12 +3,13 @@ import React from 'react'
 import Image from 'next/image'
 import services from '@/data/services.json'
 import { IntegrityCard } from '../IntegrityCard'
+import Contact from '../ContactForm/Contact'
 
 function page() {
   return (
     <div className='container mx-auto w-full'>
       {/*----- Section-1 ----- */}
-    <div className=' h-[600px] flex items-center justify-center bg-cover bg-center banner-bg-img'>
+    <div className=' h-[600px] flex items-center justify-center bg-no-repeat bg-contain banner-bg-img'>
       <div className='mx-auto max-w-7xl'>
         <div className='px-[20px]'>
             <h1 className='font-sofia font-medium text-center text-[60px] lg:text-[72px] text-[#212529] leading-[85.21px] lg:pt-[0px] pb-2 tracking-[-1.21px]'>Your imagination, <span className='text-[#ED5729]'>Amplified</span>. Digitally.</h1>
@@ -100,7 +101,7 @@ function page() {
     </section>
 
     {/* ------Whoweare Section-4 ------*/}
-    <div className=' mx-auto h-100 w-full  px-[20px] py-[60px] bg-[#EEF3ED]'>
+    <div className=' mx-auto h-100 w-full  px-8 lg:px-[20px] py-[60px] bg-[#EEF3ED]'>
         <div className='text-center'>
             <p className='lg:text-xl text-lg lg:pb-0 pb-3'>We&apos;re high on innovation, sustainability, and keeping things simple.</p>
             <div className='lg:py-6'>
@@ -123,44 +124,6 @@ function page() {
         <div className='card-container flex gap-6 gap-y-3 w-full h-full lg:pt-[60px] pt-[30px] mb-10 overflow-hidden'>
           {/* Individual Cards */}
           <IntegrityCard/>
-          {/* <div className="card p-7 w-[358px] h-[205px] bg-[#ED5729] rounded-lg flex-shrink-0">
-            <div className='h-[48px] w-[48px] '>
-              <Image src="/images/Icon-1.svg" width={48} height={48} alt="icon" />
-            </div>
-            <p className='text-[26.72px] font-normal lg:pt-3 pt-1 text-white'>Integrity</p>
-            <p className='text-white text-[14px] lg:pt-3 pt-2'>Doing what&apos;s right, Always striving!</p>
-          </div>
-
-          <div className="card p-7 w-[358px] h-[205px] bg-[#ED57291F] rounded-lg flex-shrink-0">
-            <div className='h-[48px] w-[48px] '>
-              <Image src="/images/Icon-2.svg" width={48} height={48} alt="icon2" />
-            </div>
-            <p className='text-[26.72px] font-normal lg:pt-3 pt-1 '>Authenticity </p>
-            <p className='text-[14px] lg:pt-3 pt-2'>Truthfulness, honesty, and accuracy.</p>
-          </div>
-
-          <div className="card p-7 w-[358px] h-[205px] bg-[#ED57291F] rounded-lg flex-shrink-0">
-            <div className='h-[48px] w-[48px] '>
-              <Image src="/images/Icon-2.svg" width={48} height={48} alt="icon2" />
-            </div>
-            <p className='text-[26.72px] font-normal lg:pt-3 pt-1 '>Reliability</p>
-            <p className='text-[14px] lg:pt-3 pt-2'>Let us do best for you, Anytime!</p>
-          </div>
-
-          <div className="card p-7 w-[358px] h-[205px] bg-[#ED57291F] rounded-lg flex-shrink-0">
-            <div className='h-[48px] w-[48px] '>
-              <Image src="/images/Icon-2.svg" width={48} height={48} alt="icon2" />
-            </div>
-            <p className='text-[26.72px] font-normal lg:pt-3 pt-1 '>Integrity</p>
-            <p className='text-[14px] lg:pt-3 pt-2'>Doing what&apos;s right, Always striving!</p>
-          </div>
-          <div className="card p-7 w-[358px] h-[205px] bg-[#ED57291F] rounded-lg flex-shrink-0">
-            <div className='h-[48px] w-[48px] '>
-              <Image src="/images/Icon-2.svg" width={48} height={48} alt="icon2" />
-            </div>
-            <p className='text-[26.72px] font-normal lg:pt-3 pt-1 '>Integrity</p>
-            <p className='text-[14px] lg:pt-3 pt-2'>Doing what&apos;s right, Always striving!</p>
-          </div> */}
         </div>
 
         <div className='text-center pt-2'>
@@ -169,14 +132,14 @@ function page() {
     </div>
     {/* -------Otherservices Section-6 --------- */}
     <section >
-        <div className='container mx-auto px-[20px] py-[60px] '>
+        <div className='container mx-auto px-8 lg:px-10 py-[60px] '>
             <p className='text-center text-[26px]'>Enhance the lives of millions of people</p>
             <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /><span className='text-[#ED5729]'>revolutionary projects</span> </h2>
             <div className='pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-14'>
                 <div className="card-item lg:p-4 ">
                     <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-1.svg" width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>AI </h3>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
+                    <ul className='pt-2 text-lg font-normal list-disc list-inside '>
                         <li>AI and Automation</li>
                         <li>Chat Bot Development</li>
                         <li>Fintech</li>
@@ -185,7 +148,7 @@ function page() {
                 <div className="card-item lg:p-4 ">
                     <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-2.svg"  width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Development </h3>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
+                    <ul className='pt-2  text-lg font-normal list-disc list-inside '>
                         <li>Mobile App Development</li>
                         <li>Website Development</li>
                         <li>E-commerce Development</li>
@@ -195,7 +158,7 @@ function page() {
                 <div className="card-item lg:p-4 ">
                     <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-3.svg" width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Tech </h3>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
+                    <ul className='pt-2  text-lg font-normal list-disc list-inside '>
                         <li>ERP Software</li>
                         <li>CRM Software</li>
                         <li>XR Development </li>
@@ -205,7 +168,7 @@ function page() {
                 <div className="card-item lg:p-4 ">
                     <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-4.svg" width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>IT </h3>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
+                    <ul className='pt-2  text-lg font-normal list-disc list-inside '>
                         <li>Healthcare IT</li>
                         <li>iOT Development </li>
                         <li>WordPress Website Development </li>
@@ -214,7 +177,7 @@ function page() {
                 <div className="card-item lg:p-4 ">
                     <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-5.svg" width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Design Solution </h3>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
+                    <ul className='pt-2  text-lg font-normal list-disc list-inside '>
                         <li>Digital Transformation</li>
                         <li>Software Development</li>
                         <li>User Experience </li>
@@ -224,7 +187,7 @@ function page() {
                 <div className="card-item lg:p-4 ">
                     <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-6.svg" width={48} height={48} alt="icon2" /></div>
                     <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Testing </h3>
-                    <ul className='pt-2 font-medium list-disc list-inside '>
+                    <ul className='pt-2  text-lg font-normal list-disc list-inside '>
                         <li>DevOps</li>
                         <li>QA & Testing Services </li>
                     </ul>
@@ -234,52 +197,52 @@ function page() {
     </section>
      {/* ------- Technicalstack Section-7 --------*/}
     <section >
-      <div className='container mx-auto px-[20px] py-[60px] '>
+      <div className='container mx-auto px-8 lg:px-10 py-[60px] '>
           <p className='text-center text-[26px]'>Build & run modern, AI-powered experiences , Designed to support <br /> you throughout your app development journey.</p>
           <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> <span className='text-[#ED5729]'>Get to market quickly </span> and securely with <br />products that can<span className='text-[#ED5729]'>scale globally</span> </h2>
           <div className='pt-[38px] pb-[25px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 gap-y-14'>
               <div className="card-item lg:p-4 ">
                   <div className='flex justify-between border-b-[1px] border-black py-2'>
-                    <h3 className='text-[15px]'>AI Applications </h3>
-                    <span><button className='rounded-lg bg-[#FDF3ED] text-[#C9401D] px-8 py-1'>Explore More</button></span>
+                    <h3 className='text-lg font-normal'>AI Applications </h3>
+                    <span><button className='explore-btn'>Explore More</button></span>
                   </div>
                   <ul className='pt-2 flex gap-5'>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div></li>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div></li>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div> </li>
+                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
                   </ul>
               </div>
               <div className="card-item lg:p-4 ">
                   <div className='flex justify-between border-b-[1px] border-black py-2'>
-                    <h3 className='text-[15px]'>Mobile Applications </h3>
-                    <span><button className='rounded-lg bg-[#FDF3ED] text-[#C9401D] px-8 py-1'>Explore More</button></span>
+                    <h3 className='text-lg font-normal'>Mobile Applications </h3>
+                    <span><button className='explore-btn'>Explore More</button></span>
                   </div>
-                  <ul className='pt-2 flex gap-5'>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div></li>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div></li>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div> </li>
+                  <ul className='pt-2 flex gap-5'> 
+                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
                   </ul>
               </div>
               <div className="card-item lg:p-4 ">
                   <div className='flex justify-between border-b-[1px] border-black py-2'>
-                    <h3 className='text-[15px]'>Web Applications </h3>
-                    <span><button className='rounded-lg bg-[#FDF3ED] text-[#C9401D] px-8 py-1'>Explore More</button></span>
+                    <h3 className='text-lg font-normal'>Web Applications </h3>
+                    <span><button className='explore-btn'>Explore More</button></span>
                   </div>
                   <ul className='pt-2 flex gap-5'>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div></li>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div></li>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div> </li>
+                    <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
                   </ul>
               </div>
               <div className="card-item lg:p-4 ">
                   <div className='flex justify-between border-b-[1px] border-black py-2'>
-                    <h3 className='text-[15px]'>E-commerce Applications </h3>
-                    <span><button className='rounded-lg bg-[#FDF3ED] text-[#C9401D] px-8 py-1'>Explore More</button></span>
+                    <h3 className='text-lg font-normal'>E-commerce Applications </h3>
+                    <span><button className='explore-btn'>Explore More</button></span>
                   </div>
                   <ul className='pt-2 flex gap-5'>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div></li>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div></li>
-                      <li><div className='h-[40px] w-[40px] bg-[#FDF3ED]'></div> </li>
+                       <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
+                      <li><div><img src="/images/t-icon.svg" className='h-[40px] w-[40px]' alt="t-icon" /></div></li>
                   </ul>
               </div>
              
@@ -287,47 +250,49 @@ function page() {
       </div>
     </section>
     {/* -------- CTA Section-8 --------- */}
-    <div className=' mx-auto h-100 w-full  px-[20px] py-[80px] bg-[#ED5729]'>
-            <div className='text-center'>
-                <p className='lg:text-[26px] font-light'>We just see and do what others don&apos;t.</p>
-                <div className='lg:py-4'>
+    <div className=' mx-auto h-100 w-full bg-[#ED5729] '>
+      <div className='banner-bg-img-2'>
+            <div className='text-center px-[20px] py-[80px]'>
+                <p className='text-xl lg:text-2xl font-normal'>We just see and do what others don&apos;t.</p>
+                <div className='lg:py-3'>
                     <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px] text-white'>We&apos;re dedicated to innovation and   </h2>
                     <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px] text-white'>exceeding expectations</h2>
                 </div>
                 <div className='text-center pt-4'>
-                    <button className=' rounded-lg text-[#ED5729] bg-white px-8 py-1'>Let&apos;s light it up together!</button>
+                    <button className=' white-btn'>Let&apos;s light it up together!</button>
                  </div>
             </div>
+        </div>
     </div>
     {/* ------- Ethics Section-9 -------- */}
     <section className='bg-[#EEF3ED]'>
-      <div className='container mx-auto px-[20px] py-[60px] '>
+      <div className='container mx-auto px-8 lg:px-[20px] py-[60px] '>
           <p className='text-center text-[26px]'>Positive impact while adhering to ethical standards</p>
           <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> Solutions That Matter, <span className='text-[#ED5729]'> Simplified. </span> </h2>
           <div className='pt-[38px] lg:px-[80px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-10'>
               <div className="card-item lg:p-4 ">
                   <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-1.svg" width={48} height={48} alt="Traced" /></div>
-                  <h3 className='text-[16px] py-2 border-b-[1px] border-black'>Innovative </h3>
+                  <h3 className='text-lg py-2 border-b-[1px] border-black'>Innovative </h3>
                   <p className='text-[14px] text-[#00000080] pt-2'>We stay ahead of the curve with cutting-edge AI technologies.</p>
               </div>
               <div className="card-item lg:p-4 ">
                   <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-2.svg" width={48} height={48} alt="Traced" /></div>
-                  <h3 className='text-[16px] py-2 border-b-[1px] border-black'>Useful </h3>
+                  <h3 className='text-lg py-2 border-b-[1px] border-black'>Useful </h3>
                   <p className='text-[14px] text-[#00000080] pt-2'>Solutions are designed to solve real-world problem.</p>
               </div>
               <div className="card-item lg:p-4 ">
                   <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-3.svg"  width={48} height={48} alt="Traced" /></div>
-                  <h3 className='text-[16px] py-2 border-b-[1px] border-black'>Aesthetic </h3>
+                  <h3 className='text-lg py-2 border-b-[1px] border-black'>Aesthetic </h3>
                   <p className='text-[14px] text-[#00000080] pt-2'>Stunning Visuals and user-friendly experience.</p>
               </div>
               <div className="card-item lg:p-4 ">
                   <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-4.svg" width={48} height={48} alt="Traced" /></div>
-                  <h3 className='text-[16px] py-2 border-b-[1px] border-black'>Honest </h3>
+                  <h3 className='text-lg py-2 border-b-[1px] border-black'>Honest </h3>
                   <p className='text-[14px] text-[#00000080] pt-2'>Transparent communication and ethical AI practices.</p>
               </div>
               <div className="card-item lg:p-4 ">
                   <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-5.svg" width={48} height={48} alt="Traced" /></div>
-                  <h3 className='text-[16px] py-2 border-b-[1px] border-black'>Long-lasting </h3>
+                  <h3 className='text-lg py-2 border-b-[1px] border-black'>Long-lasting </h3>
                   <p className='text-[14px] text-[#00000080] pt-2'>Built to scale and evolve with your business.</p>
               </div>
               <div className="card-item lg:p-4 ">
@@ -337,22 +302,22 @@ function page() {
               </div>
               <div className="card-item lg:p-4 ">
                   <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-4.svg" width={48} height={48} alt="Traced" /></div>
-                  <h3 className='text-[16px] py-2 border-b-[1px] border-black'>Understandable </h3>
+                  <h3 className='text-lg py-2 border-b-[1px] border-black'>Understandable </h3>
                   <p className='text-[14px] text-[#00000080] pt-2'>Break down complex AI concepts into simple terms.</p>
               </div>
               <div className="card-item lg:p-4 ">
                   <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-8.svg" width={48} height={48} alt="Traced" /></div>
-                  <h3 className='text-[16px] py-2 border-b-[1px] border-black'>Unobtrusive </h3>
+                  <h3 className='text-lg py-2 border-b-[1px] border-black'>Unobtrusive </h3>
                   <p className='text-[14px] text-[#00000080] pt-2'>Integrate seamlessly into your existing systems.</p>
               </div>
               <div className="card-item lg:p-4 ">
                   <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-9.svg" width={48} height={48} alt="Traced" /></div>
-                  <h3 className='text-[16px] py-2 border-b-[1px] border-black'>Environmentally friendly </h3>
+                  <h3 className='text-lg py-2 border-b-[1px] border-black'>Environmentally friendly </h3>
                   <p className='text-[14px] text-[#00000080] pt-2'>Environment Friendly & sustainable in every AI solutions.</p>
               </div>
               <div className="card-item lg:p-4 ">
                   <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-10.svg" width={48} height={48} alt="Traced" /></div>
-                  <h3 className='text-[16px] py-2 border-b-[1px] border-black'>Little design </h3>
+                  <h3 className='text-lg py-2 border-b-[1px] border-black'>Little design </h3>
                   <p className='text-[14px] text-[#00000080] pt-2'>Functionality and clarity, with minimal distractions.</p>
               </div>
              
@@ -360,10 +325,10 @@ function page() {
       </div>
     </section>
     {/* -------- Contact Section-10 ------- */}
-    <div className=" mx-auto px-[40px] py-[60px]">
+    <div className=" mx-auto px-8 lg:px-10 py-[60px]">
           <h2 className=" lg:text-[48px] lg:py-[10px] leading-normal font-medium">Talk with our decision makers</h2>
           <p className="text-[22px]">The team AI-powered wonder elevates mundane tasks into the astounding. </p>
-          <p className="text-[22px] pt-[20px]">Whether Hollywood-worthy stories to profound user experiences, we&apos;re the first place to look for unprecedented changes in the digital realm.</p>
+          <p className="text-[22px] pt-[20px]">Whether Hollywood-worthy stories to profound user experiences, we&apos;re the <br />first place to look for unprecedented changes in the digital realm.</p>
           <div className="pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 gap-y-14">
               <div className="card-item lg:p-4 ">
                   <div>
@@ -379,68 +344,8 @@ function page() {
                     <p className="text-[#00000080]">As Largest as Life, Conversations and Coffee</p>
                   </div>
               </div>
-              <div className="card-item lg:p-4 ">
-                  <div>
-                  <div className="sm:col-span-4">
-                    <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
-                     Name
-                    </label>
-                    <div className="mb-2">
-                      <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        autoComplete="name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      />
-                    </div>
-                  </div>
-                  <div className="sm:col-span-4">
-                    <label htmlFor="number" className="block text-sm font-medium leading-6 text-gray-900">
-                     Number
-                    </label>
-                    <div className="mb-2">
-                      <input
-                        id="number"
-                        name="number"
-                        type="number"
-                        autoComplete="number"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      />
-                    </div>
-                  </div>
-                  <div className="sm:col-span-4">
-                    <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                      Email address
-                    </label>
-                    <div className="mb-2">
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        autoComplete="email"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      />
-                    </div>
-                  </div>
-                  <div className="sm:col-span-4">
-                    <label htmlFor="massage" className="block text-sm font-medium leading-6 text-gray-900">
-                      Massage
-                    </label>
-                    <div className="mb-2">
-                      <input
-                        id="massage"
-                        name="massage"
-                        type="text"
-                        autoComplete="massage"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      />
-                    </div>
-                  </div>
-                  <div className=' pt-4'>
-                    <button className=' rounded-lg bg-[#ED5729] text-white px-8 py-1'>Let us level up in tandem!</button>
-                 </div>
-                  </div>
+              <div className="card-item lg:p-4 px-1 ">
+                 <Contact/>
               </div>
           </div>
       </div>

@@ -4,47 +4,36 @@ import Marquee from "@/components/ui/marquee";
 import Image from 'next/image'
 
 const reviews = [
- 
+  
   {
-    icon: "/images/Icon-1.svg",
-    title: "Integrity",
-    description: "Doing what's right, Always striving!",
-    background: "#ED5729"
+    name: "Integrity",
+    username:"@Integrity",
+    body: "Doing what's right, Always striving!",
+    img: "/images/Icon-1.svg",
   },
   {
-    icon: "/images/Icon-2.svg",
-    title: "Authenticity",
-    description: "Truthfulness, honesty, and accuracy.",
-    background: "#ED57291F"
+    name: "Authenticity",
+    username: "@Authenticity",
+    body: "Truthfulness, honesty, and accuracy.",
+    img: "/images/Icon-2.svg",
   },
   {
-    icon: "/images/Icon-2.svg",
-    title: "Reliability",
-    description: "Let us do best for you, Anytime!",
-    background: "#ED57291F"
+    name: "Reliability",
+    username: "@Reliability",
+    body: "Let us do best for you, Anytime!",
+    img: "/images/Icon-2.svg",
   },
-  {
-    icon: "/images/Icon-2.svg",
-    title: "Integrity",
-    description: "Doing what's right, Always striving!",
-    background: "#ED57291F"
-  },
-  {
-    icon: "/images/Icon-2.svg",
-    title: "Integrity",
-    description: "Doing what's right, Always striving!",
-    background: "#ED57291F"
-  }
+
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+const firstRow = reviews.slice(0, reviews.length / 3);
+// const secondRow = reviews.slice(reviews.length / 2);
 
 const ReviewCard  = ({
-  body,
-  icon,
-  title,
-  description
+  username,
+  img,
+  name,
+  body
 }) => {
   return (
     <figure
@@ -59,13 +48,13 @@ const ReviewCard  = ({
       <div className="flex flex-row items-center gap-2">
           <div className="card p-7 w-[358px] h-[205px] bg-[#ED57291F] rounded-lg flex-shrink-0">
             <div className='h-[48px] w-[48px] '>
-                <img className="rounded-full" width="48" height="48" alt="" src={icon} />
+                <img className="rounded-full" width="48" height="48" alt="" src={img} />
             </div>
-            <p className='text-[26.72px] font-normal lg:pt-3 pt-1 '>{title} </p>
-            <p className='text-[14px] lg:pt-3 pt-2'>{description}</p>
+            <p className='text-[26.72px] font-normal lg:pt-3 pt-1 '>{name} </p>
+            <p className='text-[14px] lg:pt-3 pt-2'>{body}</p>
           </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
+      {/* <blockquote className="mt-2 text-sm">{body}</blockquote> */}
     </figure>
   );
 };
@@ -74,8 +63,8 @@ export function IntegrityCard() {
   return (
     <div className="relative flex  w-full flex-col items-center justify-center overflow-hidden bg-white ">
       <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+        {reviews.map((review,index) => (
+          <ReviewCard key={index} {...review} />
         ))}
       </Marquee>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
