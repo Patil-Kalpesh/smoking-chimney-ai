@@ -4,8 +4,16 @@ import Image from 'next/image'
 import services from '@/data/services.json'
 import { IntegrityCard } from '../IntegrityCard'
 import Contact from '../ContactForm/Contact'
+import TextReveal from "@/components/ui/text-reveal";
+import { useInView } from 'react-intersection-observer';
 
 function page() {
+
+    const [ref, inView] = useInView({
+        triggerOnce: false, // Keep detecting in and out of view
+        threshold: 0.6,     // Trigger when 50% of the heading is in view
+      });
+
   return (
     <div className='container mx-auto w-full'>
       {/*----- Section-1 ----- */}
@@ -21,10 +29,11 @@ function page() {
       </div>
     </div>
     {/* ---Value Section-2 ------ */}
-    <div className='mx-auto  px-8 lg:px-20 py-16 lg:py-20 bg-[#EEF3ED]'>
+    <div className='mx-auto px-8 lg:px-20 py-16 lg:py-20 bg-[#EEF3ED]'>
     <div className='text-center'>
         <p className='text-lg lg:text-xl'>We&apos;re passionate creators of immersive digital content</p>
-        <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px]'>We&apos;re more than just a <span className='text-[#ED5729]'>leading creative</span> and <span className='text-[#ED5729]'>Interactive Solutions studio</span> </h2>
+        {/* <h2 className={`lg:text-[48px] text-[36px] font-medium lg:leading-[64px] transition-colors duration-500`}>We&apos;re more than just a <span className='text-[#ED5729]'>leading creative</span> and <span className='text-[#ED5729]'>Interactive Solutions studio</span> </h2> */}
+        <h2  ref={ref} className={`lg:text-[48px] text-[36px] font-medium lg:leading-[64px] transition-colors duration-400 ${inView ? 'text-[#ED5729]' : 'text-[#212529]' }`}>We&apos;re more than just a leading creative and Interactive Solutions studio</h2>
 
     </div>
     <div className='lg:grid lg:grid-cols-5 gap-3 gap-y-3 lg:content-start h-100 lg:pt-[60px] pt-[25px]'>
@@ -50,10 +59,14 @@ function page() {
     </div>
     {/* ----Service Section-3 ------ */}
     <section >
-        <div className=' mx-auto px-8 lg:px-10 py-[60px] '>
+        <div className=' mx-auto  px-8 lg:px-10 py-[60px] '>
             <div className='pb-12 lg:pb-12 lg:px-28'>
               <p className='text-center text-lg lg:text-xl pb-3'>Enhance the lives of millions of people</p>
-              <h2 className="text-center text-3xl lg:text-[48px] leading-snug  font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in revolutionary projects</h2>
+              {/* <h2 className="text-center text-3xl lg:text-[48px] leading-snug  font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in revolutionary projects</h2> */}
+              <h2 ref={ref} className={`text-center text-3xl lg:text-5xl font-medium transition-colors duration-500 ${inView ? 'text-[#ED5729]' : 'text-[#212529]' }`} >
+              We are eager to contribute in revolutionary projects
+              </h2>
+              
             </div>
             {/* ------------ */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 gap-y-10 lg:gap-y-6 relative">
@@ -135,6 +148,7 @@ function page() {
         <div className='container mx-auto px-8 lg:px-10 py-[60px] '>
             <p className='text-center text-[26px]'>Enhance the lives of millions of people</p>
             <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /><span className='text-[#ED5729]'>revolutionary projects</span> </h2>
+            {/* <h2 ref={ref} className={`text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium  ${inView ? 'text-[#ED5729]' : 'text-[#212529]' }`}> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /><span className='text-[#ED5729]'>revolutionary projects</span> </h2> */}
             <div className='pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-14'>
                 <div className="card-item lg:p-4 ">
                     <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-1.svg" width={48} height={48} alt="icon2" /></div>
