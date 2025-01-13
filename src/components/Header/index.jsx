@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from 'next/image';
 
 const navLinks = [
-  { name: "Home", target: "/" },
+  { name: "Solutions", target: "/solutions" },
   { name: "Technology", target: "/technology" },
   { name: "Company", target: "/company" },
   { name: "Contact", target: "/contact" },

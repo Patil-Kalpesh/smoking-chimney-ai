@@ -7,7 +7,7 @@ import Contact from '../ContactForm/Contact'
 import TextReveal from "@/components/ui/text-reveal";
 import { useInView } from 'react-intersection-observer';
 
-function page() {
+function Index() {
 
     const [ref, inView] = useInView({
         triggerOnce: false, // Keep detecting in and out of view
@@ -30,32 +30,31 @@ function page() {
     </div>
     {/* ---Value Section-2 ------ */}
     <div className='mx-auto px-8 lg:px-20 py-16 lg:py-20 bg-[#EEF3ED]'>
-    <div className='text-center'>
-        <p className='text-lg lg:text-xl'>We&apos;re passionate creators of immersive digital content</p>
-        {/* <h2 className={`lg:text-[48px] text-[36px] font-medium lg:leading-[64px] transition-colors duration-500`}>We&apos;re more than just a <span className='text-[#ED5729]'>leading creative</span> and <span className='text-[#ED5729]'>Interactive Solutions studio</span> </h2> */}
-        <h2  ref={ref} className={`lg:text-[48px] text-[36px] font-medium lg:leading-[64px] transition-colors duration-400 ${inView ? 'text-[#ED5729]' : 'text-[#212529]' }`}>We&apos;re more than just a leading creative and Interactive Solutions studio</h2>
-
-    </div>
-    <div className='lg:grid lg:grid-cols-5 gap-3 gap-y-3 lg:content-start h-100 lg:pt-[60px] pt-[25px]'>
-        <div className='text-center card col-span-2 flex items-center  pb-9 lg:pb-6'>
-            <p className='text-xl lg:text-2xl'>Easily shift from ideas to finished product to increase productivity.    </p>
+        <div className='text-center'>
+            <p className='text-lg lg:text-xl'>We&apos;re passionate creators of immersive digital content</p>
+            {/* <h2 className={`lg:text-[48px] text-[36px] font-medium lg:leading-[64px] transition-colors duration-500`}>We&apos;re more than just a <span className='text-[#ED5729]'>leading creative</span> and <span className='text-[#ED5729]'>Interactive Solutions studio</span> </h2> */}
+            <h2  ref={ref} className={`lg:text-[48px] text-[36px] font-medium lg:leading-[64px] transition-colors duration-400 ${inView ? 'text-[#ED5729]' : 'text-[#212529]' }`}>We&apos;re more than just a leading creative and Interactive Solutions studio</h2>
         </div>
-        <div className="card pb-[20px]">
-            <div className='h-[48px] w-[48px] '><Image src="/images/Icon-1.svg" width={48} height={48} alt="icon1" /></div>
-            <p className='font-medium lg:py-2 py-1'>Curious</p>
-            <p className='text-[#00000080]'>Seeking progress. <br /> Driven by wonder</p>
+        <div className='lg:grid lg:grid-cols-5 gap-3 gap-y-3 lg:content-start h-100 lg:pt-[60px] pt-[25px]'>
+            <div className='text-center card col-span-2 flex items-center  pb-9 lg:pb-6'>
+                <p className='text-xl lg:text-2xl'>Easily shift from ideas to finished product to increase productivity.    </p>
+            </div>
+            <div className="card pb-[20px]">
+                <div className='h-[48px] w-[48px] '><Image src="/images/Icon-1.svg" width={48} height={48} alt="icon1" /></div>
+                <p className='font-medium lg:py-2 py-1'>Curious</p>
+                <p className='text-[#00000080]'>Seeking progress. <br /> Driven by wonder</p>
+            </div>
+            <div className="card pb-[20px]">
+                <div className='h-[48px] w-[48px] '><Image src="/images/Icon-2.svg" width={48} height={48} alt="icon2" /></div>
+                <p className='font-medium lg:py-2 py-1'>Value Centric</p>
+                <p className='text-[#00000080]'>Invest in an interaction <br />unless it provides value</p>
+            </div>
+            <div className="card pb-[20px]">
+                <div className='h-[48px] w-[48px]'><Image src="/images/Icon-3.svg" width={48} height={48} alt="icon3" /></div>
+                <p className='font-medium lg:py-2 py-1'>Aesthetic</p>
+                <p className='text-[#00000080]'>Meticulous attention. <br />Endless pursuit of perfection.</p>
+            </div>
         </div>
-        <div className="card pb-[20px]">
-            <div className='h-[48px] w-[48px] '><Image src="/images/Icon-2.svg" width={48} height={48} alt="icon2" /></div>
-            <p className='font-medium lg:py-2 py-1'>Value Centric</p>
-            <p className='text-[#00000080]'>Invest in an interaction <br />unless it provides value</p>
-        </div>
-        <div className="card pb-[20px]">
-            <div className='h-[48px] w-[48px]'><Image src="/images/Icon-3.svg" width={48} height={48} alt="icon3" /></div>
-            <p className='font-medium lg:py-2 py-1'>Aesthetic</p>
-            <p className='text-[#00000080]'>Meticulous attention. <br />Endless pursuit of perfection.</p>
-        </div>
-    </div>
     </div>
     {/* ----Service Section-3 ------ */}
     <section >
@@ -369,4 +368,4 @@ function page() {
   )
 }
 
-export default page
+export default Index
