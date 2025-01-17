@@ -23,6 +23,7 @@ function Index() {
     //Text Revel Color changing effect  ---shubhamdev
     const text = "We're more than just a leading creative and Interactive Solutions studio";
     const words = text.split(" ");
+    const highlightWords = ["Interactive", "Solutions"];
   
 
      // Variants for each word
@@ -37,6 +38,14 @@ function Index() {
         transition: {
           duration: 0.6, // Total duration for all word's animation
           
+        },
+      },
+
+      // Highlighted word animation
+      highlight: {
+        color: "rgb(237, 86, 40)", 
+        transition: {
+          duration: 0.6, // Total duration for all word's animation
         },
       },
     };
@@ -94,6 +103,7 @@ function Index() {
                     key={index}
                     variants={wordVariants}
                     style={{ display: "inline-block", margin: "0 5px" }}
+                    animate={highlightWords.includes(word) ? "highlight" : undefined}
                     >
                     {word}
                     </motion.span>
