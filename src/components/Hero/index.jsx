@@ -4,21 +4,11 @@ import Image from 'next/image'
 import services from '@/data/services.json'
 import { IntegrityCard } from '../IntegrityCard'
 import Contact from '../ContactForm/Contact'
-// import TextReveal from "@/components/ui/text-reveal";
-import { useInView } from 'react-intersection-observer';
-
-
-import { motion} from "framer-motion";
+// import { motion} from "framer-motion";
+// import TextReveal from '../ui/TextReveal'
+import TextRevealHighlight from '../ui/TextRevealHighlight'
 
 function Index() {
-
-
-
-    const [ref, inView] = useInView({
-        triggerOnce: false, // Keep detecting in and out of view
-        threshold: 0.6,     // Trigger when 50% of the heading is in view
-      });
-
 
     //Text Revel Color changing effect  ---shubhamdev
     const text = "We're more than just a leading creative and Interactive Solutions studio";
@@ -47,7 +37,7 @@ function Index() {
       visible: {
         opacity: 1,
         transition: {
-          staggerChildren: 0.095, // Delay between each word animation
+          staggerChildren: 0.090, // Delay between each word animation
         },
       },
     };
@@ -74,13 +64,8 @@ function Index() {
         <div className='text-center'>
             <p className='text-lg lg:text-xl'>We&apos;re passionate creators of immersive digital content</p>
             {/* <h2 className={`lg:text-[48px] text-[36px] font-medium lg:leading-[64px] transition-colors duration-500`}>We&apos;re more than just a <span className='text-[#ED5729]'>leading creative</span> and <span className='text-[#ED5729]'>Interactive Solutions studio</span> </h2> */}
-            
-
-            {/* {<h2  ref={ref} className={`lg:text-[48px] text-[36px] font-medium lg:leading-[64px] transition-colors duration-400 ${inView ? 'text-[#ED5729]' : 'text-[#212529]' }`}>We&apos;re more than just a leading creative and Interactive Solutions studio</h2>} */}
-
-            {/* ShubhDev - Text Reveal Effect */}
-
-            <motion.h2
+            {/*- Text Reveal Effect ---*/}
+            {/* <motion.h2
                 className={`lg:text-[48px] text-[36px] font-medium lg:leading-[64px] transition-colors duration-400 }`}
                 variants={containerVariants}
                 initial="hidden"
@@ -98,13 +83,15 @@ function Index() {
                     {word}
                     </motion.span>
                 ))}
-            </motion.h2>
-
-
-
-
-
-
+            </motion.h2> */}
+            <TextRevealHighlight
+              text="We're more than just a leading creative and Interactive Solutions studio "
+              highlightWords={["Interactive", "Solutions"]} // Words to highlight
+              className="text-primary"
+              wordAnimationDuration={0.6}
+              wordStaggerDelay={0.1}
+              viewportMargin="-50px 0px -100px 0px"
+            />
         </div>
         <div className='lg:grid lg:grid-cols-5 gap-3 gap-y-3 lg:content-start h-100 lg:pt-[60px] pt-[25px]'>
             <div className='text-center card col-span-2 flex items-center  pb-9 lg:pb-6'>
@@ -133,9 +120,17 @@ function Index() {
             <div className='pb-12 lg:pb-12 lg:px-28'>
               <p className='text-center text-lg lg:text-xl pb-3'>Enhance the lives of millions of people</p>
               {/* <h2 className="text-center text-3xl lg:text-[48px] leading-snug  font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in revolutionary projects</h2> */}
-              <h2 ref={ref} className={`text-center text-3xl lg:text-5xl font-medium transition-colors duration-500 ${inView ? 'text-[#ED5729]' : 'text-[#212529]' }`} >
+              {/* <h2 ref={ref} className={`text-center text-3xl lg:text-5xl font-medium transition-colors duration-500 ${inView ? 'text-[#ED5729]' : 'text-[#212529]' }`} >
               We are eager to contribute in revolutionary projects
-              </h2>
+              </h2> */}
+              <TextRevealHighlight
+              text="We are eager to contribute in revolutionary projects"
+              highlightWords={["We", "are", "eager"]} // Words to highlight
+              className="text-primary text-center"
+              wordAnimationDuration={0.6}
+              wordStaggerDelay={0.1}
+              viewportMargin="-50px 0px -100px 0px"
+            />
               
             </div>
             {/* ------------ */}
