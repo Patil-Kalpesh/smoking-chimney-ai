@@ -4,7 +4,7 @@ import Image from 'next/image'
 import services from '@/data/services.json'
 import { IntegrityCard } from '../IntegrityCard'
 import Contact from '../ContactForm/Contact'
-import TextReveal from "@/components/ui/text-reveal";
+// import TextReveal from "@/components/ui/text-reveal";
 import { useInView } from 'react-intersection-observer';
 
 
