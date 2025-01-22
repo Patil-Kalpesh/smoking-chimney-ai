@@ -12,7 +12,7 @@ import { wordVariants, containerVariants, slideUp } from '@/lib/variants';
 
 import { motion} from "framer-motion";
 
-function Index() {
+function index() {
 
     //Text Revel Color changing effect  ---shubhamdev
     const text = "We're more than just a leading creative and Interactive Solutions studio";
