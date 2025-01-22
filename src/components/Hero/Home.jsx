@@ -672,4 +672,3 @@ const highlightWords6 = ["Simplified."]
   )
 }
 
-
