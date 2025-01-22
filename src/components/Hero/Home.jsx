@@ -11,40 +11,44 @@ import { wordVariants, containerVariants, slideUp } from '@/lib/variants';
 
 
 import { motion} from "framer-motion";
-
-function index() {
-
-    //Text Revel Color changing effect  ---shubhamdev
-    const text = "We're more than just a leading creative and Interactive Solutions studio";
-    const words = text.split(" ");
-    const highlightWords = ["Interactive", "Solutions"];
+export default function Home() {
+  const [ref, inView] = useInView({
+    triggerOnce: false, // Keep detecting in and out of view
+    threshold: 0.6,     // Trigger when 50% of the heading is in view
+  });
 
 
-    const text2 = "We are eager to contribute in revolutionary projects";
-    const words2 = text2.split(" ");
-    const highlightWords2 = ["revolutionary", "projects"];
+//Text Revel Color changing effect  ---shubhamdev
+const text = "We're more than just a leading creative and Interactive Solutions studio";
+const words = text.split(" ");
+const highlightWords = ["Interactive", "Solutions"];
 
 
-    const text3 = "Unique and badass Projects, powered by the latest AI tech.";
-    const words3 = text3.split(" ");
+const text2 = "We are eager to contribute in revolutionary projects";
+const words2 = text2.split(" ");
+const highlightWords2 = ["revolutionary", "projects"];
 
 
-    const text4 = "We are eager to contribute in revolutionary projects";
-    const words4 = text4.split(" ");
+const text3 = "Unique and badass Projects, powered by the latest AI tech.";
+const words3 = text3.split(" ");
 
-    const text5 = "Get to market quickly and securely with products that can scale globally";
-    const words5 = text5.split(" ");
-    const highlightWords5 = ["Get", "to", "market", "quickly", "scale", "globally"]
-    
 
-    const text6 = "Solutions That Matter, Simplified."
-    const words6 = text6.split(" ");
-    const highlightWords6 = ["Simplified."]
+const text4 = "We are eager to contribute in revolutionary projects";
+const words4 = text4.split(" ");
 
-    
+const text5 = "Get to market quickly and securely with products that can scale globally";
+const words5 = text5.split(" ");
+const highlightWords5 = ["Get", "to", "market", "quickly", "scale", "globally"]
+
+
+const text6 = "Solutions That Matter, Simplified."
+const words6 = text6.split(" ");
+const highlightWords6 = ["Simplified."]
+
 
   return (
-    <div className='container mx-auto w-full'>
+    <div>
+      <div className='container mx-auto w-full'>
       {/*----- Section-1 ----- */}
     <div className=' h-[600px] flex items-center justify-center bg-no-repeat bg-contain banner-bg-img'>
       <div className='mx-auto max-w-7xl'>
@@ -663,8 +667,9 @@ function index() {
           </div>
       </motion.div>
     {/* ------------- */}
-</div>
+      </div>
+    </div>
   )
 }
 
-export default Index
+
