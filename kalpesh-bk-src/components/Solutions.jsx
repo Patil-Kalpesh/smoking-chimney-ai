@@ -267,9 +267,9 @@ export default function Solutions() {
             </div>
         </div>
         {/* -------section-5 new design--- */}
-        <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-white lg:pt-16 pt-8 px-8 lg:px-10">
             {/* Header Section */}
-            <div className="max-w-7xl mx-auto text-center mb-16">
+            <div className="max-w-7xl mx-auto text-center lg:mb-16 mb-10">
                 <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -326,7 +326,7 @@ export default function Solutions() {
                         <div className="lg:col-span-3">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {service.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="space-y-2">
+                            <div key={featureIndex} className="space-y-0">
                                 <h3 className="font-medium text-gray-900">
                                 {feature.title}
                                 </h3>
@@ -344,7 +344,7 @@ export default function Solutions() {
             </div>
         </div>
         {/* -------section-6------- */}
-        <div className='card-container flex gap-6 gap-y-3 w-full h-full lg:pt-[60px] pt-[30px] mb-10 overflow-hidden'>
+        <div className='card-container flex gap-6 gap-y-3 w-full h-full lg:py-[60px] py-14  overflow-hidden'>
             {/* Individual Cards */}
             <IntegrityCard/>
         </div>
