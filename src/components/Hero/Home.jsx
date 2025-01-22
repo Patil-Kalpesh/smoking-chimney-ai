@@ -12,7 +12,6 @@ import { wordVariants, containerVariants, slideUp } from '@/lib/variants';
 
 import { motion} from "framer-motion";
 export default function Home() {
-
   const [ref, inView] = useInView({
     triggerOnce: false, // Keep detecting in and out of view
     threshold: 0.6,     // Trigger when 50% of the heading is in view
@@ -45,7 +44,6 @@ const highlightWords5 = ["Get", "to", "market", "quickly", "scale", "globally"]
 const text6 = "Solutions That Matter, Simplified."
 const words6 = text6.split(" ");
 const highlightWords6 = ["Simplified."]
-
 
 
   return (
@@ -643,7 +641,7 @@ const highlightWords6 = ["Simplified."]
       whileInView="visible"
       viewport={{once: true}}
     >
-          <h2 className=" lg:text-[48px] lg:py-[10px] leading-normal font-medium">Talk with our decision makers</h2>
+        <h2 className=" lg:text-[48px] lg:py-[10px] leading-normal font-medium">Talk with our decision makers</h2>
           <p className="text-[22px]">The team AI-powered wonder elevates mundane tasks into the astounding. </p>
           <p className="text-[22px] pt-[20px]">Whether Hollywood-worthy stories to profound user experiences, we&apos;re the <br />first place to look for unprecedented changes in the digital realm.</p>
           <div className="pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 gap-y-14">
