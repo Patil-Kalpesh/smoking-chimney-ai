@@ -2,8 +2,7 @@
 // import localFont from "next/font/local";
 import "./globals.css";
 import React from 'react';
-import Header from '@/app/header/page';
-import Footer from '@/components/Footer/index';
+
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
@@ -22,12 +21,17 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={` antialiased bg-white`} >
-   
-        <Header />
-        <div className="mt-20">  {children}</div>
-        <Footer />
+      <body className="font-sans antialiased text-gray-900">
+        {children}
       </body>
     </html>
+    // <html lang="en">
+    //   <body className={` antialiased bg-white`} >
+   
+    //     <Header />
+    //     <div className="mt-20">  {children}</div>
+    //     <Footer />
+    //   </body>
+    // </html>
   );
 }
