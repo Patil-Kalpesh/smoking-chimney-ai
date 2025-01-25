@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "@/components/Dashboard/Sidebar";
 import { FaBars } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react";
