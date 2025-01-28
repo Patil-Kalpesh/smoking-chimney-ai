@@ -1,13 +1,5 @@
-"use client";
-import Home from '@/app/home/page'
-// import TestPage from '@/components/ui/TestPage'
-function Page() {
-  return (
-    <div>
-      <Home/>
-      {/* <TestPage/> */}
-    </div>
-  );
-}
+import { redirect } from "next/navigation";
 
-export default Page;
+export default function Page() {
+  redirect("/home");
+}
