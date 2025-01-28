@@ -20,13 +20,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   
-
   return (
     <html lang="en">
       <body className={` antialiased bg-white`} >
-   
         <Header />
-        <div className="mt-20">  {children}</div>
+        {children}
         <Footer />
       </body>
     </html>

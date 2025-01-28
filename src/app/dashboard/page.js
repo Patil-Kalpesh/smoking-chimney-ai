@@ -4,7 +4,8 @@ import React from 'react'
 
 export default function page() {
   return (
-   <DashboardLayout/>
-  )
-
+    <DashboardLayout title="Dashboard">
+      Welcome to the Dashboard!
+    </DashboardLayout>
+  );
 }
