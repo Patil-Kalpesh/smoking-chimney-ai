@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import { IntegrityCard } from './IntegrityCard'
-import Contact from './ContactForm/Contact'
+import { IntegrityCard } from './CommonSection/IntegrityCard'
+import Contact from './ContactUs/ContactForm'
 
 
   

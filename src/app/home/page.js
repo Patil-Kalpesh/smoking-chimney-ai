@@ -1,11 +1,12 @@
-
+import Hero from '@/components/Hero/Hero'
+// import MainPage from '@/components/Hero/MainPage'
 import React from 'react'
-import Hero from '@/components/Hero/Home';
 
 export default function page() {
   return (
-    <>
-      <Hero />
-    </>
+    <div>
+      <Hero/>
+    {/* <MainPage/> */}
+    </div>
   )
 }
