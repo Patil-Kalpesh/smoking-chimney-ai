@@ -2,9 +2,8 @@
 import React from 'react'
 import Image from 'next/image'
 import services from '@/data/services.json'
-import { IntegrityCard } from '../IntegrityCard'
-import Contact from '../ContactForm/Contact'
-import TextReveal from "@/components/ui/text-reveal";
+import { IntegrityCard } from '../CommonSection/IntegrityCard'
+import ContactForm from '../ContactUs/ContactForm'
 import { useInView } from 'react-intersection-observer';
 
 import { wordVariants, containerVariants, slideUp } from '@/lib/variants';
@@ -152,10 +151,6 @@ export default function Home() {
                   </motion.span>
                 ))}
               </motion.h2>
-
-
-
-
             </div>
             {/* ------------ */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 gap-y-10 lg:gap-y-6 relative">
@@ -220,13 +215,13 @@ export default function Home() {
               <h2 className='lg:text-[48px] text-[36px] font-medium leading-snug  lg:leading-[64px] lg:pb-0 pb-3'>Our solutions aren&apos;t just for today; they&apos;re ready  for whatever the future throws at you.</h2>
 
             </div>
-            <p className='text-[14px]'>Our AI buddies are close friends to <span className='text-[#ED5729]'>creative thinkers</span>, <span className='text-[#ED5729]'>tech experts</span>, and <span className='text-[#ED5729]'>strategists</span> who love to go on</p>
-            <p className='text-[14px]'>adventures whatever problem it may take. Whether you&apos;re a underdog or a colossal organization, we&apos;ve</p>
-            <p className='text-[14px]'>got you covered. We&apos;re the missing piece that makes everything fit perfectly like your trusty sidekick</p>
+            <p className='lg:text-lg text-md'>Our AI buddies are close friends to <span className='text-[#ED5729]'>creative thinkers</span>, <span className='text-[#ED5729]'>tech experts</span>, and <span className='text-[#ED5729]'>strategists</span> who love to go on</p>
+            <p className='lg:text-lg text-md'>adventures whatever problem it may take. Whether you&apos;re a underdog or a colossal organization, we&apos;ve</p>
+            <p className='lg:text-lg text-md'>got you covered. We&apos;re the missing piece that makes everything fit perfectly like your trusty sidekick</p>
           </div>
         </motion.div>
         {/* ------Valuessecond Section-5 ----------- */}
-        <div id="scroll-div" className='container mx-auto w-full px-[20px] py-[60px]'>
+        <div className='container mx-auto w-full px-[20px] py-[60px]'>
           <div className='text-center align-middle'>
 
             <p className='lg:text-xl text-lg font-normal '>We see the world through every possible way</p>
@@ -652,12 +647,12 @@ export default function Home() {
                 <p className="text-[#00000080]">Dedicated, assist, and quick.</p>
               </div>
               <div className="pt-[30px]">
-                <p className="text-[18px] py-2 border-b-[1px] border-black text-[#ED5729]">Punawale, PCMC, Pune - 411033, Maharashtra, India Jablonskistrasse 15, 10405 Berlin San Francisco, U.S.A</p>
+                <p className="text-[18px] py-2 border-b-[1px] border-black text-[#ED5729]"> PCMC, Pune - 411033, Maharashtra, India. Gärtnerstr 06, 10245 Berlin</p>
                 <p className="text-[#00000080]">As Largest as Life, Conversations and Coffee</p>
               </div>
             </motion.div>
             <div className="card-item lg:p-4 px-1 ">
-              <Contact />
+              <ContactForm />
             </div>
           </div>
         </motion.div>

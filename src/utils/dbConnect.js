@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb';
 
 const client = new MongoClient(process.env.MONGODB_URI);
 
-export async function connectToDatabase() {
+export async function connectionStr() {
   if (client.isConnected()) {
     return { db: client.db() };
   }
