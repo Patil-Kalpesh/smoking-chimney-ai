@@ -1,7 +1,10 @@
-import React from 'react'
 
-export default function page() {
+import DashboardLayout from "@/components/Dashboard/DashboardLayout";
+
+export default function Page() {
   return (
-    <div>Categorie page</div>
-  )
+    <DashboardLayout title="Category List">
+      categories
+    </DashboardLayout>
+  );
 }
