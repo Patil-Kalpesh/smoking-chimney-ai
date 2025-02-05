@@ -5,6 +5,7 @@ import Sidebar from "@/components/Dashboard/Sidebar";
 import { FaBars, FaUser } from "react-icons/fa";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react";
 import Link from "next/link";
+import LogoutButton from "../login/LogoutButton";
 // import { signOut } from "next-auth/react";
 
 export default function DashboardLayout({ children, title = "Dashboard" }) {
@@ -26,14 +27,14 @@ export default function DashboardLayout({ children, title = "Dashboard" }) {
 
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-indigo-500 to-blue-500 shadow-sm z-10">
+        <div className="bg-gray-100 shadow-sm z-10">
           <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <h1 className="text-2xl font-semibold text-white">{title}</h1>
+            <h1 className="text-2xl font-semibold text-orange-500">{title}</h1>
             <div className="flex items-center gap-4">
               {/* Toggle Sidebar Button */}
               <button
                 onClick={() => setSidebarOpen(true)}
-                className="md:hidden p-2 rounded-md text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                className="md:hidden p-2 rounded-md text-white hover:bg-[#ED5729] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               >
                 <FaBars className="h-6 w-6" />
               </button>
@@ -48,21 +49,17 @@ export default function DashboardLayout({ children, title = "Dashboard" }) {
                     <MenuItem>
                       {({ active }) => (
                         <Link
-                        href="/profile"
-                        className={`block px-4 py-2 text-sm text-gray-700 ${
-                          active ? "bg-gray-100" : ""
-                        }`}
-                      >
-                        View Profile
-                      </Link>
+                          href="/profile"
+                          className={`block px-4 py-2 text-sm text-gray-700 ${
+                            active ? "bg-gray-100" : ""
+                          }`}
+                        >
+                          View Profile
+                        </Link>
                       )}
                     </MenuItem>
                     <MenuItem>
-                      <button
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100"
-                      >
-                        Log out
-                      </button>
+                      <LogoutButton />
                     </MenuItem>
                   </div>
                 </MenuItems>
