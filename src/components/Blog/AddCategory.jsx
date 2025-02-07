@@ -36,47 +36,49 @@ export default function AddCategory() {
   };
 
   return (
-    <div className="min-h-screen  py-6 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-center text-gray-900 mb-8">Create New Category</h1>
-        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-          <div className="mb-6">
-            <label htmlFor="category" className="block text-gray-700 text-sm font-bold mb-2">
-              Category Title
-            </label>
-            <input
-              type="text"
-              id="category"
-              name="category"
-              value={formData.category}
-              onChange={handleInputChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Enter Category title"
-            />
-          </div>
+    <div className="min-h-screen pt-2 px-4 sm:px-6 lg:px-2">
+      <div className=" mx-auto">
+        <h1 className="text-xl font-normal  text-gray-900 mb-3">Create New Category</h1>
+        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-4 pt-4 pb-8 mb-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="">
+              <label htmlFor="category" className="block text-gray-700 text-sm font-bold mb-2">
+                Category Title
+              </label>
+              <input
+                type="text"
+                id="category"
+                name="category"
+                value={formData.category}
+                onChange={handleInputChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Enter Category title"
+              />
+            </div>
 
-          <div className="mb-6">
-            <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
-              Category Description
-            </label>
-            <textarea
-              id="description"
-              name="description"
-              value={formData.description}
-              onChange={handleInputChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
-              placeholder="Enter category description"
-              required
-            />
-          </div>
+            <div className="">
+              <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
+                Category Description
+              </label>
+              <textarea
+                id="description"
+                name="description"
+                value={formData.description}
+                onChange={handleInputChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                placeholder="Enter category description"
+                required
+              />
+            </div>
 
-          <div className="flex items-center justify-between">
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
-              Create Category
-            </button>
+            <div className="flex items-center justify-between">
+              <button
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Create Category
+              </button>
+            </div>
           </div>
         </form>
       </div>
