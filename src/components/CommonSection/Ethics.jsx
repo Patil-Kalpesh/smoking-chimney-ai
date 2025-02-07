@@ -7,8 +7,8 @@ import HighlightText from '../ui/HighlightText'
 
 export default function Ethics() {
   return (
-    <section className='bg-[#EEF3ED]'>
-    <div className='container mx-auto px-8 lg:px-[20px] py-[60px] '>
+    <section className='mx-auto max-w-7xl bg-[#EEF3ED]'>
+    <div className='container  px-8 lg:px-[20px] py-[60px] '>
       <p className='lg:text-xl text-sm font-normal text-center'>Positive impact while adhering to ethical standards</p>
         <HighlightText
             text="Solutions That Matter, Simplified."

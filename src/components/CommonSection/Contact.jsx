@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactUs/ContactForm"
 export default function Contact() {
   return (
     <div>
-              <motion.div className=" mx-auto px-8 lg:px-10 py-[60px]"
+          <motion.div className=" mx-auto max-w-7xl px-8 lg:px-10 py-[60px]"
           variants={slideUp}
           initial="hidden"
           whileInView="visible"

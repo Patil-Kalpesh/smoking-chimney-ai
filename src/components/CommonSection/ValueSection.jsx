@@ -6,7 +6,7 @@ import HighlightText from "@/components/ui/HighlightText";
 
 export default function ValueSection() {
   return (
-    <div className="mx-auto px-8 lg:px-20 py-16 lg:py-20 bg-[#EEF3ED]">
+    <div className="mx-auto max-w-7xl px-8 lg:px-20 py-16 lg:py-20 bg-[#EEF3ED]">
       <div className="text-center">
         <p className="text-lg lg:text-xl">
           We&apos;re passionate creators of immersive digital content

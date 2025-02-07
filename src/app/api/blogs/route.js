@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server';
 export async function POST(req) {
   await dbConnect();
 
-  const { title, category, description, seoTitle, seoDescription, seoKeywords } = await req.json();
+  const { title, category, description, seoTitle, seoDescription, seoKeywords,image } = await req.json();
 
   if (!title || !category || !description) {
     return NextResponse.json(
@@ -21,6 +21,7 @@ export async function POST(req) {
       description,
       seoTitle,
       seoDescription,
+      image,
       seoKeywords,
     });
 
