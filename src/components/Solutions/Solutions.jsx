@@ -1,9 +1,12 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import { IntegrityCard } from './CommonSection/IntegrityCard'
-import Contact from './ContactUs/ContactForm'
+import { IntegrityCard } from '../CommonSection/IntegrityCard'
+import Contact from '../ContactUs/ContactForm'
 import { motion } from 'framer-motion'
+import WhoweareSection from '../CommonSection/WhoweareSection'
+import Otherservices from '../CommonSection/Otherservices'
+import CTA from '../CommonSection/CTA'
 
 const services = [
     {
@@ -175,97 +178,11 @@ export default function Solutions() {
             </div>
         </div>
         {/*----- section-2 ----- */}
-        <div className=' mx-auto h-100 w-full  px-8 lg:px-[20px] py-[60px] bg-[#EEF3ED]'>
-            <div className='text-center'>
-                <p className='lg:text-xl text-lg lg:pb-0 pb-3'>We&apos;re high on innovation, sustainability, and keeping things simple.</p>
-                <div className='lg:py-6'>
-                    <h2 className='lg:text-[48px] text-[36px] font-medium leading-snug  lg:leading-[64px] lg:pb-0 pb-3'>Our solutions aren&apos;t just for today; they&apos;re ready  for whatever the future throws at you.</h2>
-        
-                </div>
-                <p className='text-[14px]'>Our AI buddies are close friends to <span className='text-[#ED5729]'>creative thinkers</span>, <span className='text-[#ED5729]'>tech experts</span>, and <span className='text-[#ED5729]'>strategists</span> who love to go on</p>
-                <p className='text-[14px]'>adventures whatever problem it may take. Whether you&apos;re a underdog or a colossal organization, we&apos;ve</p>
-                <p className='text-[14px]'>got you covered. We&apos;re the missing piece that makes everything fit perfectly like your trusty sidekick</p>
-            </div>
-        </div>
+          <WhoweareSection/>
         {/*----- section-3 ------  */}
-         <div className='container mx-auto px-8 lg:px-10 py-[60px] '>
-            <p className='text-center text-[26px]'>Enhance the lives of millions of people</p>
-            <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /><span className='text-[#ED5729]'>revolutionary projects</span> </h2>
-            {/* <h2 ref={ref} className={`text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium  ${inView ? 'text-[#ED5729]' : 'text-[#212529]' }`}> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /><span className='text-[#ED5729]'>revolutionary projects</span> </h2> */}
-            <div className='pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-14'>
-                <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-1.svg" width={48} height={48} alt="icon2" /></div>
-                    <h3 className='text-[26px] py-2 border-b-[1px] border-black'>AI </h3>
-                    <ul className='pt-2 text-lg font-normal list-disc list-inside '>
-                        <li>AI and Automation</li>
-                        <li>Chat Bot Development</li>
-                        <li>Fintech</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-2.svg"  width={48} height={48} alt="icon2" /></div>
-                    <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Development </h3>
-                    <ul className='pt-2  text-lg font-normal list-disc list-inside '>
-                        <li>Mobile App Development</li>
-                        <li>Website Development</li>
-                        <li>E-commerce Development</li>
-                        <li>Game Development</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-3.svg" width={48} height={48} alt="icon2" /></div>
-                    <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Tech </h3>
-                    <ul className='pt-2  text-lg font-normal list-disc list-inside '>
-                        <li>ERP Software</li>
-                        <li>CRM Software</li>
-                        <li>XR Development </li>
-                        <li>CMS Development</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-4.svg" width={48} height={48} alt="icon2" /></div>
-                    <h3 className='text-[26px] py-2 border-b-[1px] border-black'>IT </h3>
-                    <ul className='pt-2  text-lg font-normal list-disc list-inside '>
-                        <li>Healthcare IT</li>
-                        <li>iOT Development </li>
-                        <li>WordPress Website Development </li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-5.svg" width={48} height={48} alt="icon2" /></div>
-                    <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Design Solution </h3>
-                    <ul className='pt-2  text-lg font-normal list-disc list-inside '>
-                        <li>Digital Transformation</li>
-                        <li>Software Development</li>
-                        <li>User Experience </li>
-                        <li>Product Design</li>
-                    </ul>
-                </div>
-                <div className="card-item lg:p-4 ">
-                    <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-6.svg" width={48} height={48} alt="icon2" /></div>
-                    <h3 className='text-[26px] py-2 border-b-[1px] border-black'>Testing </h3>
-                    <ul className='pt-2  text-lg font-normal list-disc list-inside '>
-                        <li>DevOps</li>
-                        <li>QA & Testing Services </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+          <Otherservices/>
         {/*------ section-4------ */}
-        <div className=' mx-auto h-100 w-full bg-[#ED5729] '>
-            <div className='banner-bg-img-2'>
-                <div className='text-center px-[20px] py-[80px]'>
-                    <p className='text-xl lg:text-2xl font-normal'>We just see and do what others don&apos;t.</p>
-                    <div className='lg:py-3'>
-                        <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px] text-white'>We&apos;re dedicated to innovation and   </h2>
-                        <h2 className='lg:text-[48px] text-[36px] font-medium lg:leading-[64px] text-white'>exceeding expectations</h2>
-                    </div>
-                    <div className='text-center pt-4'>
-                        <button className=' white-btn'>Let&apos;s light it up together!</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+         <CTA/>
         {/* -------section-5 new design--- */}
         <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
             {/* Header Section */}

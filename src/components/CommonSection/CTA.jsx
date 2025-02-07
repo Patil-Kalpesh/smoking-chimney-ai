@@ -5,7 +5,7 @@ import { slideUp } from "@/lib/variants";
 
 export default function CTA() {
   return (
-    <div className=' mx-auto h-100 w-full bg-[#ED5729] '>
+    <div className='mx-auto max-w-7xl h-100 w-full bg-[#ED5729] '>
     <motion.div className='banner-bg-img-2'
       variants={slideUp}
       initial="hidden"

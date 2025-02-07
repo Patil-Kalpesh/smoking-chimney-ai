@@ -8,7 +8,7 @@ import HighlightText from '../ui/HighlightText';
 export default function Technicalstack() {
   return (
     <section >
-    <div className='container mx-auto px-8 lg:px-10 py-[60px] '>
+    <div className='container mx-auto max-w-7xl px-8 lg:px-10 py-[60px] '>
       <p className='lg:text-xl text-sm font-normal text-center'>Build & run modern, AI-powered experiences , Designed to support <br /> you throughout your app development journey.</p>
 <HighlightText
     text="Get to market quickly and securely with products that can scale globally"

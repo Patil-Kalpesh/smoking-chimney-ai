@@ -6,7 +6,7 @@ import { slideUp } from "@/lib/variants";
 export default function WhoweareSection() {
   return (
     <motion.div 
-      className="mx-auto h-100 w-full px-8 lg:px-[20px] py-[60px] bg-[#EEF3ED]"
+      className="mx-auto max-w-7xl h-100 w-full px-8 lg:px-[20px] py-[60px] bg-[#EEF3ED]"
       variants={slideUp}
       initial="hidden"
       whileInView="visible"
