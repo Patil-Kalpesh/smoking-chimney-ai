@@ -36,7 +36,7 @@ export default function DashboardLayout({ children, title = "Dashboard" }) {
                 onClick={() => setSidebarOpen(true)}
                 className="md:hidden p-2 rounded-md text-white hover:bg-[#ED5729] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               >
-                <FaBars className="h-6 w-6" />
+                <FaBars className="h-6 w-6 text-slate-400" />
               </button>
 
               {/* User Profile Dropdown */}
