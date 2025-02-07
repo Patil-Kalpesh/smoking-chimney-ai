@@ -1,11 +1,31 @@
-import { MongoClient } from 'mongodb';
+import mongoose from "mongoose";
 
-const client = new MongoClient(process.env.MONGODB_URI);
+const MONGO_URI = process.env.MONGODB_URI;
 
-export async function connectionStr() {
-  if (client.isConnected()) {
-    return { db: client.db() };
-  }
-  await client.connect();
-  return { db: client.db() };
+if (!MONGO_URI) {
+  throw new Error("Please define the MONGODB_URI environment variable in your .env file");
 }
+
+let cached = global.mongoose;
+
+if (!cached) {
+  cached = global.mongoose = { conn: null, promise: null };
+}
+
+async function dbConnect() {
+  if (cached.conn) {
+    return cached.conn;
+  }
+
+  if (!cached.promise) {
+    cached.promise = mongoose.connect(MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }).then((mongoose) => mongoose);
+  }
+
+  cached.conn = await cached.promise;
+  return cached.conn;
+}
+
+export default dbConnect;
