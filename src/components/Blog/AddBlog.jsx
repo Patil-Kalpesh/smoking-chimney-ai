@@ -14,7 +14,7 @@ export default function AddBlog() {
     title: '',
     category: '',
     description: '',
-    image: null,
+    image: '',
     seoTitle: '',
     seoDescription: '',
     seoKeywords: '',
@@ -50,21 +50,36 @@ export default function AddBlog() {
     }));
   };
 
-  const handleImageChange = (e) => {
+  const handleImageChange = async (e) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       const maxSize = 10 * 1024 * 1024; // 10MB
+  
       if (file.size > maxSize) {
-        setError('File size should be less than 10MB');
-      } else {
-        setError('');
-        setFormData((prevState) => ({
-          ...prevState,
-          image: file,
-        }));
+        setError("File size should be less than 10MB");
+        return;
+      }
+  
+      setError("");
+      const formData = new FormData();
+      formData.append("file", file);
+  
+      try {
+        const response = await axios.post("/api/upload", formData);
+        if (response.data.success) {
+          setFormData((prevState) => ({
+            ...prevState,
+            image: response.data.url, // Store uploaded image URL
+          }));
+        } else {
+          setError("Image upload failed");
+        }
+      } catch (error) {
+        setError("Error uploading image");
       }
     }
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -79,6 +94,7 @@ export default function AddBlog() {
       category: formData.category,
       description: formData.description,
       seoTitle: formData.seoTitle,
+      image: formData.image,
       seoDescription: formData.seoDescription,
       seoKeywords: formData.seoKeywords,
     };
