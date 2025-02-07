@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import axios from 'axios'; // Import Axios
+import axios from 'axios'; 
 
 export default function AddCategory() {
   const [formData, setFormData] = useState({

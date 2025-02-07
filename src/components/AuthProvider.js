@@ -16,11 +16,11 @@ export default function AuthProvider({ children }) {
     setIsAuthenticated(!!authToken);
   }, []);
 
-  useEffect(() => {
-    if (!isAuthenticated && pathname.startsWith("/dashboard")) {
-      router.push("/login");
-    }
-  }, [isAuthenticated, pathname]);
+  // useEffect(() => {
+  //   if (!isAuthenticated && pathname.startsWith("/dashboard")) {
+  //     router.push("/login");
+  //   }
+  // }, [isAuthenticated, pathname]);
 
   if (!isAuthenticated && pathname.startsWith("/dashboard")) {
     return null; // Prevents flickering during redirect
