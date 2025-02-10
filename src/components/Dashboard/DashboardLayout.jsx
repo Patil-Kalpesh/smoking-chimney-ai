@@ -28,15 +28,15 @@ export default function DashboardLayout({ children, title = "Dashboard" }) {
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
         <div className="bg-gray-100 shadow-sm z-10">
-          <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <h1 className="text-2xl font-semibold text-orange-500">{title}</h1>
+          <div className="max-w-7xl mx-auto py-4 px-2 sm:px-6 lg:ps-4 lg:pe-8 flex justify-between items-center">
+            <h1 className="text-xl font-normal text-blue-400">{title}</h1>
             <div className="flex items-center gap-4">
               {/* Toggle Sidebar Button */}
               <button
                 onClick={() => setSidebarOpen(true)}
                 className="md:hidden p-2 rounded-md text-white hover:bg-[#ED5729] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               >
-                <FaBars className="h-6 w-6" />
+                <FaBars className="h-6 w-6 text-slate-400" />
               </button>
 
               {/* User Profile Dropdown */}
@@ -69,7 +69,7 @@ export default function DashboardLayout({ children, title = "Dashboard" }) {
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto p-4 md:p-8 bg-gray-50">
+        <div className="flex-1 overflow-y-auto p-2 md:p-2 bg-gray-50">
           {children}
         </div>
       </div>

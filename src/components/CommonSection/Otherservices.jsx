@@ -8,7 +8,7 @@ import Image from 'next/image';
 export default function Otherservices() {
   return (
     <section >
-    <div className='container mx-auto px-8 lg:px-10 py-[60px] '>
+    <div className='container mx-auto max-w-7xl px-8 lg:px-10 py-[60px] '>
       <p className='text-center text-[26px]'>Enhance the lives of millions of people</p>
       {/* <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /><span className='text-[#ED5729]'>revolutionary projects</span> </h2> */}
       {/* <h2 ref={ref} className={`text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium  ${inView ? 'text-[#ED5729]' : 'text-[#212529]' }`}> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /><span className='text-[#ED5729]'>revolutionary projects</span> </h2> */}
@@ -25,7 +25,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-1.svg" width={48} height={48} alt="icon2" /></div>
@@ -40,7 +40,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-2.svg" width={48} height={48} alt="icon2" /></div>
@@ -56,7 +56,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-3.svg" width={48} height={48} alt="icon2" /></div>
@@ -72,7 +72,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-4.svg" width={48} height={48} alt="icon2" /></div>
@@ -87,7 +87,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-5.svg" width={48} height={48} alt="icon2" /></div>
@@ -103,7 +103,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-6.svg" width={48} height={48} alt="icon2" /></div>

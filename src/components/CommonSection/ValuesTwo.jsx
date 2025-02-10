@@ -1,13 +1,11 @@
 "use client";
 import React from 'react'
-import { motion } from "framer-motion";
-import { slideUp } from "@/lib/variants";
 import HighlightText from "@/components/ui/HighlightText";
 import {IntegrityCard} from "@/components/CommonSection/IntegrityCard";
 
 export default function ValuesTwo() {
   return (
-    <div  className="container mx-auto w-full px-[20px] py-[60px]">
+    <div  className="container mx-auto max-w-7xl px-[20px] py-[60px]">
     <div className="text-center align-middle">
       <p className="lg:text-xl text-sm font-normal">We see the world through every possible way</p>
  <HighlightText

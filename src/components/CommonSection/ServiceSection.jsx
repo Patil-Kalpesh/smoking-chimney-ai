@@ -11,7 +11,7 @@ import services from '@/data/services.json'
 export default function ServiceSection() {
   return (
     <section>
-      <div className="mx-auto px-8 lg:px-10 py-[60px]">
+      <div className="mx-auto  max-w-7xl px-8 lg:px-10 py-[60px]">
         <div className="pb-12 lg:pb-12 lg:px-28 text-center">
           <p className="text-lg lg:text-xl pb-3">
             Enhance the lives of millions of people
@@ -37,7 +37,7 @@ export default function ServiceSection() {
                     variants={slideUp}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.2, margin: "-100px" }}
                   >
                     {/* Pseudo-elements for borders (left and right borders only for the center card) */}
                     {isCenterCard && (

@@ -1,14 +1,14 @@
 "use client";
 import React from 'react'
 import { motion } from "framer-motion";
-import { slideUp } from "@/lib/variants";
+import { slideUp, parentContainerVariants } from "@/lib/variants";
 import Image from 'next/image';
 import HighlightText from '../ui/HighlightText'
 
 export default function Ethics() {
   return (
-    <section className='bg-[#EEF3ED]'>
-    <div className='container mx-auto px-8 lg:px-[20px] py-[60px] '>
+    <section className='mx-auto max-w-7xl bg-[#EEF3ED]'>
+    <div className='container  px-8 lg:px-[20px] py-[60px] '>
       <p className='lg:text-xl text-sm font-normal text-center'>Positive impact while adhering to ethical standards</p>
         <HighlightText
             text="Solutions That Matter, Simplified."
@@ -17,12 +17,14 @@ export default function Ethics() {
 
         />
 
-      <div className='pt-[38px] lg:px-[80px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-10'>
+      <motion.div className='pt-[38px] lg:px-[80px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-10'
+        variants={parentContainerVariants}
+        initial='hidden'
+        whileInView='visible'
+        viewport={{ once: true, amount: 0.3, margin: "-100px" }}
+      >
         <motion.div className="card-item lg:p-4 "
           variants={slideUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-1.svg" width={48} height={48} alt="Traced" /></div>
           <h3 className='text-lg py-2 border-b-[1px] border-black'>Innovative </h3>
@@ -30,9 +32,6 @@ export default function Ethics() {
         </motion.div>
         <motion.div className="card-item lg:p-4 "
           variants={slideUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-2.svg" width={48} height={48} alt="Traced" /></div>
           <h3 className='text-lg py-2 border-b-[1px] border-black'>Useful </h3>
@@ -40,9 +39,6 @@ export default function Ethics() {
         </motion.div>
         <motion.div className="card-item lg:p-4 "
           variants={slideUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-3.svg" width={48} height={48} alt="Traced" /></div>
           <h3 className='text-lg py-2 border-b-[1px] border-black'>Aesthetic </h3>
@@ -50,9 +46,6 @@ export default function Ethics() {
         </motion.div>
         <motion.div className="card-item lg:p-4 "
           variants={slideUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-4.svg" width={48} height={48} alt="Traced" /></div>
           <h3 className='text-lg py-2 border-b-[1px] border-black'>Honest </h3>
@@ -60,9 +53,6 @@ export default function Ethics() {
         </motion.div>
         <motion.div className="card-item lg:p-4 "
           variants={slideUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-5.svg" width={48} height={48} alt="Traced" /></div>
           <h3 className='text-lg py-2 border-b-[1px] border-black'>Long-lasting </h3>
@@ -70,9 +60,6 @@ export default function Ethics() {
         </motion.div>
         <motion.div className="card-item lg:p-4 "
           variants={slideUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-6.svg" width={48} height={48} alt="Traced" /></div>
           <h3 className='text-[16px] py-2 border-b-[1px] border-black'>Thorough </h3>
@@ -80,9 +67,6 @@ export default function Ethics() {
         </motion.div>
         <motion.div className="card-item lg:p-4 "
           variants={slideUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-4.svg" width={48} height={48} alt="Traced" /></div>
           <h3 className='text-lg py-2 border-b-[1px] border-black'>Understandable </h3>
@@ -90,9 +74,6 @@ export default function Ethics() {
         </motion.div>
         <motion.div className="card-item lg:p-4 "
           variants={slideUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-8.svg" width={48} height={48} alt="Traced" /></div>
           <h3 className='text-lg py-2 border-b-[1px] border-black'>Unobtrusive </h3>
@@ -100,9 +81,6 @@ export default function Ethics() {
         </motion.div>
         <motion.div className="card-item lg:p-4 "
           variants={slideUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-9.svg" width={48} height={48} alt="Traced" /></div>
           <h3 className='text-lg py-2 border-b-[1px] border-black'>Environmentally friendly </h3>
@@ -110,16 +88,13 @@ export default function Ethics() {
         </motion.div>
         <motion.div className="card-item lg:p-4 "
           variants={slideUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-10.svg" width={48} height={48} alt="Traced" /></div>
           <h3 className='text-lg py-2 border-b-[1px] border-black'>Little design </h3>
           <p className='text-[14px] text-[#00000080] pt-2'>Functionality and clarity, with minimal distractions.</p>
         </motion.div>
 
-      </div>
+      </motion.div>
     </div>
   </section>
   )

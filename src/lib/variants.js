@@ -39,13 +39,24 @@ export const containerVariants = {
 // text slide up animation
 
 export const slideUp = {
-    hidden: { y: "60px", opacity: 0 },
+    hidden: { y: "77px", opacity: 0 },
     visible: {
       y: "0px",
       opacity: 1,
       transition: {
-        duration: 0.677
+        duration: 1.444
       },
     },
 };
+
+
+export const parentContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.312, 
+    },
+  },
+}
 
