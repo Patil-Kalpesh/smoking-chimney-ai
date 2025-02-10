@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { slideUp } from "@/lib/variants";
+import { slideUp, parentContainerVariants } from "@/lib/variants";
 import Image from "next/image";
 import HighlightText from "@/components/ui/HighlightText";
 
@@ -18,29 +18,35 @@ export default function ValueSection() {
         />
       </div>
        <motion.div className='lg:grid lg:grid-cols-5 gap-3 gap-y-3 lg:content-start h-100 lg:pt-[60px] pt-[25px]'
-            variants={slideUp}
+            variants={parentContainerVariants}
             initial='hidden'
             whileInView='visible'
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.7, margin: "-100px" }}
           >
             <div className='text-center card col-span-2 flex items-center  pb-9 lg:pb-6'>
               <p className='text-xl lg:text-2xl'>Easily shift from ideas to finished product to increase productivity.    </p>
             </div>
-            <div className="card pb-[20px]">
+            <motion.div className="card pb-[20px]"
+              variants={slideUp}
+            >
               <div className='h-[48px] w-[48px] '><Image src="/images/Icon-1.svg" width={48} height={48} alt="icon1" /></div>
               <p className='font-medium lg:py-2 py-1'>Curious</p>
               <p className='text-[#00000080]'>Seeking progress. <br /> Driven by wonder</p>
-            </div>
-            <div className="card pb-[20px]">
+            </motion.div>
+            <motion.div className="card pb-[20px]"
+              variants={slideUp}
+            >
               <div className='h-[48px] w-[48px] '><Image src="/images/Icon-2.svg" width={48} height={48} alt="icon2" /></div>
               <p className='font-medium lg:py-2 py-1'>Value Centric</p>
               <p className='text-[#00000080]'>Invest in an interaction <br />unless it provides value</p>
-            </div>
-            <div className="card pb-[20px]">
+            </motion.div>
+            <motion.div className="card pb-[20px]"
+              variants={slideUp}
+            >
               <div className='h-[48px] w-[48px]'><Image src="/images/Icon-3.svg" width={48} height={48} alt="icon3" /></div>
               <p className='font-medium lg:py-2 py-1'>Aesthetic</p>
               <p className='text-[#00000080]'>Meticulous attention. <br />Endless pursuit of perfection.</p>
-            </div>
+            </motion.div>
        </motion.div>
     </div>
   );

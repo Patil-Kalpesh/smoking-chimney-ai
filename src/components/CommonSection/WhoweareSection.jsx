@@ -5,14 +5,13 @@ import { slideUp } from "@/lib/variants";
 
 export default function WhoweareSection() {
   return (
-    <motion.div 
-      className="mx-auto max-w-7xl h-100 w-full px-8 lg:px-[20px] py-[60px] bg-[#EEF3ED]"
-      variants={slideUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-    >
-      <div className="text-center">
+    <div className="mx-auto max-w-7xl h-100 w-full px-8 lg:px-[20px] py-[60px] bg-[#EEF3ED]" >
+      <motion.div className="text-center"
+        variants={slideUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2, margin: "-100px" }}
+      >
         <p className="lg:text-xl text-lg lg:pb-0 pb-3">
           We&apos;re high on innovation, sustainability, and keeping things simple.
         </p>
@@ -30,7 +29,7 @@ export default function WhoweareSection() {
         <p className="text-[14px]">
           Whether you&apos;re an underdog or a colossal organization, we&apos;ve got you covered.
         </p>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   )
 }

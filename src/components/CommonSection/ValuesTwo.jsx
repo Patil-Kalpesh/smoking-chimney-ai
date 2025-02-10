@@ -1,7 +1,5 @@
 "use client";
 import React from 'react'
-import { motion } from "framer-motion";
-import { slideUp } from "@/lib/variants";
 import HighlightText from "@/components/ui/HighlightText";
 import {IntegrityCard} from "@/components/CommonSection/IntegrityCard";
 

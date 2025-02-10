@@ -15,14 +15,14 @@ function HighlightText({ text, highlightWords, className = "" }) {
   viewport={{ margin: "-100px 0px -300px 0px" }}
 >
   {words.map((word, index) => (
-    <motion.span
-      key={index}
-      variants={wordVariants}
-      style={{ display: "inline-block", margin: "0 5px" }}
-      animate={highlightWords.includes(word) ? "highlight" : undefined}
-    >
-      {word}
-    </motion.span>
+    (word == "/n") ? <br /> : <motion.span
+    key={index}
+    variants={wordVariants}
+    style={{ display: "inline-block", margin: "0 5px" }}
+    animate={highlightWords.includes(word) ? "highlight" : undefined}
+  >
+    {word}
+  </motion.span>
   ))}
 </motion.h2>
 </>
