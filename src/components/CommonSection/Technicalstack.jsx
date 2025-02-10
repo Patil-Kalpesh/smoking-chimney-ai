@@ -20,7 +20,7 @@ export default function Technicalstack() {
         variants={parentContainerVariants}
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true, amount: 0.7, margin: "-100px" }}
+        viewport={{ once: true, amount: 0.4, margin: "-100px" }}
       >
         <motion.div className="card-item lg:p-4 "
           variants={slideUp}

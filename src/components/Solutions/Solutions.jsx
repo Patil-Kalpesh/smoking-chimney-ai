@@ -278,7 +278,7 @@ export default function Solutions() {
                     variants={parentContainerVariants}
                     initial='hidden'
                     whileInView='visible'
-                    viewport={{ once: true, amount: 0.3, margin: "-100px" }}
+                    viewport={{ once: true, amount: 0.1, margin: "-100px" }}
                   >
                       <motion.div className="card-item lg:p-4 "
                         variants={slideUp}
@@ -359,7 +359,7 @@ export default function Solutions() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.2, margin: "-100px" }}
          >
                   <h2 className=" lg:text-[48px] lg:py-[10px] leading-normal font-medium">Talk with our decision makers</h2>
                   <p className="text-[22px]">The team AI-powered wonder elevates mundane tasks into the astounding. </p>

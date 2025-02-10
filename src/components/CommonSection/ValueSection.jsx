@@ -21,7 +21,7 @@ export default function ValueSection() {
             variants={parentContainerVariants}
             initial='hidden'
             whileInView='visible'
-            viewport={{ once: true, amount: 0.7, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.4, margin: "-100px" }}
           >
             <div className='text-center card col-span-2 flex items-center  pb-9 lg:pb-6'>
               <p className='text-xl lg:text-2xl'>Easily shift from ideas to finished product to increase productivity.    </p>
