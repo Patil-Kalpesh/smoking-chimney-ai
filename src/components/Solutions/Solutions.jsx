@@ -8,6 +8,9 @@ import WhoweareSection from '../CommonSection/WhoweareSection'
 import Otherservices from '../CommonSection/Otherservices'
 import CTA from '../CommonSection/CTA'
 
+import { slideUp, parentContainerVariants } from "@/lib/variants";
+import HighlightText from '../ui/HighlightText'
+
 const services = [
     {
       title: "AI Consulting and Strategy",
@@ -168,13 +171,18 @@ export default function Solutions() {
     <div className='container mx-auto w-full'>
         <div className=' h-[600px] flex items-center justify-center bg-no-repeat bg-contain banner-bg-img'>
             <div className='mx-auto max-w-7xl'>
-                <div className='px-[20px]'>
+                <motion.div className='px-[20px]'
+                    variants={slideUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true}}
+                >
                     <h1 className='font-sofia font-medium text-center text-[60px] lg:text-[72px]  leading-[85.21px] lg:pt-[0px] pb-2 tracking-[-1.21px]'>Solutions That Matter, <span className='text-[#ED5729]'>Simplified</span>. </h1>
                     <div className="singleLine"><p className='font-sofia font-light  text-[#212529] text-[26px]  text-center'>Positive impact while adhering to ethical standards</p></div>
                     <div className='text-center mt-5 lg:mt-6'>
                         <button className='btn-lightup'>Get Amplified!!</button>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
         {/*----- section-2 ----- */}
@@ -195,7 +203,7 @@ export default function Solutions() {
                 >
                 Enhance the lives of millions of people
                 </motion.p>
-                <motion.h1
+                {/* <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -203,61 +211,55 @@ export default function Solutions() {
                 >
                 <span className="text-[#FF4D00]">We are eager</span> to contribute in
                 <br className="hidden sm:block" /> revolutionary projects
-                </motion.h1>
+                </motion.h1> */}
+
+                <HighlightText text="We are eager to contribute in /n revolutionary projects" highlightWords={["We", "are", "eager"]} className="text-3xl sm:text-4xl lg:text-5xl font-medium" />
+
             </div>
 
             {/* Services Section */}
             <div className="max-w-7xl mx-auto">
-                <motion.div 
-                className="space-y-8"
-                initial="hidden"
-                animate="visible"
-                variants={{
-                    hidden: {},
-                    visible: {
-                    transition: {
-                        staggerChildren: 0.1
-                    }
-                    }
-                }}
-                >
+                <div className="space-y-8">
                 {services.map((service, index) => (
                     <motion.div
                     key={index}
-                    variants={{
-                        hidden: { opacity: 0, y: 20 },
-                        visible: { opacity: 1, y: 0 }
-                    }}
-                    transition={{ duration: 0.6 }}
+                    variants={parentContainerVariants}
+                    initial='hidden'
+                    whileInView='visible'
+                    viewport={{ once: true, amount: 0.3, margin: "-100px" }}
                     className="border-b border-gray-200 pb-8 first:border-t-0 first:pt-0"
                     >
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                        <div className="lg:col-span-1">
+                        <motion.div className="lg:col-span-1"
+                            variants={slideUp}
+                        >
                         <h2 className="text-2xl font-medium text-gray-900 mb-3">
                             {service.title}
                         </h2>
                         <p className="text-gray-600 text-sm">
                             {service.description}
                         </p>
-                        </div>
+                        </motion.div>
                         <div className="lg:col-span-3">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {service.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="space-y-2">
+                            <motion.div key={featureIndex} className="space-y-2"
+                                variants={slideUp}
+                            >
                                 <h3 className="font-medium text-gray-900">
                                 {feature.title}
                                 </h3>
                                 <p className="text-sm text-gray-600">
                                 {feature.description}
                                 </p>
-                            </div>
+                            </motion.div>
                             ))}
                         </div>
                         </div>
                     </div>
                     </motion.div>
                 ))}
-                </motion.div>
+                </div>
             </div>
         </div>
         {/* -------section-6------- */}
@@ -269,64 +271,96 @@ export default function Solutions() {
         <section className='bg-[#EEF3ED]'>
               <div className='container mx-auto px-8 lg:px-[20px] py-[60px] '>
                   <p className='text-center text-[26px]'>Positive impact while adhering to ethical standards</p>
-                  <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> Solutions That Matter, <span className='text-[#ED5729]'> Simplified. </span> </h2>
-                  <div className='pt-[38px] lg:px-[80px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-10'>
-                      <div className="card-item lg:p-4 ">
+                  {/* <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> Solutions That Matter, <span className='text-[#ED5729]'> Simplified. </span> </h2> */}
+                  <HighlightText text="Solutions That Matter, Simplified." highlightWords={["Simplified."]} className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium" />
+
+                  <motion.div className='pt-[38px] lg:px-[80px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-10'
+                    variants={parentContainerVariants}
+                    initial='hidden'
+                    whileInView='visible'
+                    viewport={{ once: true, amount: 0.3, margin: "-100px" }}
+                  >
+                      <motion.div className="card-item lg:p-4 "
+                        variants={slideUp}
+                      >
                           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-1.svg" width={48} height={48} alt="Traced" /></div>
                           <h3 className='text-lg py-2 border-b-[1px] border-black'>Innovative </h3>
                           <p className='text-[14px] text-[#00000080] pt-2'>We stay ahead of the curve with cutting-edge AI technologies.</p>
-                      </div>
-                      <div className="card-item lg:p-4 ">
+                      </motion.div>
+                      <motion.div className="card-item lg:p-4 "
+                        variants={slideUp}
+                      >
                           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-2.svg" width={48} height={48} alt="Traced" /></div>
                           <h3 className='text-lg py-2 border-b-[1px] border-black'>Useful </h3>
                           <p className='text-[14px] text-[#00000080] pt-2'>Solutions are designed to solve real-world problem.</p>
-                      </div>
-                      <div className="card-item lg:p-4 ">
+                      </motion.div>
+                      <motion.div className="card-item lg:p-4 "
+                        variants={slideUp}
+                      >
                           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-3.svg"  width={48} height={48} alt="Traced" /></div>
                           <h3 className='text-lg py-2 border-b-[1px] border-black'>Aesthetic </h3>
                           <p className='text-[14px] text-[#00000080] pt-2'>Stunning Visuals and user-friendly experience.</p>
-                      </div>
-                      <div className="card-item lg:p-4 ">
+                      </motion.div>
+                      <motion.div className="card-item lg:p-4 "
+                        variants={slideUp}
+                      >
                           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-4.svg" width={48} height={48} alt="Traced" /></div>
                           <h3 className='text-lg py-2 border-b-[1px] border-black'>Honest </h3>
                           <p className='text-[14px] text-[#00000080] pt-2'>Transparent communication and ethical AI practices.</p>
-                      </div>
-                      <div className="card-item lg:p-4 ">
+                      </motion.div>
+                      <motion.div className="card-item lg:p-4 "
+                        variants={slideUp}
+                      >
                           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-5.svg" width={48} height={48} alt="Traced" /></div>
                           <h3 className='text-lg py-2 border-b-[1px] border-black'>Long-lasting </h3>
                           <p className='text-[14px] text-[#00000080] pt-2'>Built to scale and evolve with your business.</p>
-                      </div>
-                      <div className="card-item lg:p-4 ">
+                      </motion.div>
+                      <motion.div className="card-item lg:p-4 "
+                        variants={slideUp}
+                      >
                           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-6.svg" width={48} height={48} alt="Traced" /></div>
                           <h3 className='text-[16px] py-2 border-b-[1px] border-black'>Thorough </h3>
                           <p className='text-[14px] text-[#00000080] pt-2'>Assessments and analysis along with best AI strategies.</p>
-                      </div>
-                      <div className="card-item lg:p-4 ">
+                      </motion.div>
+                      <motion.div className="card-item lg:p-4 "
+                        variants={slideUp}
+                      >
                           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-4.svg" width={48} height={48} alt="Traced" /></div>
                           <h3 className='text-lg py-2 border-b-[1px] border-black'>Understandable </h3>
                           <p className='text-[14px] text-[#00000080] pt-2'>Break down complex AI concepts into simple terms.</p>
-                      </div>
-                      <div className="card-item lg:p-4 ">
+                      </motion.div>
+                      <motion.div className="card-item lg:p-4 "
+                        variants={slideUp}
+                      >
                           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-8.svg" width={48} height={48} alt="Traced" /></div>
                           <h3 className='text-lg py-2 border-b-[1px] border-black'>Unobtrusive </h3>
                           <p className='text-[14px] text-[#00000080] pt-2'>Integrate seamlessly into your existing systems.</p>
-                      </div>
-                      <div className="card-item lg:p-4 ">
+                      </motion.div>
+                      <motion.div className="card-item lg:p-4 "
+                        variants={slideUp}
+                      >
                           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-9.svg" width={48} height={48} alt="Traced" /></div>
                           <h3 className='text-lg py-2 border-b-[1px] border-black'>Environmentally friendly </h3>
                           <p className='text-[14px] text-[#00000080] pt-2'>Environment Friendly & sustainable in every AI solutions.</p>
-                      </div>
-                      <div className="card-item lg:p-4 ">
+                      </motion.div>
+                      <motion.div className="card-item lg:p-4 "
+                        variants={slideUp}
+                      >
                           <div className='h-[48px] w-[48px] '><Image src="/images/Traced-icon-10.svg" width={48} height={48} alt="Traced" /></div>
                           <h3 className='text-lg py-2 border-b-[1px] border-black'>Little design </h3>
                           <p className='text-[14px] text-[#00000080] pt-2'>Functionality and clarity, with minimal distractions.</p>
-                      </div>
+                      </motion.div>
                      
-                  </div>
+                  </motion.div>
               </div>
         </section>
         {/* ---- section-8------ */}
-         <div className=" mx-auto px-8 lg:px-10 py-[60px]">
+         <motion.div className=" mx-auto px-8 lg:px-10 py-[60px]"
+          variants={slideUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3, margin: "-100px" }}
+         >
                   <h2 className=" lg:text-[48px] lg:py-[10px] leading-normal font-medium">Talk with our decision makers</h2>
                   <p className="text-[22px]">The team AI-powered wonder elevates mundane tasks into the astounding. </p>
                   <p className="text-[22px] pt-[20px]">Whether Hollywood-worthy stories to profound user experiences, we&apos;re the <br />first place to look for unprecedented changes in the digital realm.</p>
@@ -349,7 +383,7 @@ export default function Solutions() {
                          <Contact/>
                       </div>
                   </div>
-        </div>
+        </motion.div>
         {/* ------------------------ */}
     </div>
     </>

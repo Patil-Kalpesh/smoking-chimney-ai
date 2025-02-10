@@ -25,7 +25,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-1.svg" width={48} height={48} alt="icon2" /></div>
@@ -40,7 +40,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-2.svg" width={48} height={48} alt="icon2" /></div>
@@ -56,7 +56,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-3.svg" width={48} height={48} alt="icon2" /></div>
@@ -72,7 +72,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-4.svg" width={48} height={48} alt="icon2" /></div>
@@ -87,7 +87,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-5.svg" width={48} height={48} alt="icon2" /></div>
@@ -103,7 +103,7 @@ export default function Otherservices() {
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, ammount: 0.4, margin: "-100px" }}
 
         >
           <div className='h-[48px] w-[48px] '><Image src="/images/Icon-l-6.svg" width={48} height={48} alt="icon2" /></div>

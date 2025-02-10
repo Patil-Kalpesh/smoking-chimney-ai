@@ -37,7 +37,7 @@ export default function ServiceSection() {
                     variants={slideUp}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.2, margin: "-100px" }}
                   >
                     {/* Pseudo-elements for borders (left and right borders only for the center card) */}
                     {isCenterCard && (
