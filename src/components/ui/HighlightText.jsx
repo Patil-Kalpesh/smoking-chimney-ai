@@ -15,7 +15,9 @@ function HighlightText({ text, highlightWords, className = "" }) {
   viewport={{ margin: "-100px 0px -300px 0px" }}
 >
   {words.map((word, index) => (
-    (word == "/n") ? <br /> : <motion.span
+    (word === "/n") ?( 
+    <br key={index} />
+    ) : <motion.span
     key={index}
     variants={wordVariants}
     style={{ display: "inline-block", margin: "0 5px" }}
