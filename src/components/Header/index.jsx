@@ -6,7 +6,8 @@ import Image from 'next/image';
 const navLinks = [
   { name: "Solutions", target: "/solutions" },
   { name: "Technology", target: "/technology" },
-  { name: "Company", target: "/company" },
+  // { name: "Company", target: "/company" },
+  { name: "Blog", target: "/blog" },
   { name: "Contact", target: "/contact" },
 ];
 
@@ -33,7 +34,7 @@ function ResponsiveNavbar() {
           {navLinks.map((link, index) => (
             <li key={index} className="">
               <Link href={link.target}>
-                  <span className='group text-[15px] h-[20px] inline-block overflow-y-hidden relative cursor-pointer'>
+                  <span className='group text-[15px] h-[22px] inline-block overflow-y-hidden relative cursor-pointer'>
                     <div className='group-hover:translate-y-[-100%] transition-all ease-[cubic-bezier(0.16, 1, 0.3, 1)] duration-500 opacity-70'>
                       {link.name}
                     </div>
