@@ -8,7 +8,7 @@ export default function FrontendBlogs() {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/blogs')
+        axios.get('http:/api/blogs')
           .then(response => {
 
             console.log("Fetched Blogs:", response.data.data);  // Log response to inspect its structure
