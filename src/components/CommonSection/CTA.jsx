@@ -11,7 +11,7 @@ export default function CTA() {
         variants={slideUp}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.4, margin: "-100px" }}
+        viewport={{ once: true, amount: 0.2, margin: "-100px" }}
       >
         <p className='text-xl lg:text-2xl font-normal'>We just see and do what others don&apos;t.</p>
         <div className='lg:py-3'>

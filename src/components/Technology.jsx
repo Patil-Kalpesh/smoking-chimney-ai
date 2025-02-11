@@ -54,7 +54,7 @@ export default function Technology() {
             <p className='text-center text-[26px]'>Enhance the lives of millions of people</p>
             {/* <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /><span className='text-[#ED5729]'>revolutionary projects</span> </h2> */}
 
-            <HighlightText text="We are eager to contribute in /n revolutionary projects" highlightWords={["We", "are", "eager", "revolutionary", "projects"]} className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium" />
+            <HighlightText text="We are eager to contribute in /n revolutionary projects" highlightWords={["We", "are", "eager", "revolutionary", "projects"]} className="text-center lg:text-[48px]  lg:py-[10px] leading-normal font-medium text-3xl sm:text-4xl lg:text-5xl font-medium" />
 
             {/* <h2 ref={ref} className={`text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium  ${inView ? 'text-[#ED5729]' : 'text-[#212529]' }`}> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /><span className='text-[#ED5729]'>revolutionary projects</span> </h2> */}
             <div className='pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-14'>
@@ -153,7 +153,7 @@ export default function Technology() {
             variants={slideUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.1, margin: "-100px" }}
          >
                   <h2 className=" lg:text-[48px] lg:py-[10px] leading-normal font-medium">Talk with our decision makers</h2>
                   <p className="text-[22px]">The team AI-powered wonder elevates mundane tasks into the astounding. </p>
