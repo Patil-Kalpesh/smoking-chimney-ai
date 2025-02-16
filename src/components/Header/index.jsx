@@ -57,9 +57,9 @@ function ResponsiveNavbar() {
             <span>&#9776; {/* Menu Icon */}</span>
           )}
         </button>
-            <button className='hidden lg:block btn-lightup'>
+            <Link href={'https://api.whatsapp.com/send/?phone=7721912611&text=I%27m+inquiring+about+the+solutions%2Fservices&type=phone_number&app_absent=0 '} target="_blank" className='hidden lg:block btn-lightup'>
               Find Your Solution here!
-            </button>
+            </Link>
         </div>
         </div>
       </nav>

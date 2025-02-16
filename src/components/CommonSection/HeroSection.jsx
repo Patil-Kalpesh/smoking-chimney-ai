@@ -1,13 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import { slideUp } from "@/lib/variants";
-
+import Link from "next/link";
 export default function HeroSection() {
   return (
     <div className="h-[600px] flex items-center justify-center bg-no-repeat bg-contain banner-bg-img">
       <div className="mx-auto max-w-7xl">
         <motion.div
-          className="px-[20px]"
+          className="px-[20px] lg:py-10 py-20"
           variants={slideUp}
           initial="hidden"
           whileInView="visible"
@@ -20,7 +20,7 @@ export default function HeroSection() {
             We solve real-world problems efficiently
           </p>
           <div className="text-center mt-5 lg:mt-6">
-            <button className="btn-lightup">Get Amplified!!</button>
+            <Link href={'https://cal.com/smokingchimneystudios/free-consultation?layout=mobile'} target="_blank" className="btn-lightup">Get Amplified!!</Link>
           </div>
         </motion.div>
       </div>
