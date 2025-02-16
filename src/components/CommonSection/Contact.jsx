@@ -29,7 +29,7 @@ export default function Contact() {
                 <p className="text-[#00000080]">Dedicated, assist, and quick.</p>
               </div>
               <div className="pt-[30px]">
-                <p className="text-[18px] py-2 border-b-[1px] border-black text-[#ED5729]"> PCMC, Pune - 411033, Maharashtra, India. Gärtnerstr 06, 10245 Berlin</p>
+                <p className="text-[18px] py-2 border-b-[1px] border-black text-[#ED5729]"> PCMC - Pune, India - 411033</p>
                 <p className="text-[#00000080]">As Largest as Life, Conversations and Coffee</p>
               </div>
             </motion.div>

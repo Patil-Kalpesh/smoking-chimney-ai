@@ -10,14 +10,14 @@ import LogoutButton from "../login/LogoutButton";
 
 export default function DashboardLayout({ children, title = "Dashboard" }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false); // Track if it's client-side rendering
+  const [isClient, setIsClient] = useState(false); 
 
   useEffect(() => {
-    setIsClient(true); // Set client-side rendering flag after the component mounts
+    setIsClient(true); 
   }, []);
 
   if (!isClient) {
-    return null; // Return nothing until after the component has mounted on the client
+    return null; 
   }
 
   return (
