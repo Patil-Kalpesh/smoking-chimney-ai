@@ -1,6 +1,7 @@
 import { Blog } from "@/lib/Blog";
 import dbConnect from "@/utils/dbConnect";
 import { NextResponse } from 'next/server';
+import slugify from "slugify";
 
 export async function POST(req) {
   await dbConnect();
@@ -23,6 +24,7 @@ export async function POST(req) {
       seoDescription,
       image,
       seoKeywords,
+      slug:slugify(title, { lower: true, strict: true }),
     });
 
     const savedBlog = await newBlog.save();

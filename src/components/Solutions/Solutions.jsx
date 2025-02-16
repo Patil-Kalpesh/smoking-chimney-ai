@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { IntegrityCard } from '../CommonSection/IntegrityCard'
-import Contact from '../ContactUs/ContactForm'
+import Contact from '../CommonSection/Contact'
 import { motion } from 'framer-motion'
 import WhoweareSection from '../CommonSection/WhoweareSection'
 import Otherservices from '../CommonSection/Otherservices'
@@ -355,35 +355,8 @@ export default function Solutions() {
               </div>
         </section>
         {/* ---- section-8------ */}
-         <motion.div className=" mx-auto px-8 lg:px-10 py-[60px]"
-          variants={slideUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2, margin: "-100px" }}
-         >
-                  <h2 className=" lg:text-[48px] lg:py-[10px] leading-normal font-medium">Talk with our decision makers</h2>
-                  <p className="text-[22px]">The team AI-powered wonder elevates mundane tasks into the astounding. </p>
-                  <p className="text-[22px] pt-[20px]">Whether Hollywood-worthy stories to profound user experiences, we&apos;re the <br />first place to look for unprecedented changes in the digital realm.</p>
-                  <div className="pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 gap-y-14">
-                      <div className="card-item lg:p-4 ">
-                          <div>
-                            <p className="text-[18px] py-2 border-b-[1px] border-black text-[#ED5729]">hi@smokingchimneystudios.com </p>
-                            <p className="text-[#00000080]">Professional, accessible, and secure.</p>
-                          </div>
-                          <div className="pt-[30px]">
-                            <p className="text-[18px] py-2 border-b-[1px] border-black text-[#ED5729]">+91 77219 12611 </p>
-                            <p className="text-[#00000080]">Dedicated, assist, and quick.</p>
-                          </div>
-                          <div className="pt-[30px]">
-                            <p className="text-[18px] py-2 border-b-[1px] border-black text-[#ED5729]">Punawale, PCMC, Pune - 411033, Maharashtra, India Jablonskistrasse 15, 10405 Berlin San Francisco, U.S.A</p>
-                            <p className="text-[#00000080]">As Largest as Life, Conversations and Coffee</p>
-                          </div>
-                      </div>
-                      <div className="card-item lg:p-4 px-1 ">
-                         <Contact/>
-                      </div>
-                  </div>
-        </motion.div>
+         <Contact/>
+   
         {/* ------------------------ */}
     </div>
     </>

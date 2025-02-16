@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { FiUpload } from 'react-icons/fi';
 import axios from 'axios';
+import JoditEditor, { Jodit } from 'jodit-react';
 
 export default function AddBlog() {
   const searchParams = useSearchParams();
@@ -50,6 +51,12 @@ export default function AddBlog() {
     }));
   };
 
+  const handleDescriptionChange = (newContent) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      description: newContent,
+    }));
+};
   const handleImageChange = async (e) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
@@ -163,19 +170,17 @@ export default function AddBlog() {
                 </select>
               </div>
 
-              <div className=" col-span-2">
+              <div className=" col-span-2 ">
                 <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
                   Blog Description
                 </label>
-                <textarea
-                  id="description"
-                  name="description"
+                <JoditEditor
+                  className='rounded '
                   value={formData.description}
-                  onChange={handleInputChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
-                  placeholder="Enter blog description"
+                  onChange={handleDescriptionChange}
                   required
                 />
+               
               </div>
 
 

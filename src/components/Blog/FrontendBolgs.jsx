@@ -8,7 +8,7 @@ export default function FrontendBlogs() {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        axios.get('http:/api/blogs')
+        axios.get('api/blogs')
           .then(response => {
 
             console.log("Fetched Blogs:", response.data.data);  // Log response to inspect its structure
@@ -25,13 +25,13 @@ export default function FrontendBlogs() {
         <div>
             {/* ------------------------ */}
             <section className="py-16 bg-gray-50">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-8">
                     <h2 className="text-4xl font-bold text-center mb-12">Latest Blog Posts</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {Array.isArray(blogs) && blogs.length > 0 ? (
                             blogs.map((blog, index) => (
                                 <article key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 transition-all duration-300 hover:shadow-md">
-                                    <Link href={`/blog/${blog.id}`} target="_blank">
+                                    <Link href={`/blog/${blog.slug}`} target="_blank">
                                         <div className="relative h-64 overflow-hidden">
                                             <Image
                                                 src={blog.image || "/placeholder.svg"}
@@ -44,8 +44,11 @@ export default function FrontendBlogs() {
                                             <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors duration-300">
                                                 {blog.title}
                                             </h3>
-                                            <p className="text-gray-600 mb-4">
-                                                {blog.description.split(' ').slice(0, 20).join(' ')}{blog.description.split(' ').length > 20 && '...'}
+                                            <p className="text-gray-600 mb-4" 
+                                            dangerouslySetInnerHTML={{ __html: `${blog.description.substr(0,100)}...` }}
+                                            >
+
+                                                {/* {blog.description.split(' ').slice(0, 20).join(' ')}{blog.description.split(' ').length > 20 && '...'} */}
                                             </p>
                                             <div className="flex items-center justify-between text-sm text-gray-500">
                                                 <span>{blog.author || 'Vinayak V.'}</span>

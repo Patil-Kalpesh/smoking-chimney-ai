@@ -27,20 +27,20 @@ export default function Page() {
     }
   };
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (slug) => {
     if (!confirm("Are you sure you want to delete this blog?")) return;
 
     try {
-      await axios.delete(`/api/blogs/${id}`);
-      setBlogs(blogs.filter((blog) => blog._id !== id));
+      await axios.delete(`/api/blogs/${slug}`);
+      setBlogs(blogs.filter((blog) => blog.slug !== slug));
       alert("Blog deleted successfully.");
     } catch (error) {
       alert("Error deleting the blog.");
     }
   };
 
-  const handleEdit = (id) => {
-    router.push(`/dashboard/blogs/add?id=${id}`);
+  const handleEdit = (slug) => {
+    router.push(`/dashboard/blogs/add?id=${slug}`);
   };
 
   return (
@@ -69,13 +69,13 @@ export default function Page() {
                     <td className="p-2 border">
                       <button
                         className="bg-blue-500 text-white px-3 py-1 rounded mr-2 hover:bg-blue-700"
-                        onClick={() => handleEdit(blog._id)}
+                        onClick={() => handleEdit(blog.slug)}
                       >
                         Edit
                       </button>
                       <button
                         className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-700"
-                        onClick={() => handleDelete(blog._id)}
+                        onClick={() => handleDelete(blog.slug)}
                       >
                         Delete
                       </button>
