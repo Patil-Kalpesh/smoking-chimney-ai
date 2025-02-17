@@ -8,9 +8,13 @@ import WhoweareSection from '../CommonSection/WhoweareSection'
 import Otherservices from '../CommonSection/Otherservices'
 import CTA from '../CommonSection/CTA'
 
+
 import { slideUp, parentContainerVariants } from "@/lib/variants";
 import HighlightText from '../ui/HighlightText'
 
+export const metadata = {
+  title:"Solution "
+}
 const services = [
     {
       title: "AI Consulting and Strategy",
