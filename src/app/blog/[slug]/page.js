@@ -1,57 +1,31 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useParams } from "next/navigation";
+import SingleBlog from "./SingleBlog";
+import axios from "axios";
 
-const SingleBlog = () => {
-  const [blog, setBlog] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+export async function generateMetadata({ params }) {
+  const { slug } = params;
 
-  const { slug } = useParams(); // Extract the dynamic id (or slug)
+  try {
+    // Fetch blog data from API
+    const res = await axios.get(`/api/blogs/${slug}`);
+    const blog = res.data.data;
 
-  useEffect(() => {
-    if (slug) {
-        console.log('Fetching blog with ID:', slug);
-      // Fetch the blog data based on the id
-      axios.get(`/api/blogs/${slug}`)
-        .then(response => {
-          setBlog(response.data.data); // Set the blog data
-          setLoading(false);
-        })
-        .catch(err => {
-          setError('Failed to load the blog.');
-          setLoading(false);
-        });
-    }
-  }, [slug]);
+    return {
+      title: blog.title || "Blog Post",
+      description: blog.description?.substring(0, 150) || "Read this amazing blog!",
+      openGraph: {
+        title: blog.title || "Blog Post",
+        description: blog.description?.substring(0, 150),
+        images: [blog.image || "/placeholder.svg"],
+      },
+    };
+  } catch (error) {
+    return {
+      title: "Blog Not Found",
+      description: "Sorry, this blog post does not exist.",
+    };
+  }
+}
 
-  if (loading) return <p className='mt-24'>Loading...</p>;
-  if (error) return <p>{error}</p>;
-
-  if (!blog) return <p>No blog found!</p>;
-
-  return (
-    <>
-    <div className="container max-w-6xl mx-auto px-4 py-16 mt-16">
-      <article className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
-        <div className="relative h-64 overflow-hidden">
-          <img src={blog.image || '/placeholder.svg'} alt={blog.title} className="object-cover w-full h-full" />
-        </div>
-        <div className="p-6">
-          <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
-          <div className="text-sm text-gray-500 mb-4">
-            <span>{blog.author || 'Vinayak V.'}</span>
-            <span className="mx-2">|</span>
-            <span>{new Date(blog.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-          </div>
-          <p className="text-gray-700" dangerouslySetInnerHTML={{ __html: blog.description }}></p>
-
-        </div>
-      </article>
-    </div>
-    </>
-  );
-};
-
-export default SingleBlog;
+export default function BlogPage({ params }) {
+  return <SingleBlog slug={params.slug} />;
+}
