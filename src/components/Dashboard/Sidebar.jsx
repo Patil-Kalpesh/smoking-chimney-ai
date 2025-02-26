@@ -13,11 +13,11 @@ const menuItems = [
   { name: "Add Category", icon: FaPlus, href: "/dashboard/categories/add" },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({isOpen,toggleSidebar }) {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
+  const [IsMenu, setIsMenu] = useState(false);
 
-  const toggleSidebar = () => setIsOpen((prev) => !prev);
+  // const toggleSidebar = () => setIsOpen((prev) => !prev);
 
   return (
     <>
@@ -42,7 +42,7 @@ export default function Sidebar() {
                   className={`flex items-center p-2 rounded-lg hover:bg-sky-200 hover:text-blue-500 transition-colors ${
                     pathname === item.href ? "bg-sky-200 text-blue-500" : ""
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsMenu(false)}
                 >
                   <item.icon className="mr-3" />
                   <span>{item.name}</span>
