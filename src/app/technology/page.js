@@ -1,10 +1,14 @@
-import Technology from '@/components/Technology'
 import React from 'react'
+import Technology from '@/components/Technology'
+import Header from '@/components/Header/index'
+import Footer from '@/components/Footer/index'
 
 export default function page() {
   return (
     <div>
-      <Technology/>
+      <Header/>
+       <Technology/>
+      <Footer/>
     </div>
   )
 }

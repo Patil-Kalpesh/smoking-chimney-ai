@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Header from '@/components/Header/index'
+import Footer from '@/components/Footer/index'
 
 const SingleBlog = ({ slug }) => {
   const [blog, setBlog] = useState(null);
@@ -27,6 +29,8 @@ const SingleBlog = ({ slug }) => {
   if (!blog) return <p>No blog found!</p>;
 
   return (
+    <>
+    <Header/>
     <div className="container max-w-5xl mx-auto px-4 py-16 mt-16">
       <article className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
         <div className="relative h-64 overflow-hidden">
@@ -43,6 +47,8 @@ const SingleBlog = ({ slug }) => {
         </div>
       </article>
     </div>
+    <Footer/>
+    </>
   );
 };
 
