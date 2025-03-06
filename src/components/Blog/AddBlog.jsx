@@ -126,16 +126,16 @@ export default function AddBlog() {
   };
 
   return (
-    <div className="min-h-screen pt-2 px-4 sm:px-6 lg:px-2">
-      <div className=" mx-auto">
-        <h1 className="text-xl font-normal  text-gray-900 mb-3">
+    <div className="flex-1 min-h-screen flex flex-col justify-between">
+      <div className="">
+        <h1 className="text-xl font-medium  px-4 pt-3 mb-3">
           {isEditMode ? 'Edit Blog Post' : 'Create New Blog Post'}
         </h1>
-        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-4 pt-4 pb-8 mb-4">
+        <form onSubmit={handleSubmit} className=" px-4 pt-4 pb-8 mb-4">
           {error && <div className="text-red-500 text-center mb-4">{error}</div>}
-          <div className='grid grid-cols-2 gap-4'>
-              <div className="">
-                <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">
+          <div className='grid grid-col-2 lg:gap-4 gap-2' >
+              <div className="flex flex-col gap-1 max-w-md mb-2 lg:col-span-1 col-span-2">
+                <label htmlFor="title" className="block text-base font-medium">
                   Blog Title
                 </label>
                 <input
@@ -144,14 +144,14 @@ export default function AddBlog() {
                   name="title"
                   value={formData.title}
                   onChange={handleInputChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40 "
                   placeholder="Enter blog title"
                   required
                 />
               </div>
 
-              <div className="">
-                <label htmlFor="category" className="block text-gray-700 text-sm font-bold mb-2">
+              <div className="flex flex-col gap-1 max-w-md  lg:col-span-1 col-span-2 mb-2">
+                <label htmlFor="category" className="block text-base font-medium">
                   Category
                 </label>
                 <select
@@ -159,7 +159,7 @@ export default function AddBlog() {
                   name="category"
                   value={formData.category}
                   onChange={handleInputChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
                   required
                 >
                   <option value="">Select a category</option>
@@ -171,11 +171,11 @@ export default function AddBlog() {
               </div>
 
               <div className=" col-span-2 ">
-                <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
+                <label htmlFor="description" className="block text-base font-medium">
                   Blog Description
                 </label>
                 <JoditEditor
-                  className='rounded '
+                  className='outline-none  rounded border border-gray-500/40 '
                   value={formData.description}
                   onChange={handleDescriptionChange}
                   required
@@ -184,8 +184,8 @@ export default function AddBlog() {
               </div>
 
 
-              <div className="">
-                <label htmlFor="seoTitle" className="block text-gray-700 text-sm font-bold mb-2">
+              <div className="flex flex-col gap-1 max-w-md mb-2 lg:col-span-1 col-span-2">
+                <label htmlFor="seoTitle" className="block text-base font-medium">
                   SEO Title
                 </label>
                 <input
@@ -194,12 +194,12 @@ export default function AddBlog() {
                   name="seoTitle"
                   value={formData.seoTitle}
                   onChange={handleInputChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
                   placeholder="Enter SEO title"
                 />
               </div>
-              <div className="">
-                <label htmlFor="seoKeywords" className="block text-gray-700 text-sm font-bold mb-2">
+              <div className="flex flex-col gap-1 max-w-md mb-2 lg:col-span-1 col-span-2">
+                <label htmlFor="seoKeywords" className="block text-base font-medium">
                   SEO Keywords
                 </label>
                 <input
@@ -208,28 +208,29 @@ export default function AddBlog() {
                   name="seoKeywords"
                   value={formData.seoKeywords}
                   onChange={handleInputChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
                   placeholder="Enter SEO keywords (comma-separated)"
                 />
               </div>
-              <div className="">
-                <label htmlFor="seoDescription" className="block text-gray-700 text-sm font-bold mb-2">
+              <div className="flex flex-col gap-1 max-w-md mb-2 lg:col-span-1 col-span-2">
+                <label htmlFor="seoDescription" className="block text-base font-medium">
                   SEO Description
                 </label>
                 <textarea
                   id="seoDescription"
                   name="seoDescription"
+                  rows={4}
                   value={formData.seoDescription}
                   onChange={handleInputChange}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-24"
+                  className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
                   placeholder="Enter SEO description"
                 />
               </div>
 
              
 
-              <div className="">
-                <label htmlFor="image" className="block text-gray-700 text-sm font-bold mb-2">
+              <div className="flex flex-col gap-1 max-w-md mb-2 lg:col-span-1 col-span-2">
+                <label htmlFor="image" className="block text-base font-medium ">
                   Blog Image
                 </label>
                 <div className="relative border-2 border-dashed border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center bg-gray-50">

@@ -36,13 +36,13 @@ export default function AddCategory() {
   };
 
   return (
-    <div className="min-h-screen pt-2 px-4 sm:px-6 lg:px-2">
-      <div className=" mx-auto">
-        <h1 className="text-xl font-normal  text-gray-900 mb-3">Create New Category</h1>
-        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-4 pt-4 pb-8 mb-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="">
-              <label htmlFor="category" className="block text-gray-700 text-sm font-bold mb-2">
+    <div className="flex-1 min-h-screen flex flex-col justify-between">
+      <div className="">
+      {/* <p className="text-xl font-medium  px-4 pt-3" >Create New Category</p> */}
+        <form onSubmit={handleSubmit} className=" space-y-5 px-4 pt-4 pb-8 mb-4">
+          <div className="">
+            <div className="flex flex-col gap-1 max-w-md mb-3">
+              <label htmlFor="category"  className="text-base font-medium" >
                 Category Title
               </label>
               <input
@@ -51,21 +51,22 @@ export default function AddCategory() {
                 name="category"
                 value={formData.category}
                 onChange={handleInputChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
                 placeholder="Enter Category title"
               />
             </div>
 
-            <div className="">
-              <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
+            <div className="flex flex-col gap-1 max-w-md  mb-3">
+              <label htmlFor="description" className="text-base font-medium">
                 Category Description
               </label>
               <textarea
                 id="description"
                 name="description"
                 value={formData.description}
+                rows={4}
                 onChange={handleInputChange}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40 resize-none"
                 placeholder="Enter category description"
                 required
               />
@@ -74,7 +75,7 @@ export default function AddCategory() {
             <div className="flex items-center justify-between">
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="px-8 py-2.5 bg-orange-600 text-white font-medium  rounded focus:outline-none focus:shadow-outline"
               >
                 Create Category
               </button>

@@ -1,34 +1,48 @@
 'use client';
-import React, { useEffect, useState } from 'react'
-import Image from "next/image"
-import Link from "next/link"
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import axios from 'axios';
 
 export default function FrontendBlogs() {
     const [blogs, setBlogs] = useState([]);
+    const [loading, setLoading] = useState(true); // Track loading state
 
     useEffect(() => {
         axios.get('api/blogs')
-          .then(response => {
-
-            console.log("Fetched Blogs:", response.data.data);  // Log response to inspect its structure
-
-            setBlogs(response.data.data); // Store the fetched data in state
-          })
-          .catch(error => {
-            console.error("Error fetching blogs:", error);
-          });
-      }, []);
+            .then(response => {
+                console.log("Fetched Blogs:", response.data.data);
+                setBlogs(response.data.data);
+            })
+            .catch(error => {
+                console.error("Error fetching blogs:", error);
+            })
+            .finally(() => {
+                setLoading(false); // Stop loading after data fetch
+            });
+    }, []);
 
     return (
-        
         <div>
-            {/* ------------------------ */}
-            <section className="py-16 bg-gray-50">
+            <section className="lg:pt-28 pt-28 lg:pb-16 bg-gray-50">
                 <div className="container mx-auto px-8">
                     <h2 className="text-4xl font-bold text-center mb-12">Latest Blog Posts</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {Array.isArray(blogs) && blogs.length > 0 ? (
+                        {loading ? (
+                            // Skeleton Loader (3 placeholder cards)
+                            [...Array(3)].map((_, index) => (
+                                <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-1 animate-pulse">
+                                    <div className="h-64 bg-gray-300 rounded-lg w-full"></div>
+                                    <div className="mt-4 h-6 bg-gray-300 rounded w-3/4"></div>
+                                    <div className="mt-2 h-4 bg-gray-300 rounded w-full"></div>
+                                    <div className="mt-2 h-4 bg-gray-300 rounded w-5/6"></div>
+                                    <div className="mt-4 flex justify-between text-sm text-gray-400">
+                                        <div className="h-4 bg-gray-300 w-1/4 rounded"></div>
+                                        <div className="h-4 bg-gray-300 w-1/4 rounded"></div>
+                                    </div>
+                                </div>
+                            ))
+                        ) : blogs.length > 0 ? (
                             blogs.map((blog, index) => (
                                 <article key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 transition-all duration-300 hover:shadow-md">
                                     <Link href={`/blog/${blog.slug}`} target="_blank">
@@ -47,8 +61,6 @@ export default function FrontendBlogs() {
                                             <p className="text-gray-600 mb-4" 
                                             dangerouslySetInnerHTML={{ __html: `${blog.description.substr(0,100)}...` }}
                                             >
-
-                                                {/* {blog.description.split(' ').slice(0, 20).join(' ')}{blog.description.split(' ').length > 20 && '...'} */}
                                             </p>
                                             <div className="flex items-center justify-between text-sm text-gray-500">
                                                 <span>{blog.author || 'Vinayak V.'}</span>
@@ -65,5 +77,5 @@ export default function FrontendBlogs() {
                 </div>
             </section>
         </div>
-    )
+    );
 }
