@@ -9,21 +9,24 @@ import LogoutButton from "../login/LogoutButton";
 // import { signOut } from "next-auth/react";
 
 export default function DashboardLayout({ children, title = "Dashboard" }) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isClient, setIsClient] = useState(false); 
 
-  useEffect(() => {
-    setIsClient(true); 
-  }, []);
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+  // useEffect(() => {
+  //   setIsClient(true); 
+  // }, []);
 
-  if (!isClient) {
-    return null; 
-  }
+  // if (!isClient) {
+  //   return null; 
+  // }
 
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
@@ -33,7 +36,7 @@ export default function DashboardLayout({ children, title = "Dashboard" }) {
             <div className="flex items-center gap-4">
               {/* Toggle Sidebar Button */}
               <button
-                onClick={() => setSidebarOpen(true)}
+                onClick={toggleSidebar}
                 className="md:hidden p-2 rounded-md text-white hover:bg-[#ED5729] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               >
                 <FaBars className="h-6 w-6 text-slate-400" />
@@ -47,11 +50,11 @@ export default function DashboardLayout({ children, title = "Dashboard" }) {
                 <MenuItems className="absolute right-0 w-48 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                   <div className="py-1">
                     <MenuItem>
-                      {({ active }) => (
+                      {({ focus }) => (
                         <Link
                           href="/profile"
                           className={`block px-4 py-2 text-sm text-gray-700 ${
-                            active ? "bg-gray-100" : ""
+                            focus ? "bg-gray-100" : ""
                           }`}
                         >
                           View Profile
