@@ -24,14 +24,14 @@ export default function FrontendBlogs() {
 
     return (
         <div>
-            <section className="py-16 bg-gray-50">
+            <section className="lg:pt-28 pt-28 lg:pb-16 bg-gray-50">
                 <div className="container mx-auto px-8">
                     <h2 className="text-4xl font-bold text-center mb-12">Latest Blog Posts</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {loading ? (
                             // Skeleton Loader (3 placeholder cards)
                             [...Array(3)].map((_, index) => (
-                                <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 animate-pulse">
+                                <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-1 animate-pulse">
                                     <div className="h-64 bg-gray-300 rounded-lg w-full"></div>
                                     <div className="mt-4 h-6 bg-gray-300 rounded w-3/4"></div>
                                     <div className="mt-2 h-4 bg-gray-300 rounded w-full"></div>
