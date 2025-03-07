@@ -12,7 +12,18 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false); // Page & transition loading state
+<<<<<<< HEAD
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+=======
+
+  useEffect(() => {
+    // Check if already logged in
+    const token = Cookies.get("auth_token");
+    if (token) {
+      router.push("/dashboard"); // Redirect if already logged in
+    }
+  }, []);
+>>>>>>> 0bcab5fa2136ebed1a5a1e8173dc98605db9ab6d
 
   useEffect(() => {
     const token = Cookies.get("auth_token");
@@ -58,7 +69,11 @@ export default function LoginPage() {
         <Loading/>
       ) : (
         // Login Form
+<<<<<<< HEAD
         <div className="pt-16 flex items-center justify-center bg-gray-100 min-h-[96vh]">
+=======
+        <div className="flex items-center justify-center bg-gray-100 min-h-[70vh]">
+>>>>>>> 0bcab5fa2136ebed1a5a1e8173dc98605db9ab6d
           <div className="bg-white p-8 rounded-lg shadow-lg w-96">
             <h1 className="text-2xl font-semibold text-center mb-6">Admin Login</h1>
             <form onSubmit={handleLogin}>
