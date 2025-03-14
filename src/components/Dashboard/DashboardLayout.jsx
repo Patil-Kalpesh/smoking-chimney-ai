@@ -30,7 +30,7 @@ export default function DashboardLayout({ children, title = "Dashboard" }) {
 
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
-        <div className="bg-gray-100 shadow-sm z-10">
+        <div className="bg-white shadow-sm z-10 border-b">
           <div className="max-w-7xl mx-auto py-4 px-2 sm:px-6 lg:ps-4 lg:pe-8 flex justify-between items-center">
             <h1 className="text-xl font-normal text-blue-400">{title}</h1>
             <div className="flex items-center gap-4">

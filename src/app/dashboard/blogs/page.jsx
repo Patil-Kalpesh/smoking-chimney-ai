@@ -44,7 +44,7 @@ export default function Page() {
   };
 
   return (
-    <DashboardLayout title="Blog">
+    <DashboardLayout title="">
       <div  className="min-h-screen pt-2 px-4 sm:px-6 lg:px-2">
         <h1 className="text-xl font-normal  text-gray-900 mb-3">Blog List</h1>
         {error && <p className="text-red-500">{error}</p>}

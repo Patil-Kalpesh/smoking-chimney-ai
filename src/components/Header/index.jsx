@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Link from "next/link";
 import Image from 'next/image';
 
@@ -13,12 +13,37 @@ const navLinks = [
 
 function ResponsiveNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
+
+      useEffect(() => {
+          const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+      
+            if (currentScrollY > lastScrollY) {
+              // User is scrolling down
+              setIsScrollingUp(false);
+            } else {
+              // User is scrolling up
+              setIsScrollingUp(true);
+            }
+      
+            setLastScrollY(currentScrollY);
+          };
+      
+          window.addEventListener('scroll', handleScroll);
+      
+          return () => {
+            window.removeEventListener('scroll', handleScroll);
+          };
+        }, [lastScrollY]);
+      
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
+    <div className={`header ${isScrollingUp ? 'show-header' : 'hide-header'}`}>
     <header className=" container mx-auto w-full bg-white ">
       <nav className="flex justify-between items-center px-[20px] py-[20px] lg:mx-auto lg:px-[40px]">
         {/* Logo */}
@@ -77,6 +102,7 @@ function ResponsiveNavbar() {
         </ul>
       )}
     </header>
+    </div>
   );
 }
 

@@ -49,7 +49,7 @@ const ReviewCard  = ({
       <div className="flex flex-row items-center gap-2">
           <div className="card p-7 w-[358px] h-[205px] bg-[#ED57291F] rounded-lg flex-shrink-0">
             <div className='h-[48px] w-[48px] '>
-                <img className="rounded-full" width="48" height="48" alt="" src={img} />
+                <Image className="rounded-full" width="48" height="48" alt="" src={img} />
             </div>
             <p className='text-[26.72px] font-normal lg:pt-3 pt-1 '>{name} </p>
             <p className='text-[14px] lg:pt-3 pt-2'>{body}</p>
