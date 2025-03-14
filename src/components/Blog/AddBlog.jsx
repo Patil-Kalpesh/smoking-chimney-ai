@@ -4,12 +4,13 @@ import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { FiUpload } from 'react-icons/fi';
 import axios from 'axios';
-import JoditEditor, { Jodit } from 'jodit-react';
+import dynamic from "next/dynamic";
+const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 
 export default function AddBlog() {
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
   const router = useRouter();
-  const blogId = searchParams.get('id');
+  // const blogId = searchParams.get('id');
 
   const [formData, setFormData] = useState({
     title: '',
@@ -22,7 +23,14 @@ export default function AddBlog() {
   });
   const [error, setError] = useState('');
   const [isEditMode, setIsEditMode] = useState(false);
+  const [blogId, setBlogId] = useState(null);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      setBlogId(params.get("id"));
+    }
+  }, []);
   useEffect(() => {
     if (blogId) {
       fetchBlogData(blogId);
