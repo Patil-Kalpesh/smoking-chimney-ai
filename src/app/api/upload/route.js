@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
-import path from "path";
-import fs from "fs";
-import { promisify } from "util";
-import mime from "mime-types";
+import { v2 as cloudinary } from "cloudinary";
 
-const writeFile = promisify(fs.writeFile);
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 export async function POST(req) {
   try {
@@ -15,21 +16,17 @@ export async function POST(req) {
       return NextResponse.json({ success: false, message: "No file uploaded" }, { status: 400 });
     }
 
-    // Convert file to a Buffer
+    // Convert file to Buffer
     const buffer = await file.arrayBuffer();
-    const fileExtension = mime.extension(file.type);
-    const fileName = `${Date.now()}.${fileExtension}`;
+    const base64File = `data:${file.type};base64,${Buffer.from(buffer).toString("base64")}`;
 
-    // Define file path
-    const filePath = path.join(process.cwd(), "public/uploads", fileName);
+    // Upload directly to Cloudinary
+    const uploadResponse = await cloudinary.uploader.upload(base64File, {
+      folder: "nextjs_uploads", // Change folder if needed
+      resource_type: "auto",
+    });
 
-    // Write the file to disk
-    await writeFile(filePath, Buffer.from(buffer));
-
-    // Generate accessible URL
-    const fileUrl = `/uploads/${fileName}`;
-
-    return NextResponse.json({ success: true, url: fileUrl }, { status: 200 });
+    return NextResponse.json({ success: true, url: uploadResponse.secure_url }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ success: false, message: error.message }, { status: 500 });
   }

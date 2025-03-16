@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import WhoweareSection from '../CommonSection/WhoweareSection'
 import Otherservices from '../CommonSection/Otherservices'
 import CTA from '../CommonSection/CTA'
-
+import Link from 'next/link'
 
 import { slideUp, parentContainerVariants } from "@/lib/variants";
 import HighlightText from '../ui/HighlightText'
@@ -184,7 +184,7 @@ export default function Solutions() {
                     <h1 className='font-sofia font-medium text-center text-[60px] lg:text-[72px]  leading-[85.21px] lg:pt-[0px] pb-2 tracking-[-1.21px]'>Solutions That Matter, <span className='text-[#ED5729]'>Simplified</span>. </h1>
                     <div className="singleLine"><p className='font-sofia font-light  text-[#212529] text-[26px]  text-center'>Positive impact while adhering to ethical standards</p></div>
                     <div className='text-center mt-5 lg:mt-6'>
-                        <button className='btn-lightup'>Get Amplified!!</button>
+                        <button className='banner-btn'><Link href={'https://cal.com/smokingchimneystudios/free-consultation?layout=mobile'} target="_blank" >Get Amplified!!</Link></button>
                     </div>
                 </motion.div>
             </div>

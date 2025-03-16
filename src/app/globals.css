@@ -143,6 +143,14 @@ body {
 .btn-lightup:hover {
   @apply bg-white text-[#ED5729] border-[#ED5729];
 }
+.banner-btn {
+  @apply rounded-md bg-[#ED5729] text-white px-20 py-1   font-normal border border-transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner-btn:hover {
+  @apply bg-white text-[#ED5729] border-[#ED5729];
+}
 
 @layer base {
   :root {

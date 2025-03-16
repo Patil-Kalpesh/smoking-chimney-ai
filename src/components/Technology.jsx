@@ -5,7 +5,7 @@ import Contact from '@/components/CommonSection/Contact'
 import { motion } from "framer-motion";
 import { slideUp } from "@/lib/variants";
 import HighlightText from "./ui/HighlightText";
-
+import Link from 'next/link';
 
   
 export default function Technology() {
@@ -24,13 +24,13 @@ export default function Technology() {
                     <h1 className='font-sofia font-medium text-center text-[60px] lg:text-[72px]  leading-[85.21px] lg:pt-[0px] pb-2 tracking-[-1.21px]'>Proactive, Dynamic &  <span className='text-[#ED5729]'>Bold</span>. </h1>
                     <div className="singleLine"><p className='font-sofia font-light  text-[#212529] text-[26px]  text-center'>Experience trustworthy, innovative solutions that&apos;s ready optimally for the years ahead.</p></div>
                     <div className='text-center mt-5 lg:mt-6'>
-                        <button className='btn-lightup'>Get Amplified!!</button>
+                        <button className='banner-btn'><Link href={'https://cal.com/smokingchimneystudios/free-consultation?layout=mobile'} target="_blank" >Get Amplified!!</Link></button>
                     </div>
                 </motion.div>
             </div>
         </div>
         {/*----- section-2 ----- */}
-        <div className=' mx-auto h-100 w-full  px-8 lg:px-[20px] py-[60px] bg-[#EEF3ED]'>
+        <div className='mx-auto h-100 w-full  px-8 lg:px-[20px] py-[60px] bg-[#EEF3ED]'>
             <motion.div className='text-center '
                 variants={slideUp}
                 initial="hidden"
@@ -48,7 +48,7 @@ export default function Technology() {
                 
             </motion.div>
         </div>
-        {/*----- section-3 ------  */}
+            {/*----- section-3 ------  */}
          <div className='container mx-auto px-8 lg:px-10 py-[60px] '>
             <p className='text-center text-[26px]'>Enhance the lives of millions of people</p>
             {/* <h2 className="text-center lg:text-[48px] lg:py-[10px] leading-normal font-medium"> <span className='text-[#ED5729]'> We are eager </span> to contribute in <br /><span className='text-[#ED5729]'>revolutionary projects</span> </h2> */}
@@ -145,7 +145,7 @@ export default function Technology() {
                 </motion.div>
             </div>
         </div>
-        
+      
 
         {/* ---- section-8------ */}
          <Contact/>
