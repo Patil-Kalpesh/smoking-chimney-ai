@@ -63,7 +63,7 @@ export default function Page() {
               <tbody>
                 {blogs.map((blog) => (
                   <tr key={blog._id} className="border-b hover:bg-gray-50">
-                    <td className="p-2 border"> <Image src={blog.image} alt=""   width={80} height={80}  className="h-20 w-20"/> </td>
+                    <td className="p-2 border"> <Image src={blog.image} alt={blog.image}   width={80} height={80}  className="h-20 w-20"/> </td>
                     <td className="p-2 border">{blog.title}</td>
                     <td className="p-2 border">{blog.category}</td>
                     <td className="p-2 border">

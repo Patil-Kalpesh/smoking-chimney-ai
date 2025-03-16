@@ -5,9 +5,18 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { FiUpload } from 'react-icons/fi';
 import axios from 'axios';
 import dynamic from "next/dynamic";
+import Image from 'next/image';
+import { ToastContainer, toast } from 'react-toastify';
+import Loading from '../Loading';
+
 const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 
 export default function AddBlog() {
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState('');
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [blogId, setBlogId] = useState(null);
+  const [loading, setLoading] = useState(false);
   // const searchParams = useSearchParams();
   const router = useRouter();
   // const blogId = searchParams.get('id');
@@ -21,9 +30,7 @@ export default function AddBlog() {
     seoDescription: '',
     seoKeywords: '',
   });
-  const [error, setError] = useState('');
-  const [isEditMode, setIsEditMode] = useState(false);
-  const [blogId, setBlogId] = useState(null);
+  
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -38,16 +45,19 @@ export default function AddBlog() {
   }, [blogId]);
 
   const fetchBlogData = async (id) => {
+    setLoading(true);
     try {
       const response = await axios.get(`/api/blogs/${id}`);
       if (response.data.success) {
         setFormData(response.data.data);
         setIsEditMode(true);
       } else {
-        setError(response.data.message || 'Failed to fetch blog details.');
+        toast.error(response.data.message || 'Failed to fetch blog details.');
       }
     } catch (error) {
-      setError('Error fetching blog details.');
+      toast.error('Error fetching blog details.');
+    }finally {
+      setLoading(false);
     }
   };
 
@@ -65,46 +75,50 @@ export default function AddBlog() {
       description: newContent,
     }));
 };
-  const handleImageChange = async (e) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      const maxSize = 10 * 1024 * 1024; // 10MB
-  
-      if (file.size > maxSize) {
-        setError("File size should be less than 10MB");
-        return;
-      }
-  
-      setError("");
-      const formData = new FormData();
-      formData.append("file", file);
-  
-      try {
-        const response = await axios.post("/api/upload", formData);
-        console.log(JSON.stringify(response))
-        if (response.data.success) {
-          // alert(response.data.url);
-          setFormData((prevState) => ({
-            ...prevState,
-            image: response.data.url, // Store uploaded image URL
-          }));
-          console.log("Updated FormData:", formData);
+const handleImageChange = async (e) => {
+  if (e.target.files && e.target.files[0]) {
+    const file = e.target.files[0];
+    const maxSize = 10 * 1024 * 1024; // 10MB
 
-        } else {
-          setError("Image upload failed");
-        }
-      } catch (error) {
-        setError("Error uploading image");
-      }
+    if (file.size > maxSize) {
+      toast.error("File size should be less than 10MB");
+      return;
     }
-  };
-  
+
+    setError("");
+    setUploading(true);
+
+    const formDataUpload = new FormData();
+    formDataUpload.append("file", file);
+
+    try {
+      const response = await axios.post("/api/upload", formDataUpload); // Ensure this API is correct
+
+      if (response.data.success && response.data.url) {
+        setFormData((prevState) => ({
+          ...prevState,
+          image: response.data.url, // Store the uploaded image URL
+        }));
+        toast.success('Image uploaded successfully!');
+        console.log("Image uploaded successfully:", response.data.url);
+      } else {
+        toast.error('Image upload failed. Please try again.');
+      }
+    } catch (error) {
+      toast.error('Error uploading image.');
+    } finally {
+      setUploading(false);
+    }
+  }
+};
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     if (!formData.title || !formData.category || !formData.description) {
-      setError('Title, category, and description are required!');
+      toast.error('Title, category, and description are required!');
+      setLoading(false);
       return;
     }
 
@@ -122,20 +136,25 @@ export default function AddBlog() {
     try {
       if (isEditMode) {
         await axios.put(`/api/blogs/${blogId}`, blogData);
-        alert('Blog updated successfully!');
+        toast.success('Blog updated successfully!');
       } else {
         await axios.post('/api/blogs', blogData);
-        alert('Blog created successfully!');
+        toast.success('Blog created successfully!');
       }
       router.push('/dashboard/blogs');
     } catch (error) {
-      setError('Error during submission, please try again.');
+      toast.error('Error during submission, please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div className="flex-1 min-h-screen flex flex-col justify-between">
-      <div className="">
+      
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
+      {loading ? (<Loading/>) :(
+      <div>
         <h1 className="text-xl font-medium  px-4 pt-3 mb-3">
           {isEditMode ? 'Edit Blog Post' : 'Create New Blog Post'}
         </h1>
@@ -242,13 +261,16 @@ export default function AddBlog() {
                   Blog Image
                 </label>
                 <div className="relative border-2 border-dashed border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center bg-gray-50">
-                  {/* Show Preview if Image Exists */}
-                  {formData.image ? (
+                  {uploading ? (
+                    <p className="text-blue-500 text-sm">Uploading...</p>
+                  ) : formData.image ? (
                     <div className="relative">
-                      <img
+                      <Image
                         src={formData.image}
                         alt="Uploaded preview"
                         className="h-40 w-40 object-cover rounded-lg shadow-md"
+                        width={40}
+                        height={30}
                       />
                       <button
                         type="button"
@@ -276,7 +298,6 @@ export default function AddBlog() {
                     accept="image/*"
                   />
                 </div>
-
                 {/* Replace Image Button */}
                 {formData.image && (
                   <button
@@ -294,11 +315,11 @@ export default function AddBlog() {
               type="submit"
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
-              {isEditMode ? 'Update Post' : 'Create Post'}
+             {loading ? 'Uploading...' : isEditMode ? 'Update Post' : 'Create Post'}
             </button>
           </div>
         </form>
-      </div>
+      </div>)}
     </div>
   );
 }

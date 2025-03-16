@@ -1,5 +1,6 @@
 import { Blog } from "@/lib/Blog";
 import dbConnect from "@/utils/dbConnect";
+import slugify from "slugify";
 
 // 🟢 GET a Blog by Slug
 export async function GET(req, { params }) {
@@ -16,13 +17,13 @@ export async function GET(req, { params }) {
   }
 }
 
-// 🟢 UPDATE a Blog by Slug
+//  UPDATE a Blog by Slug
 export async function PUT(req, { params }) {
   await dbConnect();
 
   try {
     const body = await req.json();
-    const updatedBlog = await Blog.findOneAndUpdate({ slug: params.slug }, body, { new: true, runValidators: true });
+    const updatedBlog = await Blog.findOneAndUpdate({ slug: params.slug }, {...body, slug:slugify(body.title, { lower: true, strict: true })}, { new: true, runValidators: true });
 
     if (!updatedBlog) {
       return new Response(JSON.stringify({ success: false, message: "Blog not found" }), { status: 404 });
