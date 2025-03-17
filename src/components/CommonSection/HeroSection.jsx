@@ -19,8 +19,8 @@ export default function HeroSection() {
           <p className="font-sofia font-light text-[#ED5729] text-[26px] text-center">
             We solve real-world problems efficiently
           </p>
-          <div className="text-center mt-5 lg:mt-6">
-            <Link href={'https://cal.com/smokingchimneystudios/free-consultation?layout=mobile'} target="_blank" className="btn-lightup">Get Amplified!!</Link>
+          <div className="text-center mt-5 lg:mt-6 ">
+           <button className=" banner-btn "> <Link href={'https://cal.com/smokingchimneystudios/free-consultation?layout=mobile'} target="_blank" >Get Amplified!!</Link></button> 
           </div>
         </motion.div>
       </div>

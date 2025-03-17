@@ -2,49 +2,47 @@
 
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import Cookies from "js-cookie";
-import Header from '@/components/Header/index';
-import Footer from '@/components/Footer/index';
+import Header from "@/components/Header/index";
+import Footer from "@/components/Footer/index";
 import Loading from "@/components/Loading";
 
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false); // Page & transition loading state
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(null);
 
   useEffect(() => {
-    const token = Cookies.get("auth_token");
+    const token = localStorage.getItem("auth_token");
 
-    if (!token) {
-      router.replace("/"); // Redirect to login if not authenticated
-    } else {
+    if (token) {
       setIsAuthenticated(true);
+      router.replace("/dashboard"); // Redirect to dashboard if already logged in
+    } else {
+      setIsAuthenticated(false);
     }
-
-    setLoading(false);
   }, []);
 
-  if (loading) {
-    return <p>Loading...</p>; // Prevent UI flash while checking authentication
+  if (isAuthenticated === null) {
+    return <Loading />;
   }
 
-  if (!isAuthenticated) {
-    return null; // Avoid rendering sensitive content before redirecting
+  if (isAuthenticated) {
+    return null; // Prevent login page from rendering if already logged in
   }
-  
+
   const handleLogin = (e) => {
     e.preventDefault();
-    setLoading(true); // Show loading before redirecting
+    setLoading(true);
 
     setTimeout(() => {
       if (email === "admin@gmail.com" && password === "123456") {
-        Cookies.set("auth_token", "your_auth_token", { expires: 5 });
-        router.push("/dashboard");
+        localStorage.setItem("auth_token", "your_auth_token");
+        router.push("/dashboard"); // Redirect to dashboard after login
       } else {
         alert("Invalid credentials");
-        setLoading(false); // Stop loading if failed
+        setLoading(false);
       }
     }, 2000);
   };
@@ -52,12 +50,9 @@ export default function LoginPage() {
   return (
     <>
       <Header />
-
       {loading ? (
-        // Full Page Loader During Login & Redirect
-        <Loading/>
+        <Loading />
       ) : (
-        // Login Form
         <div className="pt-16 flex items-center justify-center bg-gray-100 min-h-[96vh]">
           <div className="bg-white p-8 rounded-lg shadow-lg w-96">
             <h1 className="text-2xl font-semibold text-center mb-6">Admin Login</h1>
@@ -93,7 +88,6 @@ export default function LoginPage() {
           </div>
         </div>
       )}
-
       <Footer />
     </>
   );

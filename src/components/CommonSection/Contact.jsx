@@ -17,9 +17,7 @@ export default function Contact() {
           <p className="text-[22px]">The team AI-powered wonder elevates mundane tasks into the astounding. </p>
           <p className="text-[22px] pt-[20px]">Whether Hollywood-worthy stories to profound user experiences, we&apos;re the <br />first place to look for unprecedented changes in the digital realm.</p>
           <div className="pt-[38px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 gap-y-14">
-            <motion.div className="card-item lg:p-4 "
-
-            >
+            <motion.div className="card-item lg:p-4 " >
               <div>
                 <p className="text-[18px] py-2 border-b-[1px] border-black text-[#ED5729]">hi@smokingchimneystudios.com </p>
                 <p className="text-[#00000080]">Professional, accessible, and secure.</p>
