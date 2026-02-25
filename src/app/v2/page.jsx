@@ -1,10 +1,10 @@
 import Image from "next/image";
-import EngineeredCapabilitiesSection from "./Component/EngineeredCapabilitiesSection";
-import PortfolioUI from "./Component/PortfolioUI";
-import CommercialFrameworks from "./Component/CommercialFrameworks";
-import StudioSection from "./Component/StudioSection";
-import SkipAgencySection from "./Component/SkipAgencySection";
-import Footer from "./Component/Footer";
+import EngineeredCapabilitiesSection from "../../components/Component/EngineeredCapabilitiesSection";
+import PortfolioUI from "../../components/Component/PortfolioUI";
+import CommercialFrameworks from "../../components/Component/CommercialFrameworks";
+import StudioSection from "../../components/Component/StudioSection";
+import SkipAgencySection from "../../components/Component/SkipAgencySection";
+import Footer from "../../components/Component/Footer";
 
 const navItems = ["Services", "Studio", "Work", "Process"];
 const serviceTags = [
@@ -211,9 +211,9 @@ export default function Page() {
 
           <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl">
             Logic combines with the soul of a musician to solve the one problem
-            that matters: Obscurity. A background in filmmaking isn't just a
+            that matters: Obscurity. A background in filmmaking isn&apos;t just a
             hobby; it is the empathy tool. It teaches that if the audience
-            doesn't feel something, they won't do anything.
+            doesn&apos;t feel something, they won&apos;t do anything.
           </p>
 
           <a
@@ -234,7 +234,7 @@ export default function Page() {
               Cinema-led tools for growth-seeking brands.
             </h2>
             <p className="mt-5 text-base sm:text-lg text-gray-600 leading-relaxed">
-              We don't just 'make videos'. We engineer assets using proprietary
+              We don&apos;t just &apos;make videos&apos;. We engineer assets using proprietary
               narrative frameworks and AI velocity.
             </p>
           </div>
@@ -265,7 +265,7 @@ export default function Page() {
             {/* Card 3 */}
             <div className="bg-white rounded-2xl p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
               <h3 className="text-lg md:text-xl font-medium text-gray-900 leading-snug">
-                We don't just edit video.
+                We don&apos;t just edit video.
                 <br />
                 We engineer attention.
               </h3>
@@ -485,7 +485,7 @@ export default function Page() {
             </h2>
 
             <p className="text-gray-500 leading-relaxed mb-10 max-w-md">
-              Don’t wait for the "big reveal". Watch it build. See your project come alive everyday*. No radio silence, just relentless progress.
+              Don’t wait for the &quot;big reveal&quot;. Watch it build. See your project come alive everyday*. No radio silence, just relentless progress.
             </p>
 
             {/* Timeline UI */}
@@ -544,7 +544,7 @@ export default function Page() {
         {/* Subtext */}
         <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mb-16">
           From brand identity to high-end CGI, we provide the technical and
-          creative expertise needed to elevate your brand's digital presence.
+          creative expertise needed to elevate your brand&apos;s digital presence.
           Select a specialized unit to view the narrative blueprint and
           sub-service specifications.
         </p>
@@ -558,7 +558,7 @@ export default function Page() {
               Retention.
             </h3>
             <p className="text-gray-600 leading-relaxed text-sm">
-              If they don't watch, they don't buy. We craft stories that don't
+              If they don&apos;t watch, they don&apos;t buy. We craft stories that don&apos;t
               just interrupt the feed—they become the reason people stop
               scrolling.
             </p>
@@ -582,7 +582,7 @@ export default function Page() {
               Global Scale.
             </h3>
             <p className="text-gray-600 leading-relaxed text-sm">
-              Your brand doesn't sleep. Our distributed team chases the sun,
+              Your brand doesn&apos;t sleep. Our distributed team chases the sun,
               keeping the creative fires burning 24/7 to meet global timelines.
             </p>
           </div>
@@ -638,7 +638,7 @@ export default function Page() {
             <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
               Works that moved people, turned heads and Proven to change
               directions. We attach precise performance telemetry to every
-              production sequence. Proof isn't a separate section—it's the
+              production sequence. Proof isn&apos;t a separate section—it&apos;s the
               core of our aesthetic.
             </p>
                {/* Subheading */}

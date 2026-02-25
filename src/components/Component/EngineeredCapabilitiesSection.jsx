@@ -31,13 +31,13 @@ const EngineeredCapabilitiesSection = () => {
         {/* Paragraphs */}
         <p className="text-gray-600 text-lg max-w-4xl leading-relaxed mb-6">
           From brand identity to high-end CGI, we provide the technical and
-          creative expertise needed to elevate your brand's digital presence.
+          creative expertise needed to elevate your brand&apos;s digital presence.
           Select a specialized unit to view the narrative blueprint and
           sub-service specifications.
         </p>
 
         <p className="text-gray-600 text-lg max-w-4xl leading-relaxed mb-16">
-          Stop buying generic "creative work". Purchase specific solutions to
+          Stop buying generic &quot;creative work&quot;. Purchase specific solutions to
           business friction. Explore how each department eliminates a barrier
           to growth.
         </p>

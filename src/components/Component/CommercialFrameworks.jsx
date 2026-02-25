@@ -14,10 +14,10 @@ export default function CommercialFrameworks() {
           </h2>
 
           <p className="mt-6 text-gray-600 text-lg leading-relaxed">
-            We don't sell hours. We sell outcomes. Choose the trajectory that
-            matches your current mission phase. whether you're starting fresh
-            or going global, we've bundled everything you need to stand out and
-            sell more. no fluff, just results.
+            We don&apos;t sell hours. We sell outcomes. Choose the trajectory that
+            matches your current mission phase. whether you&apos;re starting fresh
+            or going global&lsquo; we&apos;ve bundled everything you need to stand out and
+            sell more. no fluff&lsquo; just results.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export default function CommercialFrameworks() {
           <FrameworkCard
             title="Build conviction."
             subtitle="Project Base Cycle"
-            description="Investors don't read decks. They scan for signals. We build the visual authority that makes the valuation stick."
+            description="Investors don&apos;t read decks. They scan for signals. We build the visual authority that makes the valuation stick."
             points={[
               "Narrative Architecture",
               "Visual identity core",

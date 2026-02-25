@@ -22,7 +22,7 @@ export default function PortfolioUI() {
           <p className="mt-4 text-gray-600 max-w-3xl">
             Works that moved people, turned heads and Proven to change
             directions. We attach precise performance telemetry to every
-            production sequence. Proof isn't a separate section—it's the
+            production sequence. Proof isn&apos;t a separate section—it&apos;s the
             core of our aesthetic.
           </p>
         </div>

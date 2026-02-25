@@ -30,7 +30,7 @@ function TopBanner() {
           Custom Project Requirement
         </span>
         <span className="text-xs text-gray-400 mt-1">
-          Own the industry's ears and audience trust
+          Own the industry&apos;s ears and audience trust
         </span>
       </button>
     </div>
@@ -65,7 +65,7 @@ function HowWeWork() {
       </div>
 
       <p className="text-sm text-orange-600">
-        The Home Discount ❤️ If you're a local business in India, ask us about
+        The Home Discount ❤️ If you&apos;re a local business in India, ask us about
         our special local rates.
       </p>
     </div>
