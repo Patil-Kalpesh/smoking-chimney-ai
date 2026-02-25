@@ -1,4 +1,10 @@
 import Image from "next/image";
+import EngineeredCapabilitiesSection from "./Component/EngineeredCapabilitiesSection";
+import PortfolioUI from "./Component/PortfolioUI";
+import CommercialFrameworks from "./Component/CommercialFrameworks";
+import StudioSection from "./Component/StudioSection";
+import SkipAgencySection from "./Component/SkipAgencySection";
+import Footer from "./Component/Footer";
 
 const navItems = ["Services", "Studio", "Work", "Process"];
 const serviceTags = [
@@ -444,6 +450,215 @@ export default function Page() {
         </div>
       </div>
     </section>
+    {/* Production section-6 */}
+     <section className="w-full bg-[#f5f5f5] py-24">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-10">
+          
+          {/* LEFT CARD */}
+          <div className="bg-white rounded-3xl p-10 shadow-sm">
+            <h2 className="text-2xl md:text-3xl font-medium text-gray-900 leading-snug mb-6">
+              We ship while they schedule.
+              <br />
+              Production ready in 48 hours.
+            </h2>
+
+            <p className="text-gray-500 leading-relaxed mb-8">
+              Traditional agencies take months. We take hours or mins and seconds depending on rush and wait.
+            </p>
+
+            {/* Gradient Button */}
+            <button className="relative px-8 py-4 rounded-xl text-white font-medium mb-8 bg-gradient-to-r from-orange-300 via-orange-400 to-orange-600 hover:opacity-90 transition">
+              Shipped in 2 Days*
+            </button>
+
+            {/* Bottom muted tag */}
+            <div className="bg-gray-100 text-gray-500 px-6 py-4 rounded-xl text-sm w-fit">
+              Month’s to launch & millions spend
+            </div>
+          </div>
+
+          {/* RIGHT CARD */}
+          <div className="bg-white rounded-3xl p-10 shadow-sm">
+            <h2 className="text-2xl md:text-3xl font-medium text-gray-900 leading-snug mb-6">
+              Frequent, high-fidelity updates.
+            </h2>
+
+            <p className="text-gray-500 leading-relaxed mb-10 max-w-md">
+              Don’t wait for the "big reveal". Watch it build. See your project come alive everyday*. No radio silence, just relentless progress.
+            </p>
+
+            {/* Timeline UI */}
+            <div className="relative border-t border-gray-200 pt-10">
+
+              {/* Floating Tags */}
+              <div className="relative h-32">
+
+                <div className="absolute left-0 top-0 bg-white shadow-md px-5 py-2 rounded-full text-sm">
+                  <span className="text-orange-500 mr-2">•</span> Script Lock
+                </div>
+
+                <div className="absolute left-1/3 top-10 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
+                  Style frame
+                </div>
+
+                <div className="absolute left-2/3 top-2 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
+                  Color Grade
+                </div>
+
+                <div className="absolute left-1/2 top-20 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
+                  Rough Cut
+                </div>
+
+                <div className="absolute right-0 top-16 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
+                  VFX Pass
+                </div>
+
+                <div className="absolute right-0 bottom-0 bg-orange-500 text-white px-6 py-3 rounded-full text-sm shadow-md">
+                  Final Master
+                </div>
+              </div>
+
+              {/* Days */}
+              <div className="flex justify-between text-xs text-gray-400 mt-6">
+                <span>Day 1</span>
+                <span>Day 2</span>
+                <span>Day 3</span>
+                <span>Day 4</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    {/* VisualEngineeringSection-7 */}
+     <section className="w-full bg-[#f5f5f5] py-24">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Heading */}
+        <h2 className="text-4xl md:text-5xl font-medium text-gray-900 mb-6">
+          Visual engineering.
+        </h2>
+
+        {/* Subtext */}
+        <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mb-16">
+          From brand identity to high-end CGI, we provide the technical and
+          creative expertise needed to elevate your brand's digital presence.
+          Select a specialized unit to view the narrative blueprint and
+          sub-service specifications.
+        </p>
+
+        {/* Cards Grid */}
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+          
+          {/* Card 1 */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-sm transition">
+            <h3 className="text-xl font-medium text-gray-900 mb-4">
+              Retention.
+            </h3>
+            <p className="text-gray-600 leading-relaxed text-sm">
+              If they don't watch, they don't buy. We craft stories that don't
+              just interrupt the feed—they become the reason people stop
+              scrolling.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-sm transition">
+            <h3 className="text-xl font-medium text-gray-900 mb-4">
+              Discovery.
+            </h3>
+            <p className="text-gray-600 leading-relaxed text-sm">
+              Being found is an engineering problem. We fuse technical SEO
+              with cinematic storytelling to ensure algorithms love you as
+              much as humans do.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-sm transition">
+            <h3 className="text-xl font-medium text-gray-900 mb-4">
+              Global Scale.
+            </h3>
+            <p className="text-gray-600 leading-relaxed text-sm">
+              Your brand doesn't sleep. Our distributed team chases the sun,
+              keeping the creative fires burning 24/7 to meet global timelines.
+            </p>
+          </div>
+
+          {/* CTA Card */}
+          <div className="rounded-2xl p-8 bg-gradient-to-br from-orange-500 to-orange-600 text-white flex flex-col justify-between">
+            <div>
+              <h3 className="text-xl font-medium mb-4">
+                Begin production.
+              </h3>
+              <p className="text-sm text-white/90 leading-relaxed">
+                Ready to eliminate the bottlenecks? Configure your production
+                unit and get a preliminary estimate in under 60 seconds.
+              </p>
+            </div>
+
+            <button className="mt-8 text-left text-lg font-medium flex items-center gap-2 hover:gap-3 transition-all">
+              Start Project Now →
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    {/*--- EngineeredCapabilitiesSection---8 */}
+    <EngineeredCapabilitiesSection/>
+    {/* Portfolio-section---9 */}
+    <PortfolioUI/>
+
+    {/* Section----10 */}
+    <div className="px-4 sm:px-8 lg:px-16 pt-10">
+      <div className="relative max-w-7xl mx-auto rounded-2xl overflow-hidden">
+
+        {/* Background Image */}
+        <div
+          className="h-[380px] sm:h-[450px] lg:h-[520px] bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('/images/v2/photo-bg-1.png')",
+          }}
+        />
+
+        {/* White Gradient Overlay (Left Fade) */}
+        <div className="absolute inset-0 " />
+
+        {/* Content */}
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-3xl px-6 sm:px-12">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 leading-tight">
+              Proven results. Worthy to share. Box office hits!
+            </h1>
+
+            <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
+              Works that moved people, turned heads and Proven to change
+              directions. We attach precise performance telemetry to every
+              production sequence. Proof isn't a separate section—it's the
+              core of our aesthetic.
+            </p>
+               {/* Subheading */}
+            <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
+              Join 500+ founders and creative directors who stopped playing safe and started shipping greatness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* CommercialFrameworks-section--11 */}
+    <CommercialFrameworks/>
+
+    {/* StudioSection--12 */}
+    <StudioSection/>
+    {/* SkipAngency-section-13 */}
+    <SkipAgencySection/>
+    {/* Footer */}
+    <Footer/>
 
     </>
   );
