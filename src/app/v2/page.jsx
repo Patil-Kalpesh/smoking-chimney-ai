@@ -80,24 +80,26 @@ const pillars = [
         {/* Header Section */}
         <Header  />
 
-        <main className="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-16 pt-32 lg:pt-40">
-          <div className="space-y-5 lg:max-w-3xl">
+        <main className="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-6 pt-32 lg:pt-52">
+          <div className="space-y-2 lg:max-w-3xl">
             <div className="flex items-center gap-2 text-sm font-medium text-[#d44a2d]">
               <span>Accepting Projects with</span>
               <span className="inline-block h-2.5 w-2.5 rounded-full bg-[#d44a2d]" />
             </div>
             <h1
-              className="font-figtree font-light text-[32px] leading-[1.4] text-[#181818]"
+              className="font-figtree font-light text-[32px] lg:text-[40px] leading-[1.4] lg:text-[#141517] text-white"
               style={{
                 letterSpacing: "0.01px",
                 fontVariantNumeric: "slashed-zero",
+                leadingTrim: "none",
+                verticalAlign: "middle",
               }}
             >
-              Award winning premiere for brands that need to move as fast as
+              Award winning premiere for brands that <br /> need to move as fast as
               modern culture.
             </h1>
             <div className="flex flex-wrap items-center gap-4">
-              <button className="flex items-center gap-3 rounded-lg bg-[#ef582a] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ef582a]/30 transition hover:translate-y-[-1px] hover:bg-[#df4f24]">
+              <button className="flex items-center gap-3 rounded-lg bg-[#ef582a] px-7 py-2 text-sm font-semibold text-white shadow-lg shadow-[#ef582a]/30 transition hover:translate-y-[-1px] hover:bg-[#df4f24]">
                 <span>Start Your Premiere</span>
                 <span className="text-lg">→</span>
               </button>
@@ -113,17 +115,17 @@ const pillars = [
                     />
                   ))}
                 </div>
-                <span className="text-[11px] tracking-tight">
+                <span className="text-[14px] lg:text-gray-500 text-white font-light">
                   Trusted by 12k+ clients
                 </span>
               </div>
             </div>
-            <p className="max-w-2xl text-sm text-[#4a4a4a]">
+            <p className="max-w-2xl text-[18px] font-light lg:text-[#141517] text-white">
               30-min session, Book your call. Just a clear path forward.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 text-sm text-[#4a4a4a]">
+          <div className="flex flex-wrap justify-center items-center gap-3 text-sm text-[#4a4a4a] lg:pt-16 pt-1">
             {serviceTags.map((tag) => (
               <span
                 key={tag}
@@ -134,43 +136,41 @@ const pillars = [
             ))}
           </div>
 
-          <div className="flex flex-col gap-4 rounded-full bg-white/92 px-6 py-4 shadow-lg shadow-black/5 backdrop-blur md:flex-row md:items-center md:justify-between">
+          <div className="mx-auto flex flex-col gap-4 rounded-full bg-white/70 lg:px-10 px-4 py-4 shadow-lg shadow-black/5 backdrop-blur md:flex-row md:items-center md:justify-center">
             <div className="flex items-center gap-3 text-sm text-[#4a4a4a]">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#ef582a]/10 text-[#ef582a]">
+              <div className="flex items-center gap-2">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#ef582a]/10 text-[#ef582a]">
                 ★
               </span>
               <div className="leading-tight">
-                <div className="font-semibold text-[#1f1f1f]">
+                <div className="text-xs font-light text-[#1f1f1f]">
                   Accepting New Projects
                 </div>
-                <div className="text-xs text-[#d44a2d]">
+                <div className="text-xs font-light text-[#d44a2d]">
                   2 Slots remaining for January
                 </div>
               </div>
-            </div>
-            <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
-              <button className="flex items-center gap-2 rounded-full bg-[#ef582a] px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-[#df4f24]">
+              </div>
+                <button className="flex items-center gap-2 rounded-full bg-[#ef582a] px-5 py-2 text-sm font-light text-white shadow-md transition hover:bg-[#df4f24]">
                 <span>Configure New Project</span>
                 <span className="text-lg">→</span>
               </button>
-              <div className="flex items-center gap-3 text-[#4a4a4a]">
-                {iconPaths.map((d, idx) => (
-                  <svg
-                    key={idx}
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    className="h-6 w-6 fill-none stroke-[#4a4a4a] stroke-[1.4]"
-                  >
-                    <path d={d} />
-                  </svg>
-                ))}
+            </div>
+            <div className="flex flex-col gap-3 md:flex-row md:items-center justify-center md:gap-4">
+            
+              <div className="flex items-center justify-center gap-3 text-[#4a4a4a]">
+               <img src="/images/v2/icon-1.png" alt="icon-1" />
+               <img src="/images/v2/icon-2.png" alt="icon-2" />
+               <img src="/images/v2/icon-3.png" alt="icon-3" /> |
+               <img src="/images/v2/icon-4.png" alt="icon-4" />
+               <img src="/images/v2/icon-5.png" alt="icon-5" />
               </div>
             </div>
           </div>
         </main>
       </div>
       {/* // Hero Section 2 */}
-      <section className="relative min-h-screen flex items-center bg-[#f3f3f3] overflow-hidden">
+      <section className="relative min-h-full pt-10 lg:pb-10 pb-6 flex items-center bg-[#f3f3f3] overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -182,13 +182,13 @@ const pillars = [
         </div>
 
         {/* Content */}
-        <div className="relative max-w-6xl mx-auto px-4 py-6">
-          <h1 className="text-4xl md:text-4xl font-light leading-tight text-gray-900">
+        <div className="relative max-w-6xl mx-auto px-4 py-4">
+          <h1 className="text-3xl md:text-[36px] font-light leading-tight text-[#141517]">
             Smoking Chimney is a creative-tech studio that turns messy ideas
             into binge-worthy experiences and orchestrate human connections.
           </h1>
 
-          <p className="mt-8 text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl">
+          <p className="mt-8 text-lg md:text-[21px] text-gray-600 leading-relaxed max-w-4xl">
             Fluency in Strategy is standard. But the native language here is
             Cinema. Experience it like a film score it needs rhythm, tension,
             and release. Access a friction-removal specialist disguised as a
@@ -204,7 +204,7 @@ const pillars = [
 
           <a
             href="#"
-            className="inline-flex items-center mt-10 text-orange-600 font-medium text-lg hover:underline"
+            className="inline-flex items-center mt-10 text-orange-600 font-normal text-lg hover:underline"
           >
             Read the operating manual
             <span className="ml-2 text-xl">↗</span>
@@ -212,14 +212,14 @@ const pillars = [
         </div>
       </section>
       {/* Tool Section--3 */}
-      <section className="bg-[#f4f4f4] py-8 md:py-10">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-[#fff] py-6 md:py-8">
+        <div className="max-w-6xl mx-auto px-6">
           {/* Header */}
           <div className="max-w-4xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight text-gray-900">
+            <h2 className="text-3xl lg:text-4xl  font-light leading-tight text-gray-900">
               Cinema-led tools for growth-seeking brands.
             </h2>
-            <p className="mt-5 text-base sm:text-lg text-gray-600 leading-relaxed">
+            <p className="mt-2 text-base sm:text-lg text-gray-600 leading-relaxed">
               We don&apos;t just &apos;make videos&apos;. We engineer assets using proprietary
               narrative frameworks and AI velocity.
             </p>
@@ -227,36 +227,34 @@ const pillars = [
 
           {/* GRID */}
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="col-span-2 relative rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] min-h-[250px] flex items-end p-8 md:p-10">
+            <div className="lg:col-span-2 col-span-1 relative rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] lg:min-h-[250px] min-h-[160px] flex items-end p-8 md:p-10">
               {/* Background Image */}
               <img
                 src="/images/v2/focus.png"
                 alt="Focus visual"
                 className="absolute inset-0 w-full h-full"
               />
-
               {/* Soft Overlay */}
-
               {/* Content */}
-              <div className="relative z-10 max-w-sm">
-                <h3 className="text-lg md:text-xl font-medium text-gray-900">
+              <div className="absolute z-10 max-w-sm top-14">
+                <h3 className="text-lg md:text-2xl font-light text-gray-800">
                   We focus on attention
                 </h3>
-                <p className="mt-4 text-gray-700 text-sm md:text-base leading-relaxed">
-                  We make things people actually want to watch.
+                <p className="mt-2 text-gray-600 text-md text-light ">
+                  We make things people actually <br /> want to watch.
                 </p>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-              <h3 className="text-lg md:text-xl font-medium text-gray-900 leading-snug">
+            <div className="bg-white rounded-2xl p-8 md:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+              <h3 className="text-lg md:text-2xl font-light text-gray-800">
                 We don&apos;t just edit video.
                 <br />
                 We engineer attention.
               </h3>
               <p className="mt-4 text-gray-600 text-sm md:text-base leading-relaxed">
-                We engineer assets using proprietary narrative frameworks and
+                We engineer assets using proprietary <br /> narrative frameworks and
                 visual delight.
               </p>
             </div>
@@ -264,14 +262,14 @@ const pillars = [
           <div className="mt-6  grid lg:grid-cols-5 grid-cols-1 gap-6 ">
             {/* Card 4 */}
             <div
-              className="col-span-2 w-full bg-no-repeat  bg-contain  relative rounded-2xl overflow-hidden  min-h-[227px] "
+              className="lg:col-span-2 col-span-1 w-full bg-no-repeat  bg-contain  relative rounded-2xl overflow-hidden  lg:min-h-[227px] h-[180px] "
               style={{ backgroundImage: "url('/images/v2/globe.png')" }}
             >
               {/* Background Image */}
               <div className=" ">
                 {/* Content */}
-                <div className="pt-8 ps-4">
-                  <h3 className="text-xl  md:text-2xl font-light text-gray-900 leading-snug">
+                <div className=" pt-4 ps-8">
+                  <h3 className="text-lg md:text-2xl font-light text-gray-800">
                     200+ Projects shipped globally
                   </h3>
                 </div>
@@ -280,24 +278,24 @@ const pillars = [
 
             {/* Card 5 */}
             <div
-              className="col-span-3  w-full bg-no-repeat  bg-contain relative rounded-2xl overflow-hidden  h-full"
+              className="lg:col-span-3  col-span-1 w-full bg-no-repeat  bg-contain relative rounded-2xl overflow-hidden  lg:h-[210px] h-[145px] "
               style={{ backgroundImage: "url('/images/v2/mu2.png')" }}
             >
-              <h3 className="pt-4 ps-4 text-xl md:text-2xl font-light text-gray-900">
-                Effortless video production at scale
+              <h3 className="pt-4  ps-4 text-xl md:text-2xl font-light text-gray-900">
+               Effortless video production at scale
               </h3>
             </div>
           </div>
-          <div className="mt-6  grid lg:grid-cols-5 grid-cols-1 gap-6 ">
+          <div className="mt-6  flex flex-col lg:flex-row gap-6 ">
             {/* TRUST SECTION */}
-            <div className="rounded-2xl col-span-3 bg-white">
+            <div className="rounded-2xl  bg-white">
             <div className=" flex gap-2 ">
-              <div className="max-w-[480px] ps-6">
-                <h3 className="mt-10  text-xl md:text-2xl font-light text-gray-900 leading-snug">
+              <div className="max-w-[590px] ps-6">
+                <h3 className="mt-10 text-lg md:text-2xl font-light text-gray-800">
                   Trusted by Visionaries and Creators like you.
                 </h3>
 
-                <p className="mt-4 text-gray-600 leading-relaxed text-sm md:text-base">
+                <p className="mt-4 text-gray-600 leading-relaxed text-sm ">
                   <span className="font-semibold">
                     40+ Global Industry Awards
                   </span>{" "}
@@ -309,27 +307,27 @@ const pillars = [
                 </p>
               </div>
 
-              <div className="flex justify-center md:justify-end mt-16">
+              <div className="flex justify-center w-[630px]">
                 <img
                   src="/images/v2/mascot.png"
                   alt="Mascot"
-                  className="w-52 md:w-64 object-contain"
+                  className="h-full object-contain"
                 />
               </div>
             </div>
             </div>
             {/* CTA Card */}
-            <div className="col-span-2 rounded-2xl p-8 md:p-10 bg-gradient-to-br from-orange-500 to-red-500 text-white  flex flex-col justify-between">
+            <div className="col-span-1 lg:w-[400px] rounded-2xl p-4 bg-gradient-to-br from-orange-600 to-[#F94A0D] text-white  flex flex-col justify-between">
               <div>
-                <h3 className="text-xl md:text-2xl font-medium leading-snug">
-                  Great Stories Unearth Hidden Revenue
+                <h3 className="text-xl font-medium leading-snug">
+                  Great Stories Unearth <br /> Hidden Revenue
                 </h3>
-                <p className="mt-4 text-sm md:text-base text-white/90 leading-relaxed">
-                  The best conversions come from evoking the right emotion.
+                <p className="mt-4 text-sm lg:text-lg text-white font-light ">
+                  The best conversions come <br /> from evoking the <br /> right emotion.
                 </p>
               </div>
 
-              <button className="mt-8 inline-flex items-center font-medium text-base md:text-lg hover:opacity-90 transition">
+              <button className="mt-8  mb-3 inline-flex items-center font-medium text-base md:text-lg hover:opacity-90 transition">
                 Start Project Now
                 <span className="ml-2 text-xl">→</span>
               </button>
