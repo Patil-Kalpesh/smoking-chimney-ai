@@ -372,37 +372,38 @@ const pillars = [
       </div>
        </section>
       {/* Parral section -5 */}
-     <section className="w-full bg-[#f3f3f3] py-24">
-      <div className="max-w-7xl mx-auto px-6">
+     <section className="w-full bg-[#ffff] py-24">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl font-medium text-gray-900 leading-tight max-w-4xl mb-16">
+        <h2 className="text-2xl md:text-4xl font-light text-[#141517] leading-tight max-w-4xl mb-10">
           Our each project is lead by three monolithic pillars,
           <br />
           Which lead your project to Effortless Cinema-grade.
         </h2>
 
-        {/* Cards */}
+       {/* Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {pillars.map((pillar, index) => (
-            <div key={index} className="space-y-6">
-              {/* Image */}
-              <div className="relative rounded-2xl overflow-hidden">
-                <img
-                  src={pillar.image}
-                  alt={pillar.title}
-                  className="w-full h-[420px] object-cover"
-                />
+            <div
+              key={index}
+              className="relative h-[620px] rounded-xl overflow-hidden group"
+            >
+              {/* Background Image */}
+              <img
+                src={pillar.image}
+                alt={pillar.title}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
 
-                {/* Bottom fade overlay */}
-                <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
-              </div>
+              {/* Dark Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/0 to-transparent"></div>
 
-              {/* Text */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              {/* Content */}
+              <div className="relative h-full flex flex-col justify-end p-6 text-[#141517]">
+                <h3 className="text-xl font-normal mb-3">
                   {pillar.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-sm text-gray-700 font-light leading-relaxed">
                   {pillar.description}
                 </p>
               </div>
@@ -411,37 +412,37 @@ const pillars = [
         </div>
 
         {/* CTA Section */}
-        <div className="relative bg-black text-white rounded-xl px-10 py-10 flex items-center justify-between overflow-hidden">
+        <div className=" relative bg-black text-white rounded-lg p-4 flex items-center justify-between ">
           
           {/* Left Text */}
-          <h3 className="text-2xl md:text-3xl font-medium max-w-xl">
+          <h3 className="text-2xl md:text-2xl font-light max-w-xl">
             Initialize Blueprint Script or <br /> Request Custom Solution?
           </h3>
 
           {/* Center Reel Image */}
-          <div className="absolute left-1/2 transform -translate-x-1/2">
+          <div className="absolute  left-1/2 transform -translate-x-1/2">
             <img
               src="/images/v2/reel.png"
               alt="reel"
-              className="w-28 h-28 object-contain"
+              className=" object-contain"
             />
           </div>
 
           {/* Right Button */}
-          <button className="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-lg text-white font-medium flex items-center gap-2">
+          <button className="bg-[#F94A0D] hover:bg-orange-600 transition px-8 py-3 rounded-md text-white font-medium flex items-center gap-2">
             Cinema-grade Solutions →
           </button>
         </div>
       </div>
     </section>
       {/* Production section-6 */}
-      <section className="w-full bg-[#f5f5f5] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="w-full bg-[#ffff] py-24">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-10">
             
             {/* LEFT CARD */}
-            <div className="bg-white rounded-3xl p-10 shadow-sm">
-              <h2 className="text-2xl md:text-3xl font-medium text-gray-900 leading-snug mb-6">
+            <div className="bg-white rounded-lg p-8 shadow-md ">
+              <h2 className="text-xl md:text-2xl font-light text-gray-900 leading-snug mb-6">
                 We ship while they schedule.
                 <br />
                 Production ready in 48 hours.
@@ -452,19 +453,19 @@ const pillars = [
               </p>
 
               {/* Gradient Button */}
-              <button className="relative px-8 py-4 rounded-xl text-white font-medium mb-8 bg-gradient-to-r from-orange-300 via-orange-400 to-orange-600 hover:opacity-90 transition">
+              <button className="relative ps-14 pe-2 py-3 rounded-md text-white text-sm font-light mb-8 bg-gradient-to-r from-white via-orange-400 to-orange-700 hover:opacity-90 transition">
                 Shipped in 2 Days*
               </button>
 
               {/* Bottom muted tag */}
-              <div className="bg-gray-100 text-gray-500 px-6 py-4 rounded-xl text-sm w-fit">
+              <div className="bg-gray-100 text-gray-500 ps-20 pe-6 py-3 rounded-md text-sm w-fit bg-gradient-to-r from-white via-gray-100 to-gray-300">
                 Month’s to launch & millions spend
               </div>
             </div>
 
             {/* RIGHT CARD */}
-            <div className="bg-white rounded-3xl p-10 shadow-sm">
-              <h2 className="text-2xl md:text-3xl font-medium text-gray-900 leading-snug mb-6">
+            <div className="bg-white rounded-lg p-8 shadow-md">
+              <h2 className="text-2xl md:text-3xl font-light text-gray-900 leading-snug mb-6">
                 Frequent, high-fidelity updates.
               </h2>
 
@@ -476,29 +477,29 @@ const pillars = [
               <div className="relative border-t border-gray-200 pt-10">
 
                 {/* Floating Tags */}
-                <div className="relative h-32">
+                <div className="relative h-40">
 
                   <div className="absolute left-0 top-0 bg-white shadow-md px-5 py-2 rounded-full text-sm">
                     <span className="text-orange-500 mr-2">•</span> Script Lock
                   </div>
 
-                  <div className="absolute left-1/3 top-10 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
+                  <div className="absolute left-1/4 top-14 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
                     Style frame
                   </div>
 
-                  <div className="absolute left-2/3 top-2 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
+                  <div className="absolute left-2/3 top-0 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
                     Color Grade
                   </div>
 
-                  <div className="absolute left-1/2 top-20 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
+                  <div className="absolute left-1/2 top-28 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
                     Rough Cut
                   </div>
 
-                  <div className="absolute right-0 top-16 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
+                  <div className="absolute right-0 top-14 bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600">
                     VFX Pass
                   </div>
 
-                  <div className="absolute right-0 bottom-0 bg-orange-500 text-white px-6 py-3 rounded-full text-sm shadow-md">
+                  <div className="absolute right-0 top-28 bg-orange-500 text-white px-5 py-2 rounded-full text-sm shadow-md">
                     Final Master
                   </div>
                 </div>
@@ -517,11 +518,11 @@ const pillars = [
         </div>
       </section>
       {/* VisualEngineeringSection-7 */}
-      <section className="w-full bg-[#f5f5f5] py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="w-full bg-[#ffff] py-12">
+        <div className="max-w-6xl mx-auto px-6">
           
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-medium text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-4xl font-light text-[#141517] mb-4">
             Visual engineering.
           </h2>
 
@@ -534,14 +535,14 @@ const pillars = [
           </p>
 
           {/* Cards Grid */}
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-3">
             
             {/* Card 1 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-sm transition">
-              <h3 className="text-xl font-medium text-gray-900 mb-4">
+            <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-sm transition">
+              <h3 className="text-xl font-normal text-gray-900 mb-2">
                 Retention.
               </h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-gray-600 font-light leading-relaxed text-sm">
                 If they don&apos;t watch, they don&apos;t buy. We craft stories that don&apos;t
                 just interrupt the feed—they become the reason people stop
                 scrolling.
@@ -549,11 +550,11 @@ const pillars = [
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-sm transition">
-              <h3 className="text-xl font-medium text-gray-900 mb-4">
+            <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-sm transition">
+              <h3 className="text-xl font-normal text-gray-900 mb-2">
                 Discovery.
               </h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-gray-600 font-light leading-relaxed text-sm">
                 Being found is an engineering problem. We fuse technical SEO
                 with cinematic storytelling to ensure algorithms love you as
                 much as humans do.
@@ -561,29 +562,29 @@ const pillars = [
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-sm transition">
-              <h3 className="text-xl font-medium text-gray-900 mb-4">
+            <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-sm transition">
+              <h3 className="text-xl font-normal text-gray-900 mb-2">
                 Global Scale.
               </h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-gray-600 font-light leading-relaxed text-sm">
                 Your brand doesn&apos;t sleep. Our distributed team chases the sun,
                 keeping the creative fires burning 24/7 to meet global timelines.
               </p>
             </div>
 
             {/* CTA Card */}
-            <div className="rounded-2xl p-8 bg-gradient-to-br from-orange-500 to-orange-600 text-white flex flex-col justify-between">
+            <div className="rounded-lg p-4 bg-gradient-to-br from-orange-500 to-orange-700 text-white flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-medium mb-4">
+                <h3 className="text-xl font-normal mb-4">
                   Begin production.
                 </h3>
-                <p className="text-sm text-white/90 leading-relaxed">
+                <p className="text-sm text-white/90 font-light leading-relaxed">
                   Ready to eliminate the bottlenecks? Configure your production
                   unit and get a preliminary estimate in under 60 seconds.
                 </p>
               </div>
 
-              <button className="mt-8 text-left text-lg font-medium flex items-center gap-2 hover:gap-3 transition-all">
+              <button className="mt-8 text-left text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all">
                 Start Project Now →
               </button>
             </div>
@@ -597,8 +598,8 @@ const pillars = [
       <PortfolioUI/>
 
       {/* Section----10 */}
-      <div className="px-4 sm:px-8 lg:px-16 pt-10">
-        <div className="relative max-w-7xl mx-auto rounded-2xl overflow-hidden">
+      <div className=" pt-10">
+        <div className="relative max-w-7xl mx-auto  overflow-hidden">
 
           {/* Background Image */}
           <div
@@ -615,18 +616,16 @@ const pillars = [
           {/* Content */}
           <div className="absolute inset-0 flex items-center">
             <div className="max-w-3xl px-6 sm:px-12">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 leading-tight">
-                Proven results. Worthy to share. Box office hits!
+              <h1 className="text-3xl  lg:text-4xl font-light text-gray-800 leading-snug">
+                We stopped hiring freelancers. 
+                We just plug Smoking Chimney into our Slack and things get shipped.
               </h1>
 
-              <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
-                Works that moved people, turned heads and Proven to change
-                directions. We attach precise performance telemetry to every
-                production sequence. Proof isn&apos;t a separate section—it&apos;s the
-                core of our aesthetic.
+              <p className="mt-6 text-gray-600 text-base sm:text-sm leading-relaxed">
+                    Madmango, Founder, Jugaadu AI
               </p>
                 {/* Subheading */}
-              <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
+              <p className="mt-2 text-gray-600 text-base sm:text-lg font-light leading-relaxed">
                 Join 500+ founders and creative directors who stopped playing safe and started shipping greatness.
               </p>
             </div>

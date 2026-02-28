@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <>
       <header className={`fixed top-6 left-0 right-0 z-20 flex justify-center px-4 transition-all duration-300 `}> 
-        <nav className={`flex items-center gap-6 rounded-full  px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-md ring-1 ring-black/5 w-full max-w-2xl md:max-w-4xl ${scrolled ? 'backdrop-blur-md bg-slate-100/30 shadow-lg' : 'bg-white/95'}`}>
+        <nav className={`flex items-center gap-8 rounded-full  px-6 py-3 shadow-lg shadow-black/5 backdrop-blur-md ring-1 ring-black/5 w-full max-w-2xl md:max-w-4xl ${scrolled ? 'backdrop-blur-md bg-slate-100/50 shadow-lg' : 'bg-white/95'}`}>
           <div className="flex items-center gap-3 pr-5">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-sm font-semibold uppercase text-white">
               <img src="/images/logo/SC_logo-2.avif" alt="Smoking Chimney Studios Logo" className="h-6 w-6 object-contain" />
@@ -38,7 +38,7 @@ export default function Header() {
             </div>
           </div>
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-5 text-sm text-[#4a4a4a]">
+          <div className=" hidden md:flex items-center gap-12 text-sm text-[#4a4a4a]">
             {navItems.map((item) => (
               <button
                 key={item}
@@ -48,7 +48,7 @@ export default function Header() {
               </button>
             ))}
           </div>
-          <button className="hidden md:flex ml-2 items-center gap-2 rounded-full bg-black px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#181818]">
+          <button className="hidden md:flex ml-2 items-center justify-end gap-2 rounded-full bg-black px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#181818]">
             <span>Configure New Project</span>
             <span className="text-lg">→</span>
           </button>

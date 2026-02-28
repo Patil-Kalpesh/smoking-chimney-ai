@@ -10,12 +10,12 @@ const categories = [
 
 export default function PortfolioUI() {
   return (
-    <div className="bg-gray-100 min-h-screen px-4 sm:px-8 lg:px-16 py-12">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-white min-h-screen px-4 sm:px-8 lg:px-16 py-12">
+      <div className="max-w-6xl mx-auto">
         
         {/* Heading Section */}
         <div className="text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl font-semibold text-gray-800">
+          <h1 className="text-3xl sm:text-4xl font-normal text-gray-800">
             Proven results. Worthy to share. Box office hits!
           </h1>
 
@@ -28,7 +28,7 @@ export default function PortfolioUI() {
         </div>
 
         {/* Category Pills */}
-        <div className="flex gap-3 mt-6 overflow-x-auto pb-2 scrollbar-hide">
+        <div className="flex gap-3 mt-10 overflow-x-auto pb-2 scrollbar-hide">
           {categories.map((cat, index) => (
             <button
               key={index}
@@ -44,7 +44,7 @@ export default function PortfolioUI() {
         </div>
 
         {/* Featured Card */}
-        <div className="mt-10">
+        <div className="mt-12">
           <div className="relative rounded-2xl overflow-hidden h-[280px] sm:h-[400px]">
             <img
               src="/images/v2/photo-1.png"
@@ -54,9 +54,9 @@ export default function PortfolioUI() {
 
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
 
-            <div className="absolute bottom-6 left-6 text-white">
+            <div className="absolute bottom-1/2 left-6 text-white">
               <p className="text-sm opacity-80">TVC Commercial</p>
-              <h2 className="text-2xl sm:text-3xl font-semibold mt-1">
+              <h2 className="text-2xl sm:text-3xl font-normal mt-1">
                 Seedha Baitho - Frido
               </h2>
             </div>
