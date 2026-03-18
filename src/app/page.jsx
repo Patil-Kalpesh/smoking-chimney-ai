@@ -1,13 +1,13 @@
-import Hero from '@/components/Hero/Hero'
+import Hero from '@/app/v2/page'
 import React from 'react'
 import Header from '@/components/Header/index'
 import Footer from '@/components/Footer/index'
 export default function page() {
   return (
     <div>
-      <Header/>
+      {/* <Header/> */}
       <Hero/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }
