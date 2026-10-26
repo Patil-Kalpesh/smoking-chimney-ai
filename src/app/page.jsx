@@ -5,9 +5,9 @@ import Footer from '@/components/Footer/index'
 export default function page() {
   return (
     <div>
-      <Header/>
-      <Hero/>
-      <Footer/>
+      <Header />
+      <Hero />
+      <Footer />
     </div>
   )
 }

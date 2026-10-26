@@ -9,20 +9,22 @@ import Technicalstack from '../CommonSection/Technicalstack'
 import CTA from '../CommonSection/CTA'
 import Ethics from '../CommonSection/Ethics'
 import Contact from '../CommonSection/Contact'
+import ServicesAndIndustries from '../CommonSection/ServicesAndIndustries'
 
 export default function index() {
   return (
     <div>
-        <HeroSection/>
-        <ValueSection/>
-        <ServiceSection/>
-        <WhoweareSection/>
-        <ValuesTwo/>
-        <Otherservices/>
-        <Technicalstack/>
-        <CTA/>
-        <Ethics/>
-        <Contact/>
+      <HeroSection />
+      <ValueSection />
+      <ServiceSection />
+      <WhoweareSection />
+      <ValuesTwo />
+      <Otherservices />
+      <Technicalstack />
+      <ServicesAndIndustries />
+      <CTA />
+      <Ethics />
+      <Contact />
     </div>
   )
 }
