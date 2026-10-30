@@ -90,11 +90,11 @@ const services = [
 ];
 
 const industries = [
-    "FinTech & Digital Banking",
-    "RegTech, AML & Identity Verification",
-    "Enterprise Procurement & Vendor Risk",
-    "Lending, Credit & Business Finance",
-    "Digital Assets & Blockchain Financial Services"
+    { name: "FinTech & RegTech", href: "/industries/fintech-regtech-software-development/" },
+    { name: "Healthcare & HealthTech", href: "/industries/healthtech-software-development/" },
+    { name: "Enterprise SaaS & AI", href: "/industries/enterprise-saas-ai-development/" },
+    { name: "Cybersecurity & Identity", href: "/industries/cybersecurity-identity-software-development/" },
+    { name: "Supply Chain & Logistics", href: "/industries/supply-chain-software-development/" },
 ];
 
 export default function ServicesAndIndustries() {
@@ -188,12 +188,13 @@ export default function ServicesAndIndustries() {
 
                         <div className="md:w-2/3 flex flex-wrap justify-center md:justify-end gap-3">
                             {industries.map((industry, index) => (
-                                <div
+                                <Link
                                     key={index}
-                                    className="px-5 py-2.5 rounded-full border border-gray-200 bg-white text-[14px] font-medium text-[#4a4a4a] shadow-sm hover:border-[#ED5729] hover:text-[#ED5729] transition-colors cursor-default"
+                                    href={industry.href}
+                                    className="px-5 py-2.5 rounded-full border border-gray-200 bg-white text-[14px] font-medium text-[#4a4a4a] shadow-sm hover:border-[#ED5729] hover:text-[#ED5729] transition-colors"
                                 >
-                                    {industry}
-                                </div>
+                                    {industry.name}
+                                </Link>
                             ))}
                         </div>
                     </div>
